@@ -1,0 +1,13 @@
+<IfModule authz_core_module>
+    <FilesMatch ".(css|js)$">
+        Require all granted
+    </FilesMatch>
+    Require all denied
+</IfModule>
+<IfModule !authz_core_module>
+    Deny from all
+    <FilesMatch ".(css|js)$">
+        Order Allow,Deny
+        allow from all
+    </FilesMatch>
+</IfModule>

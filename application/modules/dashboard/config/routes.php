@@ -1,0 +1,2 @@
+<?php
+$route['dashboard'] = 'dashboard';

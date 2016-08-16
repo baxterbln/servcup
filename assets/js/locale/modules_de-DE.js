@@ -1,0 +1,1 @@
+var LG_placeholder = '';
