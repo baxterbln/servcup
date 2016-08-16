@@ -1,0 +1,5 @@
+# Add all host names and IP addressess for the local machine here one per line.
+# Any SMTP host that connects to us using these values in the helo
+# arguement will be dropped immediately.
+127.0.0.1
+localhost

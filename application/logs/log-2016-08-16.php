@@ -1696,3 +1696,79 @@ DEBUG - 2016-08-16 13:22:48 --> Global POST, GET and COOKIE data sanitized
 INFO - 2016-08-16 13:22:48 --> Input Class Initialized
 INFO - 2016-08-16 13:22:48 --> Language Class Initialized
 ERROR - 2016-08-16 13:22:48 --> 404 Page Not Found: /index
+INFO - 2016-08-16 13:47:53 --> Config Class Initialized
+INFO - 2016-08-16 13:47:53 --> Hooks Class Initialized
+DEBUG - 2016-08-16 13:47:53 --> UTF-8 Support Enabled
+INFO - 2016-08-16 13:47:53 --> Utf8 Class Initialized
+INFO - 2016-08-16 13:47:53 --> URI Class Initialized
+DEBUG - 2016-08-16 13:47:53 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-16 13:47:53 --> Router Class Initialized
+INFO - 2016-08-16 13:47:53 --> Output Class Initialized
+INFO - 2016-08-16 13:47:53 --> Security Class Initialized
+DEBUG - 2016-08-16 13:47:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-16 13:47:53 --> Input Class Initialized
+INFO - 2016-08-16 13:47:53 --> Language Class Initialized
+INFO - 2016-08-16 13:47:53 --> Language Class Initialized
+INFO - 2016-08-16 13:47:53 --> Config Class Initialized
+INFO - 2016-08-16 13:47:53 --> Loader Class Initialized
+INFO - 2016-08-16 13:47:53 --> Helper loaded: language_helper
+INFO - 2016-08-16 13:47:53 --> Helper loaded: render_helper
+INFO - 2016-08-16 13:47:53 --> Helper loaded: acl_helper
+INFO - 2016-08-16 13:47:53 --> Helper loaded: global_helper
+INFO - 2016-08-16 13:47:53 --> Helper loaded: security_helper
+INFO - 2016-08-16 13:47:53 --> Helper loaded: domain_helper
+INFO - 2016-08-16 13:47:53 --> Database Driver Class Initialized
+INFO - 2016-08-16 13:47:53 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-16 13:47:53 --> Controller Class Initialized
+DEBUG - 2016-08-16 13:47:53 --> Database MX_Controller Initialized
+DEBUG - 2016-08-16 13:47:53 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-16 13:47:53 --> Initialize main hooks
+INFO - 2016-08-16 13:47:53 --> Model Class Initialized
+INFO - 2016-08-16 13:47:53 --> Helper loaded: url_helper
+INFO - 2016-08-16 13:47:53 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-16 13:47:53 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+DEBUG - 2016-08-16 13:47:53 --> user has access
+DEBUG - 2016-08-16 13:47:53 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/header.php
+DEBUG - 2016-08-16 13:47:53 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_side.php
+DEBUG - 2016-08-16 13:47:53 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_top.php
+ERROR - 2016-08-16 13:47:53 --> Could not find the language line "Manage domains"
+DEBUG - 2016-08-16 13:47:53 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/views/user/user.php
+DEBUG - 2016-08-16 13:47:53 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/footer.php
+INFO - 2016-08-16 13:47:53 --> Final output sent to browser
+DEBUG - 2016-08-16 13:47:53 --> Total execution time: 0.0175
+INFO - 2016-08-16 13:47:54 --> Config Class Initialized
+INFO - 2016-08-16 13:47:54 --> Hooks Class Initialized
+DEBUG - 2016-08-16 13:47:54 --> UTF-8 Support Enabled
+INFO - 2016-08-16 13:47:54 --> Utf8 Class Initialized
+INFO - 2016-08-16 13:47:54 --> URI Class Initialized
+INFO - 2016-08-16 13:47:54 --> Router Class Initialized
+INFO - 2016-08-16 13:47:54 --> Output Class Initialized
+INFO - 2016-08-16 13:47:54 --> Security Class Initialized
+DEBUG - 2016-08-16 13:47:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-16 13:47:54 --> Input Class Initialized
+INFO - 2016-08-16 13:47:54 --> Language Class Initialized
+ERROR - 2016-08-16 13:47:54 --> 404 Page Not Found: /index
+INFO - 2016-08-16 13:47:54 --> Config Class Initialized
+INFO - 2016-08-16 13:47:54 --> Hooks Class Initialized
+DEBUG - 2016-08-16 13:47:54 --> UTF-8 Support Enabled
+INFO - 2016-08-16 13:47:54 --> Utf8 Class Initialized
+INFO - 2016-08-16 13:47:54 --> URI Class Initialized
+INFO - 2016-08-16 13:47:54 --> Router Class Initialized
+INFO - 2016-08-16 13:47:54 --> Output Class Initialized
+INFO - 2016-08-16 13:47:54 --> Security Class Initialized
+DEBUG - 2016-08-16 13:47:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-16 13:47:54 --> Input Class Initialized
+INFO - 2016-08-16 13:47:54 --> Language Class Initialized
+ERROR - 2016-08-16 13:47:54 --> 404 Page Not Found: /index
+INFO - 2016-08-16 13:47:54 --> Config Class Initialized
+INFO - 2016-08-16 13:47:54 --> Hooks Class Initialized
+DEBUG - 2016-08-16 13:47:54 --> UTF-8 Support Enabled
+INFO - 2016-08-16 13:47:54 --> Utf8 Class Initialized
+INFO - 2016-08-16 13:47:54 --> URI Class Initialized
+INFO - 2016-08-16 13:47:54 --> Router Class Initialized
+INFO - 2016-08-16 13:47:54 --> Output Class Initialized
+INFO - 2016-08-16 13:47:54 --> Security Class Initialized
+DEBUG - 2016-08-16 13:47:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-16 13:47:54 --> Input Class Initialized
+INFO - 2016-08-16 13:47:54 --> Language Class Initialized
+ERROR - 2016-08-16 13:47:54 --> 404 Page Not Found: /index

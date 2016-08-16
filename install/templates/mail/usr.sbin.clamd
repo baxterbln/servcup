@@ -1,0 +1,3 @@
+# For use with exim
+/var/tmp/** krw,
+/var/spool/exim4/** krw,

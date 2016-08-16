@@ -21,7 +21,7 @@ class User {
 		{
 			$this->data['site'] = 'database';
 			$this->data['title'] = lang('Manage database user');
-			$this->data['jsFiles'] = array('domain.js');
+			$this->data['jsFiles'] = array('user.js');
 
 			renderPage(role().'/user', $this->data, true);
 		} else {

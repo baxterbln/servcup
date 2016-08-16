@@ -1,0 +1,7 @@
+# Add backup MX host names to be exempted from ratelimit checks only.
+# All other spam checks are always performed including spamassassin.
+# Relay host should not be an servcup installation. Otherwise, if
+# relay host is an servcup installation, for coordinated optimum
+# spam protection put relay host in servcup_backup_mx_host_names.
+#
+# backupmx_no_rl.hostname.tld
