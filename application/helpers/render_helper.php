@@ -11,7 +11,10 @@ if(!function_exists('renderPage'))
 		$ci->load->view($template, $data);
 		$ci->load->view('widgets/footer', $data);
     }
+}
 
+if(!function_exists('readMenuEntrys'))
+{
     function readMenuEntrys()
     {
         $ci =& get_instance();
@@ -43,7 +46,10 @@ if(!function_exists('renderPage'))
         }
         return buildMenu();
     }
+}
 
+if(!function_exists('buildMenu'))
+{
     function buildMenu() {
         $ci =& get_instance();
 
@@ -57,7 +63,10 @@ if(!function_exists('renderPage'))
 
         return $myMenu;
     }
+}
 
+if(!function_exists('createMenu'))
+{
     function createMenu($arr)
     {
         $ci =& get_instance();
@@ -86,8 +95,8 @@ if(!function_exists('renderPage'))
 				$str .="</ul>";
          	}
 			$str .= "</li>";
-      }
-      return $str;
+        }
+        return $str;
     }
 }
 

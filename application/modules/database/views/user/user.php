@@ -1,20 +1,16 @@
 <article class="content responsive-tables-page">
                     <div class="title-block">
-                        <h1 class="title"><?php echo lang('Manage domains') ?></h1>
+                        <h1 class="title"><?php echo lang('Manage database user') ?></h1>
                     </div>
                     <section class="section">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-7">
                                 <div class="card">
-                                    <div class="card-block">
-                                        <section class="example">
+                                    <div class="card-block" style="min-height: 500px;">
+                                        <section class="usertable">
                                             <div class="table-responsive">
-                                                <div id="toolbar">
-                                                    <a href="/database/addUser" type="button" class="btn btn-primary"><?php echo lang('Add DB user') ?></a>
-                                                </div>
                                                 <table id="userlist" class="table table-striped table-hover"
-                                                   data-toolbar="#toolbar"
-                                                   data-search="true"
+                                                   data-search="false"
                                                    data-show-refresh="true"
                                                    data-show-toggle="true"
                                                    data-show-export="true"
@@ -29,6 +25,54 @@
                                                    data-side-pagination="server">
                                                 </table>
                                             </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="card">
+                                    <div class="card-block">
+                                        <section class="actions">
+                                            <h3 class="title" style="padding-bottom: 40px;">Benutzer hinzufügen</h3>
+                                            <form id="dbUserAdd">
+                                                <div class="form-group row" style="padding-bottom: 20px;">
+                                                    <label class="col-sm-4 form-control-label"><?php echo lang('Username'); ?>:</label>
+                                                    <div class="col-sm-8">
+                                                        <input class="form-control boxed" type="text" autocomplete="off" id="username" name="username">
+                                                        <label class="username err"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 form-control-label"><?php echo lang('Password'); ?>:</label>
+                                                    <div class="col-sm-8">
+                                                        <input class="form-control boxed" type="password" autocomplete="off" id="password" name="password">
+                                                        <label class="password err"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-sm-4 form-control-label"><?php echo lang('Password repeat'); ?>:</label>
+                                                    <div class="col-sm-8">
+                                                        <input class="form-control boxed" type="password" autocomplete="off" id="password_repeat" name="password_repeat">
+                                                        <label class="password_repeat err"></label>
+                                                        <span style="padding-top: 5px; float: right"><button type="button" class="btn btn-primary" name="generate" id="generate"><?php echo lang('generate'); ?></button></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <label class="col-sm-4 form-control-label" style="line-height: 17px;"><?php echo lang('allow remote access'); ?>:</label>
+                                                    <div class="col-sm-8">
+                                                        <label>
+                                                            <input class="checkbox" type="checkbox" id="remote" name="remote" value="1">
+                                                            <span></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12 text-right">
+                                                        <input type="submit" class="btn btn-primary" id="addUser" value="Speichern">
+                                                    </div>
+                                                </div>
+                                            <form>
                                         </section>
                                     </div>
                                 </div>

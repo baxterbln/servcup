@@ -134,7 +134,8 @@ class Subdomain {
 			}else{
 				$data = array(
 					'customer_id' => $this->customer_id,
-					'server_id' => $this->_CI->DomainModel->getServerID(),
+                    'server_id' => getServer('mail')->id,
+                    'server_ip' => getServer('mail')->ip,
 					'active' => $active,
 					'parent_id' => $domain_id,
 					'domain' => $subdomain,

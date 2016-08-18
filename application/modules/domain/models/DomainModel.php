@@ -291,40 +291,6 @@ class DomainModel extends CI_Model
         return $this->db->get()->num_rows();
     }
 
-    public function getServerID()
-    {
-        $this->db->select('server_id');
-        $this->db->from('customer');
-        $this->db->where(
-            array(
-                'customer_id' => $this->customer_id
-               )
-        );
-        $result = $this->db->get();
-
-        if($result->num_rows()) {
-            return $result->row()->server_id;
-        }
-    }
-
-    public function getServerIP()
-    {
-        $server_ip = $this->getServerID();
-
-        $this->db->select('ip');
-        $this->db->from('server');
-        $this->db->where(
-            array(
-                'id' => $server_ip
-               )
-        );
-        $result = $this->db->get();
-
-        if($result->num_rows()) {
-            return $result->row()->ip;
-        }
-    }
-
     public function checkDomainOwner($id, $domain)
     {
         $this->db->select('id');

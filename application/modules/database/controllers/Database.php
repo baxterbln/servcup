@@ -27,4 +27,16 @@ class Database extends MX_Controller {
 		$this->user->user();
     }
 
+    public function getUsers()
+    {
+        $this->load->library('User', $this->data);
+		$this->user->getUsers();
+    }
+
+    public function addUser()
+    {
+        $this->load->library('User', $this->data);
+		$this->user->addUser();
+    }
+
 }

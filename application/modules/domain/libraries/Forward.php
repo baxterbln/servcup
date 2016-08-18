@@ -89,7 +89,8 @@ class Forward {
 
 				$data = array(
 					'customer_id' => $this->customer_id,
-					'server_id' => $this->_CI->DomainModel->getServerID(),
+                    'server_id' => getServer('mail')->id,
+                    'server_ip' => getServer('mail')->ip,
 					'active' => 1,
 					'parent_id' => $domain_id,
 					'domain' => $forwardDomain,

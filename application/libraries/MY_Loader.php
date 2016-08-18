@@ -24,9 +24,7 @@ class MY_Loader extends MX_Loader {
         }
 
         $this->_ci_library_paths = array(APPPATH, BASEPATH);
-
         $this->_ci_model_paths = array(APPPATH);
-
         $this->_ci_helper_paths = array(APPPATH, BASEPATH);
 
         log_message('debug', "Loader Class Initialized");

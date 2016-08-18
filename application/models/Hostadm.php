@@ -19,4 +19,24 @@ class Hostadm extends CI_Model
     {
         $this->db->insert('tasks', array('task' => $task, 'object' => $object));
     }
+
+    public function getServer($function, $group)
+    {
+        //SELECT server.ip FROM `server`, `server_groups` WHERE server.group_id = server_groups.id AND mail = 1
+        $this->db->select('server.name AS name, server.ip as ip, server_groups.id AS id');
+        $this->db->from('server');
+        $this->db->join('server_groups', 'server.group_id = server_groups.id');
+        $this->db->where(array($function => 1, 'server_groups.id' => $group));
+
+        return $this->db->get()->row();
+    }
+
+    public function getUsedServer($customer_id)
+    {
+        $this->db->select('server_id');
+        $this->db->from('user');
+        $this->db->where(array('customer_id' => $customer_id));
+
+        return $this->db->get()->row()->server_id;
+    }
 }

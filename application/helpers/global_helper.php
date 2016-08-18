@@ -90,3 +90,14 @@ if(!function_exists('randomPassword'))
     	return implode($pass); //turn the array into a string
 	}
 }
+
+if(!function_exists('getServer'))
+{
+    function getServer($function) {
+        $ci =& get_instance();
+        $ci->load->model('Hostadm');
+
+        $group = $ci->Hostadm->getUsedServer($ci->session->userdata('customer_id'));
+        return $ci->Hostadm->getServer($function, $group);
+    }
+}

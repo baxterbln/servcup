@@ -246,7 +246,7 @@ class Domains {
 			$aliases = preg_split('/[\n\r]+/', trim($this->_CI->input->post('alias')));
 			$redirect_destination = ($redirect != '') ? $this->_CI->input->post('destination') : '';
 
-			$this->server_ip = $this->_CI->DomainModel->getServerIP();
+			$this->server_ip = getServer('mail')->ip;
 
             if($cache == 0){
                 $this->resetCacheSettings($this->_CI->input->post('domain_id'));
@@ -283,7 +283,8 @@ class Domains {
 
 			$data = array(
 				'customer_id' => $this->customer_id,
-				'server_id' => $this->_CI->DomainModel->getServerID(),
+				'server_id' => getServer('mail')->id,
+                'server_ip' => $this->server_ip,
 				'active' => $active,
 				'php_version' => $this->_CI->input->post('php'),
 				'domain' => $domain,
@@ -372,7 +373,7 @@ class Domains {
 	{
         $this->_CI->load->model('DnsModel');
 
-		$addDomain = array('domain_id' => $domain_id, 'name' => $domain, 'type' => 'NATIVE', 'server_id' => $this->_CI->DomainModel->getServerID(), 'customer_id' => $this->customer_id);
+		$addDomain = array('domain_id' => $domain_id, 'name' => $domain, 'type' => 'NATIVE', 'server_id' => getServer('mail')->id, 'customer_id' => $this->customer_id);
 		$dns_id = $this->_CI->DnsModel->addDNSDomain($addDomain);
 		if($dns_id > 0) {
 

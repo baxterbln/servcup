@@ -14,7 +14,7 @@
           <span class="l l5">
           </span>
         </div>
-        CC-Admin
+        ServCup
       </div>
     </div>
     <nav class="menu">
