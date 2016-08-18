@@ -70,12 +70,19 @@ class DatabaseModel extends CI_Model
         }
     }
 
-    /* Check if user exist */
+    /**
+	 * checkExistUser
+	 * Check if user exist
+	 *
+     * @param   string  $username username
+	 * @access  public
+     *
+     * @return  bool    true|false
+	 */
     public function checkExistUser($username)
     {
         $this->db->where('username', $username);
         $result = $this->db->get('sql_user');
-        $this->db->last_query();
         if($result->num_rows() > 0)
         {
             return false;
@@ -83,23 +90,127 @@ class DatabaseModel extends CI_Model
         return true;
     }
 
-    /* Save new user */
+    /**
+	 * addUser
+	 * Save new user
+	 *
+     * array['server_id']   int Id of the used mysql server
+     * array['customer_id'] int customer id
+     * array['username'] string new username
+     * array['password'] string password of mysql user
+     * array['remote'] string allowed host for mysql connect
+     *
+     * @param   array  $data (See above)
+	 * @access  public
+	 */
     public function addUser($data)
     {
         $this->db->insert('sql_user', $data);
-        $this->createUser($data['username'], $data['password'], $data['remote']);
+        $this->createDBUser($data['username'], $data['password'], $data['remote']);
     }
 
-    /* Create MySQL User */
-    public function createUser($user, $password, $host)
+    /**
+	 * updateUser
+	 * update mysql user
+	 *
+     * array['password'] string password of mysql user
+     * array['remote'] string allowed host for mysql connect
+     *
+     * @param   array  $data (See above)
+     * @param   int $user_id    Id of user dataset
+	 * @access  public
+	 */
+    public function updateUser($data, $user_id)
+    {
+        $this->db->where(array('customer_id' => $this->customer_id, 'id' => $user_id));
+        $this->db->update('sql_user', $data);
+        $this->updateDBUser($user_id, $data['password'], $data['remote']);
+    }
+
+    /**
+	 * getUser
+	 * fetch user data
+     *
+     * @param   string  $username   MySQL username
+     * @param   int     $user_id    Id of user
+     *
+     * @return  object[]
+	 * @access  public
+	 */
+    public function getUser($username, $id)
+    {
+        $this->db->select('*');
+        $this->db->where('username', $username);
+        $this->db->where('id', $id);
+        $this->db->where('customer_id', $this->customer_id);
+        return $this->db->get('sql_user')->row();
+    }
+
+    /**
+	 * getUsername
+	 * get username, required for update
+     *
+     * @param   int     $id    Id of user
+     *
+     * @return  string  username
+	 * @access  private
+	 */
+    private function getUsername($id)
+    {
+        $this->db->select('username');
+        $this->db->where('customer_id', $this->customer_id);
+        $this->db->where('id', $id);
+        return $this->db->get('sql_user')->row()->username;
+    }
+
+    /**
+	 * createDBUser
+	 * Create MySQL User
+     *
+     * @param   string     $user        MySQL username
+     * @param   string     $password    MySQL password
+     * @param   string     $host        allowed host for access
+     *
+	 * @access  public
+	 */
+    public function createDBUser($user, $password, $host)
     {
         $dbm = $this->load->database(getServer('mysql')->name, true);
         $dbm->query("CREATE USER '". $user ."'@'".$host."' IDENTIFIED BY '". $password ."';");
         $dbm->query("FLUSH PRIVILEGES;");
-
     }
 
-    /* Grant MySQL Privileges */
+    /**
+	 * updateDBUser
+	 * Update serverside mysql user
+     *
+     * @param   int        $id          Id of MySQL User
+     * @param   string     $password    new MySQL password
+     * @param   string     $host        allowed host for access
+     *
+	 * @access  public
+	 */
+    public function updateDBUser($id, $password, $host)
+    {
+        $user = $this->getUsername($id);
+        $lasthost = $this->getDbHost($user);
+
+        $dbm = $this->load->database(getServer('mysql')->name, true);
+        $dbm->query("ALTER USER '".$user."'@'".$lasthost."' IDENTIFIED BY '". $password ."';");
+        $dbm->query("UPDATE user SET Host='". $host ."' WHERE User='". $user ."';");
+        $dbm->query("FLUSH PRIVILEGES;");
+    }
+
+    /**
+	 * grantPrivileges
+	 * Grant MySQL Privileges
+     *
+     * @param   string     $user        MySQL User
+     * @param   string     $database    Name of database
+     * @param   string     $host        allowed host for access
+     *
+	 * @access  private
+	 */
     private function grantPrivileges($user, $database, $host)
     {
         $dbm = $this->load->database(getServer('mysql')->name, true);
@@ -107,11 +218,66 @@ class DatabaseModel extends CI_Model
         $dbm->query("FLUSH PRIVILEGES;");
     }
 
-    /* Create MySQL Database */
+    /**
+	 * createDatabase
+	 * create MySQL Database
+	 *
+     * array['password'] string password of mysql user
+     * array['remote'] string allowed host for mysql connect
+     *
+     * @param   string     $database    Name of database
+     *
+	 * @access  public
+	 */
     public function createDatabase($database)
     {
         $dbm = $this->load->database(getServer('mysql')->name, true);
         $dbm->dbforge->create_database( $database );
+    }
+
+    /**
+	 * createDatabase
+	 * get host for update
+	 *
+     * array['password'] string password of mysql user
+     * array['remote'] string allowed host for mysql connect
+     *
+     * @param   string     $user   MySQL username
+     * @return  string  $hostname  Hostname for user
+     *
+	 * @access  private
+	 */
+    private function getDbHost($user)
+    {
+        $dbm = $this->load->database(getServer('mysql')->name, true);
+        $dbm->select('Host');
+        $dbm->where('User', $user);
+        return $dbm->get('user')->row()->Host;
+    }
+
+    /**
+     * checkOwner
+     * check if customer owner of user
+     *
+     * array['password'] string password of mysql user
+     * array['remote'] string allowed host for mysql connect
+     *
+     * @param   string  $field  Table field
+     * @param   string  $key    Value for table field
+     * @param   string  $table  Table
+     * @return  bool    true|false
+     * @access  public
+     */
+    public function checkOwner($field, $key, $table)
+    {
+        $this->db->where($field, $key);
+        $this->db->where('customer_id', $this->customer_id);
+        $result = $this->db->get($table);
+        if($result->num_rows() > 0)
+        {
+            return true;
+        }
+        return false;
     }
 
 

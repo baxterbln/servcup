@@ -10,7 +10,6 @@ $route['database/getDatabases'] = 'database/getDatabases';
 
 $route['database/user'] = 'database/user';
 $route['database/saveUser'] = 'database/saveUser';
-$route['database/addUser'] = 'database/addUser';
-$route['database/editUser/(:num)/(:any)'] = 'database/editUser/$1/$2';
+$route['database/getUser'] = 'database/getUser';
 $route['database/deleteUser'] = 'database/deleteUser';
 $route['database/getUsers'] = 'database/getUsers';

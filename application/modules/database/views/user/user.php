@@ -12,7 +12,7 @@
                                                 <table id="userlist" class="table table-striped table-hover"
                                                    data-search="false"
                                                    data-show-refresh="true"
-                                                   data-show-toggle="true"
+                                                   data-show-toggle="false"
                                                    data-show-export="true"
                                                    data-minimum-count-columns="2"
                                                    data-show-pagination-switch="true"
@@ -33,8 +33,9 @@
                                 <div class="card">
                                     <div class="card-block">
                                         <section class="actions">
-                                            <h3 class="title" style="padding-bottom: 40px;">Benutzer hinzufügen</h3>
-                                            <form id="dbUserAdd">
+                                            <h3 class="title formtitle" style="padding-bottom: 40px;">Benutzer hinzufügen</h3>
+                                            <form id="saveUserForm">
+                                                <input type="hidden" name="user_id" id="user_id" value="">
                                                 <div class="form-group row" style="padding-bottom: 20px;">
                                                     <label class="col-sm-4 form-control-label"><?php echo lang('Username'); ?>:</label>
                                                     <div class="col-sm-8">
@@ -57,7 +58,6 @@
                                                         <span style="padding-top: 5px; float: right"><button type="button" class="btn btn-primary" name="generate" id="generate"><?php echo lang('generate'); ?></button></span>
                                                     </div>
                                                 </div>
-
                                                 <div class="row">
                                                     <label class="col-sm-4 form-control-label" style="line-height: 17px;"><?php echo lang('allow remote access'); ?>:</label>
                                                     <div class="col-sm-8">
@@ -69,7 +69,7 @@
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-sm-12 text-right">
-                                                        <input type="submit" class="btn btn-primary" id="addUser" value="Speichern">
+                                                        <input type="submit" class="btn btn-primary" id="saveUser" value="Speichern">
                                                     </div>
                                                 </div>
                                             <form>

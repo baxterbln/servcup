@@ -39,7 +39,7 @@ $(function() {
         $(".password_repeat").hide();
     });
 
-    $('#addUser').click(function(e) {
+    $('#saveUser').click(function(e) {
         e.preventDefault();
 
         // validate
@@ -60,10 +60,10 @@ $(function() {
 
         if (!error) {
             $.ajax({
-                url: '/database/addUser',
+                url: '/database/saveUser',
                 type: 'post',
                 dataType: 'json',
-                data: $('form#dbUserAdd').serialize(),
+                data: $('form#saveUserForm').serialize(),
                 success: function(data) {
                     if (data.status == "503") {
                         window.location.href = "/login";
@@ -79,7 +79,7 @@ $(function() {
                             $('.password_repeat').html(data.password_repeat).show();
                         }
                     } else {
-                        bootbox.alert(LG_domain_delete_successful, function() {
+                        bootbox.alert(LG_user_added, function() {
                             $('#userlist').bootstrapTable('refresh');
                         });
                     }
@@ -105,13 +105,37 @@ function makePasswd() {
     }
 
     return passwd;
-
 }
 
 window.operateEvents = {
-    'click .settings': function(e, value, row, index) {
-        window.location = '/domain/edit/' + row.id + '/' + row.domain;
-        //alert('You click settings action, row: ' + JSON.stringify(row));
+    'click .edit': function(e, value, row, index) {
+        $.ajax({
+            url: '/database/getUser',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                id: row.id,
+                username: row.username
+            },
+            success: function(data) {
+
+                var username = data.username;
+                username = username.replace("_"+data.customer_id, "");
+
+                $('#username').val(username);
+                $('#username').prop('disabled', true);
+                $('#user_id').val(data.id);
+                $('#password').val('');
+                $('#password_repeat').val('');
+                $(".formtitle").text(LG_edit_user);
+
+                if (data.remote == '%') {
+                    $('#remote').prop('checked', true);
+                }else{
+                    $('#remote').prop('checked', false);
+                }
+            }
+        });
     },
     'click .stats': function(e, value, row, index) {
         var win = window.open('/domain/stats', '_blank');
@@ -196,21 +220,13 @@ window.operateEvents = {
 
 function operateFormatter(value, row, index) {
     return [
-        '<a class="btn btn-secondary list-btn settings" href="javascript:void(0)" title="' + LG_Edit + '">',
+        '<a class="btn btn-secondary list-btn edit" href="javascript:void(0)" title="' + LG_Edit + '">',
         '<i class="fa fa-pencil" title="' + LG_Edit + '" aria-hidden="true"></i>',
         '<span class="sr-only">' + LG_Edit + '</span>',
         '</a>',
         '<a class="btn btn-secondary list-btn delete" href="javascript:void(0)" title="' + LG_Delete + '">',
         '<i class="fa fa-trash-o" title="' + LG_Delete + '" aria-hidden="true"></i>',
         '<span class="sr-only">' + LG_Delete + '</span>',
-        '</a>',
-        '<a class="btn btn-secondary list-btn suspend" href="javascript:void(0)" title="' + LG_Suspend + '">',
-        '<i class="fa fa-power-off" title="' + LG_Suspend + '" aria-hidden="true"></i>',
-        '<span class="sr-only">' + LG_Suspend + '</span>',
-        '</a>',
-        '<a class="btn btn-secondary stats" href="javascript:void(0)" title="' + LG_Statistics + '">',
-        '<i class="fa fa-bar-chart" title="' + LG_Statistics + '" aria-hidden="true"></i>',
-        '<span class="sr-only">' + LG_Statistics + '</span>',
         '</a>'
     ].join('');
 }
