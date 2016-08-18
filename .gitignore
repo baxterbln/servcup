@@ -3,3 +3,4 @@ database.php
 .Trash-1000
 .tags
 .tags1
+application/logs/log*
