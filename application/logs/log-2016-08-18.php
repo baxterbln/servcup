@@ -7989,3 +7989,2293 @@ INFO - 2016-08-18 13:20:00 --> Model Class Initialized
 DEBUG - 2016-08-18 13:20:00 --> user has access
 INFO - 2016-08-18 13:20:00 --> Final output sent to browser
 DEBUG - 2016-08-18 13:20:00 --> Total execution time: 0.0165
+INFO - 2016-08-18 14:48:46 --> Config Class Initialized
+INFO - 2016-08-18 14:48:46 --> Hooks Class Initialized
+DEBUG - 2016-08-18 14:48:46 --> UTF-8 Support Enabled
+INFO - 2016-08-18 14:48:46 --> Utf8 Class Initialized
+INFO - 2016-08-18 14:48:46 --> URI Class Initialized
+DEBUG - 2016-08-18 14:48:46 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 14:48:46 --> Router Class Initialized
+INFO - 2016-08-18 14:48:46 --> Output Class Initialized
+INFO - 2016-08-18 14:48:46 --> Security Class Initialized
+DEBUG - 2016-08-18 14:48:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 14:48:46 --> Input Class Initialized
+INFO - 2016-08-18 14:48:46 --> Language Class Initialized
+INFO - 2016-08-18 14:48:46 --> Language Class Initialized
+INFO - 2016-08-18 14:48:46 --> Config Class Initialized
+INFO - 2016-08-18 14:48:46 --> Loader Class Initialized
+INFO - 2016-08-18 14:48:46 --> Helper loaded: language_helper
+INFO - 2016-08-18 14:48:46 --> Helper loaded: render_helper
+INFO - 2016-08-18 14:48:46 --> Helper loaded: acl_helper
+INFO - 2016-08-18 14:48:46 --> Helper loaded: global_helper
+INFO - 2016-08-18 14:48:46 --> Helper loaded: security_helper
+INFO - 2016-08-18 14:48:46 --> Helper loaded: domain_helper
+INFO - 2016-08-18 14:48:46 --> Database Driver Class Initialized
+INFO - 2016-08-18 14:48:46 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 14:48:46 --> Controller Class Initialized
+DEBUG - 2016-08-18 14:48:46 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 14:48:46 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 14:48:46 --> Initialize main hooks
+INFO - 2016-08-18 14:48:46 --> Model Class Initialized
+INFO - 2016-08-18 14:48:46 --> Helper loaded: url_helper
+INFO - 2016-08-18 14:48:46 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 14:48:46 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 14:48:46 --> Model Class Initialized
+DEBUG - 2016-08-18 14:48:46 --> user has access
+DEBUG - 2016-08-18 14:48:46 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/header.php
+DEBUG - 2016-08-18 14:48:46 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_side.php
+DEBUG - 2016-08-18 14:48:46 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_top.php
+DEBUG - 2016-08-18 14:48:46 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/views/user/user.php
+DEBUG - 2016-08-18 14:48:46 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/footer.php
+INFO - 2016-08-18 14:48:46 --> Final output sent to browser
+DEBUG - 2016-08-18 14:48:46 --> Total execution time: 0.1180
+INFO - 2016-08-18 14:48:46 --> Config Class Initialized
+INFO - 2016-08-18 14:48:46 --> Hooks Class Initialized
+DEBUG - 2016-08-18 14:48:46 --> UTF-8 Support Enabled
+INFO - 2016-08-18 14:48:46 --> Utf8 Class Initialized
+INFO - 2016-08-18 14:48:46 --> URI Class Initialized
+INFO - 2016-08-18 14:48:46 --> Router Class Initialized
+INFO - 2016-08-18 14:48:46 --> Output Class Initialized
+INFO - 2016-08-18 14:48:46 --> Security Class Initialized
+DEBUG - 2016-08-18 14:48:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 14:48:46 --> Input Class Initialized
+INFO - 2016-08-18 14:48:46 --> Language Class Initialized
+ERROR - 2016-08-18 14:48:46 --> 404 Page Not Found: /index
+INFO - 2016-08-18 14:48:47 --> Config Class Initialized
+INFO - 2016-08-18 14:48:47 --> Hooks Class Initialized
+DEBUG - 2016-08-18 14:48:47 --> UTF-8 Support Enabled
+INFO - 2016-08-18 14:48:47 --> Utf8 Class Initialized
+INFO - 2016-08-18 14:48:47 --> URI Class Initialized
+DEBUG - 2016-08-18 14:48:47 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 14:48:47 --> Router Class Initialized
+INFO - 2016-08-18 14:48:47 --> Output Class Initialized
+INFO - 2016-08-18 14:48:47 --> Security Class Initialized
+DEBUG - 2016-08-18 14:48:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 14:48:47 --> Input Class Initialized
+INFO - 2016-08-18 14:48:47 --> Language Class Initialized
+INFO - 2016-08-18 14:48:47 --> Language Class Initialized
+INFO - 2016-08-18 14:48:47 --> Config Class Initialized
+INFO - 2016-08-18 14:48:47 --> Loader Class Initialized
+INFO - 2016-08-18 14:48:47 --> Helper loaded: language_helper
+INFO - 2016-08-18 14:48:47 --> Helper loaded: render_helper
+INFO - 2016-08-18 14:48:47 --> Helper loaded: acl_helper
+INFO - 2016-08-18 14:48:47 --> Helper loaded: global_helper
+INFO - 2016-08-18 14:48:47 --> Helper loaded: security_helper
+INFO - 2016-08-18 14:48:47 --> Helper loaded: domain_helper
+INFO - 2016-08-18 14:48:47 --> Database Driver Class Initialized
+INFO - 2016-08-18 14:48:47 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 14:48:47 --> Controller Class Initialized
+DEBUG - 2016-08-18 14:48:47 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 14:48:47 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 14:48:47 --> Initialize main hooks
+INFO - 2016-08-18 14:48:47 --> Model Class Initialized
+INFO - 2016-08-18 14:48:47 --> Helper loaded: url_helper
+INFO - 2016-08-18 14:48:47 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 14:48:47 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 14:48:47 --> Model Class Initialized
+DEBUG - 2016-08-18 14:48:47 --> user has access
+INFO - 2016-08-18 14:48:47 --> Final output sent to browser
+DEBUG - 2016-08-18 14:48:47 --> Total execution time: 0.0206
+INFO - 2016-08-18 14:48:51 --> Config Class Initialized
+INFO - 2016-08-18 14:48:51 --> Hooks Class Initialized
+DEBUG - 2016-08-18 14:48:51 --> UTF-8 Support Enabled
+INFO - 2016-08-18 14:48:51 --> Utf8 Class Initialized
+INFO - 2016-08-18 14:48:51 --> URI Class Initialized
+DEBUG - 2016-08-18 14:48:51 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 14:48:51 --> Router Class Initialized
+INFO - 2016-08-18 14:48:51 --> Output Class Initialized
+INFO - 2016-08-18 14:48:51 --> Security Class Initialized
+DEBUG - 2016-08-18 14:48:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 14:48:51 --> Input Class Initialized
+INFO - 2016-08-18 14:48:51 --> Language Class Initialized
+INFO - 2016-08-18 14:48:51 --> Language Class Initialized
+INFO - 2016-08-18 14:48:51 --> Config Class Initialized
+INFO - 2016-08-18 14:48:51 --> Loader Class Initialized
+INFO - 2016-08-18 14:48:51 --> Helper loaded: language_helper
+INFO - 2016-08-18 14:48:51 --> Helper loaded: render_helper
+INFO - 2016-08-18 14:48:51 --> Helper loaded: acl_helper
+INFO - 2016-08-18 14:48:51 --> Helper loaded: global_helper
+INFO - 2016-08-18 14:48:51 --> Helper loaded: security_helper
+INFO - 2016-08-18 14:48:51 --> Helper loaded: domain_helper
+INFO - 2016-08-18 14:48:51 --> Database Driver Class Initialized
+INFO - 2016-08-18 14:48:51 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 14:48:51 --> Controller Class Initialized
+DEBUG - 2016-08-18 14:48:51 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 14:48:51 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 14:48:51 --> Initialize main hooks
+INFO - 2016-08-18 14:48:51 --> Model Class Initialized
+INFO - 2016-08-18 14:48:51 --> Helper loaded: url_helper
+INFO - 2016-08-18 14:48:51 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 14:48:51 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 14:48:51 --> Model Class Initialized
+DEBUG - 2016-08-18 14:48:51 --> user has access
+INFO - 2016-08-18 14:48:51 --> Final output sent to browser
+DEBUG - 2016-08-18 14:48:51 --> Total execution time: 0.0198
+INFO - 2016-08-18 14:48:55 --> Config Class Initialized
+INFO - 2016-08-18 14:48:55 --> Hooks Class Initialized
+DEBUG - 2016-08-18 14:48:55 --> UTF-8 Support Enabled
+INFO - 2016-08-18 14:48:55 --> Utf8 Class Initialized
+INFO - 2016-08-18 14:48:55 --> URI Class Initialized
+DEBUG - 2016-08-18 14:48:55 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 14:48:55 --> Router Class Initialized
+INFO - 2016-08-18 14:48:55 --> Output Class Initialized
+INFO - 2016-08-18 14:48:55 --> Security Class Initialized
+DEBUG - 2016-08-18 14:48:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 14:48:55 --> Input Class Initialized
+INFO - 2016-08-18 14:48:55 --> Language Class Initialized
+INFO - 2016-08-18 14:48:55 --> Language Class Initialized
+INFO - 2016-08-18 14:48:55 --> Config Class Initialized
+INFO - 2016-08-18 14:48:55 --> Loader Class Initialized
+INFO - 2016-08-18 14:48:55 --> Helper loaded: language_helper
+INFO - 2016-08-18 14:48:55 --> Helper loaded: render_helper
+INFO - 2016-08-18 14:48:55 --> Helper loaded: acl_helper
+INFO - 2016-08-18 14:48:55 --> Helper loaded: global_helper
+INFO - 2016-08-18 14:48:55 --> Helper loaded: security_helper
+INFO - 2016-08-18 14:48:55 --> Helper loaded: domain_helper
+INFO - 2016-08-18 14:48:55 --> Database Driver Class Initialized
+INFO - 2016-08-18 14:48:55 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 14:48:55 --> Controller Class Initialized
+DEBUG - 2016-08-18 14:48:55 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 14:48:55 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 14:48:55 --> Initialize main hooks
+INFO - 2016-08-18 14:48:55 --> Model Class Initialized
+INFO - 2016-08-18 14:48:55 --> Helper loaded: url_helper
+INFO - 2016-08-18 14:48:55 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 14:48:55 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 14:48:55 --> Model Class Initialized
+DEBUG - 2016-08-18 14:48:55 --> user has access
+INFO - 2016-08-18 14:48:55 --> Helper loaded: form_helper
+INFO - 2016-08-18 14:48:55 --> Form Validation Class Initialized
+INFO - 2016-08-18 14:48:55 --> Language file loaded: language/german/form_validation_lang.php
+INFO - 2016-08-18 14:48:55 --> Model Class Initialized
+INFO - 2016-08-18 14:48:55 --> Database Driver Class Initialized
+INFO - 2016-08-18 14:48:55 --> Database Driver Class Initialized
+INFO - 2016-08-18 14:48:55 --> Final output sent to browser
+DEBUG - 2016-08-18 14:48:55 --> Total execution time: 0.0544
+INFO - 2016-08-18 14:48:57 --> Config Class Initialized
+INFO - 2016-08-18 14:48:57 --> Hooks Class Initialized
+DEBUG - 2016-08-18 14:48:57 --> UTF-8 Support Enabled
+INFO - 2016-08-18 14:48:57 --> Utf8 Class Initialized
+INFO - 2016-08-18 14:48:57 --> URI Class Initialized
+DEBUG - 2016-08-18 14:48:57 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 14:48:57 --> Router Class Initialized
+INFO - 2016-08-18 14:48:57 --> Output Class Initialized
+INFO - 2016-08-18 14:48:57 --> Security Class Initialized
+DEBUG - 2016-08-18 14:48:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 14:48:57 --> Input Class Initialized
+INFO - 2016-08-18 14:48:57 --> Language Class Initialized
+INFO - 2016-08-18 14:48:57 --> Language Class Initialized
+INFO - 2016-08-18 14:48:57 --> Config Class Initialized
+INFO - 2016-08-18 14:48:57 --> Loader Class Initialized
+INFO - 2016-08-18 14:48:57 --> Helper loaded: language_helper
+INFO - 2016-08-18 14:48:57 --> Helper loaded: render_helper
+INFO - 2016-08-18 14:48:57 --> Helper loaded: acl_helper
+INFO - 2016-08-18 14:48:57 --> Helper loaded: global_helper
+INFO - 2016-08-18 14:48:57 --> Helper loaded: security_helper
+INFO - 2016-08-18 14:48:57 --> Helper loaded: domain_helper
+INFO - 2016-08-18 14:48:57 --> Database Driver Class Initialized
+INFO - 2016-08-18 14:48:57 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 14:48:57 --> Controller Class Initialized
+DEBUG - 2016-08-18 14:48:57 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 14:48:57 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 14:48:57 --> Initialize main hooks
+INFO - 2016-08-18 14:48:57 --> Model Class Initialized
+INFO - 2016-08-18 14:48:57 --> Helper loaded: url_helper
+INFO - 2016-08-18 14:48:57 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 14:48:57 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 14:48:57 --> Model Class Initialized
+DEBUG - 2016-08-18 14:48:57 --> user has access
+INFO - 2016-08-18 14:48:57 --> Final output sent to browser
+DEBUG - 2016-08-18 14:48:57 --> Total execution time: 0.0205
+INFO - 2016-08-18 16:10:57 --> Config Class Initialized
+INFO - 2016-08-18 16:10:57 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:10:57 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:10:57 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:10:57 --> URI Class Initialized
+DEBUG - 2016-08-18 16:10:57 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:10:57 --> Router Class Initialized
+INFO - 2016-08-18 16:10:57 --> Output Class Initialized
+INFO - 2016-08-18 16:10:57 --> Security Class Initialized
+DEBUG - 2016-08-18 16:10:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:10:57 --> Input Class Initialized
+INFO - 2016-08-18 16:10:57 --> Language Class Initialized
+INFO - 2016-08-18 16:10:57 --> Language Class Initialized
+INFO - 2016-08-18 16:10:57 --> Config Class Initialized
+INFO - 2016-08-18 16:10:57 --> Loader Class Initialized
+INFO - 2016-08-18 16:10:57 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:10:57 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:10:57 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:10:57 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:10:57 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:10:57 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:10:57 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:10:57 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:10:57 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:10:57 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:10:57 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:10:57 --> Initialize main hooks
+INFO - 2016-08-18 16:10:57 --> Model Class Initialized
+INFO - 2016-08-18 16:10:57 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:10:57 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:10:57 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:10:57 --> Model Class Initialized
+DEBUG - 2016-08-18 16:10:57 --> user has access
+DEBUG - 2016-08-18 16:10:57 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/header.php
+DEBUG - 2016-08-18 16:10:57 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_side.php
+DEBUG - 2016-08-18 16:10:57 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_top.php
+DEBUG - 2016-08-18 16:10:57 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/views/user/user.php
+DEBUG - 2016-08-18 16:10:57 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/footer.php
+INFO - 2016-08-18 16:10:57 --> Final output sent to browser
+DEBUG - 2016-08-18 16:10:57 --> Total execution time: 0.0177
+INFO - 2016-08-18 16:10:58 --> Config Class Initialized
+INFO - 2016-08-18 16:10:58 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:10:58 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:10:58 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:10:58 --> URI Class Initialized
+INFO - 2016-08-18 16:10:58 --> Router Class Initialized
+INFO - 2016-08-18 16:10:58 --> Output Class Initialized
+INFO - 2016-08-18 16:10:58 --> Security Class Initialized
+DEBUG - 2016-08-18 16:10:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:10:58 --> Input Class Initialized
+INFO - 2016-08-18 16:10:58 --> Language Class Initialized
+ERROR - 2016-08-18 16:10:58 --> 404 Page Not Found: /index
+INFO - 2016-08-18 16:10:58 --> Config Class Initialized
+INFO - 2016-08-18 16:10:58 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:10:58 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:10:58 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:10:58 --> URI Class Initialized
+DEBUG - 2016-08-18 16:10:58 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:10:58 --> Router Class Initialized
+INFO - 2016-08-18 16:10:58 --> Output Class Initialized
+INFO - 2016-08-18 16:10:58 --> Security Class Initialized
+DEBUG - 2016-08-18 16:10:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:10:58 --> Input Class Initialized
+INFO - 2016-08-18 16:10:58 --> Language Class Initialized
+INFO - 2016-08-18 16:10:58 --> Language Class Initialized
+INFO - 2016-08-18 16:10:58 --> Config Class Initialized
+INFO - 2016-08-18 16:10:58 --> Loader Class Initialized
+INFO - 2016-08-18 16:10:58 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:10:58 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:10:58 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:10:58 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:10:58 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:10:58 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:10:58 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:10:58 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:10:58 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:10:58 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:10:58 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:10:58 --> Initialize main hooks
+INFO - 2016-08-18 16:10:58 --> Model Class Initialized
+INFO - 2016-08-18 16:10:58 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:10:58 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:10:58 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:10:58 --> Model Class Initialized
+DEBUG - 2016-08-18 16:10:58 --> user has access
+INFO - 2016-08-18 16:10:58 --> Final output sent to browser
+DEBUG - 2016-08-18 16:10:58 --> Total execution time: 0.0462
+INFO - 2016-08-18 16:12:40 --> Config Class Initialized
+INFO - 2016-08-18 16:12:40 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:12:40 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:12:40 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:12:40 --> URI Class Initialized
+DEBUG - 2016-08-18 16:12:40 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:12:40 --> Router Class Initialized
+INFO - 2016-08-18 16:12:40 --> Output Class Initialized
+INFO - 2016-08-18 16:12:40 --> Security Class Initialized
+DEBUG - 2016-08-18 16:12:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:12:40 --> Input Class Initialized
+INFO - 2016-08-18 16:12:40 --> Language Class Initialized
+INFO - 2016-08-18 16:12:40 --> Language Class Initialized
+INFO - 2016-08-18 16:12:40 --> Config Class Initialized
+INFO - 2016-08-18 16:12:40 --> Loader Class Initialized
+INFO - 2016-08-18 16:12:40 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:12:40 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:12:40 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:12:40 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:12:40 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:12:40 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:12:40 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:12:40 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:12:40 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:12:40 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:12:40 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:12:40 --> Initialize main hooks
+INFO - 2016-08-18 16:12:40 --> Model Class Initialized
+INFO - 2016-08-18 16:12:40 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:12:40 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:12:40 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:12:40 --> Model Class Initialized
+DEBUG - 2016-08-18 16:12:40 --> user has access
+DEBUG - 2016-08-18 16:12:40 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/header.php
+DEBUG - 2016-08-18 16:12:40 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_side.php
+DEBUG - 2016-08-18 16:12:40 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_top.php
+DEBUG - 2016-08-18 16:12:40 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/views/user/user.php
+DEBUG - 2016-08-18 16:12:40 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/footer.php
+INFO - 2016-08-18 16:12:40 --> Final output sent to browser
+DEBUG - 2016-08-18 16:12:40 --> Total execution time: 0.0368
+INFO - 2016-08-18 16:12:40 --> Config Class Initialized
+INFO - 2016-08-18 16:12:40 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:12:40 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:12:40 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:12:40 --> URI Class Initialized
+INFO - 2016-08-18 16:12:40 --> Router Class Initialized
+INFO - 2016-08-18 16:12:40 --> Output Class Initialized
+INFO - 2016-08-18 16:12:40 --> Security Class Initialized
+DEBUG - 2016-08-18 16:12:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:12:40 --> Input Class Initialized
+INFO - 2016-08-18 16:12:40 --> Language Class Initialized
+ERROR - 2016-08-18 16:12:40 --> 404 Page Not Found: /index
+INFO - 2016-08-18 16:12:41 --> Config Class Initialized
+INFO - 2016-08-18 16:12:41 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:12:41 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:12:41 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:12:41 --> URI Class Initialized
+DEBUG - 2016-08-18 16:12:41 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:12:41 --> Router Class Initialized
+INFO - 2016-08-18 16:12:41 --> Output Class Initialized
+INFO - 2016-08-18 16:12:41 --> Security Class Initialized
+DEBUG - 2016-08-18 16:12:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:12:41 --> Input Class Initialized
+INFO - 2016-08-18 16:12:41 --> Language Class Initialized
+INFO - 2016-08-18 16:12:41 --> Language Class Initialized
+INFO - 2016-08-18 16:12:41 --> Config Class Initialized
+INFO - 2016-08-18 16:12:41 --> Loader Class Initialized
+INFO - 2016-08-18 16:12:41 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:12:41 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:12:41 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:12:41 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:12:41 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:12:41 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:12:41 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:12:41 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:12:41 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:12:41 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:12:41 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:12:41 --> Initialize main hooks
+INFO - 2016-08-18 16:12:41 --> Model Class Initialized
+INFO - 2016-08-18 16:12:41 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:12:41 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:12:41 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:12:41 --> Model Class Initialized
+DEBUG - 2016-08-18 16:12:41 --> user has access
+INFO - 2016-08-18 16:12:41 --> Final output sent to browser
+DEBUG - 2016-08-18 16:12:41 --> Total execution time: 0.0217
+INFO - 2016-08-18 16:12:43 --> Config Class Initialized
+INFO - 2016-08-18 16:12:43 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:12:43 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:12:43 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:12:43 --> URI Class Initialized
+DEBUG - 2016-08-18 16:12:43 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:12:43 --> Router Class Initialized
+INFO - 2016-08-18 16:12:43 --> Output Class Initialized
+INFO - 2016-08-18 16:12:43 --> Security Class Initialized
+DEBUG - 2016-08-18 16:12:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:12:43 --> Input Class Initialized
+INFO - 2016-08-18 16:12:43 --> Language Class Initialized
+INFO - 2016-08-18 16:12:43 --> Language Class Initialized
+INFO - 2016-08-18 16:12:43 --> Config Class Initialized
+INFO - 2016-08-18 16:12:43 --> Loader Class Initialized
+INFO - 2016-08-18 16:12:43 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:12:43 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:12:43 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:12:43 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:12:43 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:12:43 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:12:43 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:12:43 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:12:43 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:12:43 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:12:43 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:12:43 --> Initialize main hooks
+INFO - 2016-08-18 16:12:43 --> Model Class Initialized
+INFO - 2016-08-18 16:12:43 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:12:43 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:12:43 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:12:43 --> Model Class Initialized
+DEBUG - 2016-08-18 16:12:43 --> user has access
+INFO - 2016-08-18 16:12:43 --> Final output sent to browser
+DEBUG - 2016-08-18 16:12:43 --> Total execution time: 0.0191
+INFO - 2016-08-18 16:13:06 --> Config Class Initialized
+INFO - 2016-08-18 16:13:06 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:13:06 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:13:06 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:13:06 --> URI Class Initialized
+DEBUG - 2016-08-18 16:13:06 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:13:06 --> Router Class Initialized
+INFO - 2016-08-18 16:13:06 --> Output Class Initialized
+INFO - 2016-08-18 16:13:06 --> Security Class Initialized
+DEBUG - 2016-08-18 16:13:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:13:06 --> Input Class Initialized
+INFO - 2016-08-18 16:13:06 --> Language Class Initialized
+INFO - 2016-08-18 16:13:06 --> Language Class Initialized
+INFO - 2016-08-18 16:13:06 --> Config Class Initialized
+INFO - 2016-08-18 16:13:06 --> Loader Class Initialized
+INFO - 2016-08-18 16:13:06 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:13:06 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:13:06 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:13:06 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:13:06 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:13:06 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:13:06 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:13:06 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:13:06 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:13:06 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:13:06 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:13:06 --> Initialize main hooks
+INFO - 2016-08-18 16:13:06 --> Model Class Initialized
+INFO - 2016-08-18 16:13:06 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:13:06 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:13:06 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:13:06 --> Model Class Initialized
+DEBUG - 2016-08-18 16:13:06 --> user has access
+INFO - 2016-08-18 16:13:06 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:13:06 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:13:06 --> Language file loaded: language/german/form_validation_lang.php
+INFO - 2016-08-18 16:13:06 --> Model Class Initialized
+INFO - 2016-08-18 16:13:06 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:13:06 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:13:06 --> Final output sent to browser
+DEBUG - 2016-08-18 16:13:06 --> Total execution time: 0.0271
+INFO - 2016-08-18 16:13:08 --> Config Class Initialized
+INFO - 2016-08-18 16:13:08 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:13:08 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:13:08 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:13:08 --> URI Class Initialized
+DEBUG - 2016-08-18 16:13:08 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:13:08 --> Router Class Initialized
+INFO - 2016-08-18 16:13:08 --> Output Class Initialized
+INFO - 2016-08-18 16:13:08 --> Security Class Initialized
+DEBUG - 2016-08-18 16:13:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:13:08 --> Input Class Initialized
+INFO - 2016-08-18 16:13:08 --> Language Class Initialized
+INFO - 2016-08-18 16:13:08 --> Language Class Initialized
+INFO - 2016-08-18 16:13:08 --> Config Class Initialized
+INFO - 2016-08-18 16:13:08 --> Loader Class Initialized
+INFO - 2016-08-18 16:13:08 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:13:08 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:13:08 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:13:08 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:13:08 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:13:08 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:13:08 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:13:08 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:13:08 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:13:08 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:13:08 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:13:08 --> Initialize main hooks
+INFO - 2016-08-18 16:13:08 --> Model Class Initialized
+INFO - 2016-08-18 16:13:08 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:13:08 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:13:08 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:13:08 --> Model Class Initialized
+DEBUG - 2016-08-18 16:13:08 --> user has access
+INFO - 2016-08-18 16:13:08 --> Final output sent to browser
+DEBUG - 2016-08-18 16:13:08 --> Total execution time: 0.0336
+INFO - 2016-08-18 16:14:18 --> Config Class Initialized
+INFO - 2016-08-18 16:14:18 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:14:18 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:14:18 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:14:18 --> URI Class Initialized
+DEBUG - 2016-08-18 16:14:18 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:14:18 --> Router Class Initialized
+INFO - 2016-08-18 16:14:18 --> Output Class Initialized
+INFO - 2016-08-18 16:14:18 --> Security Class Initialized
+DEBUG - 2016-08-18 16:14:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:14:18 --> Input Class Initialized
+INFO - 2016-08-18 16:14:18 --> Language Class Initialized
+INFO - 2016-08-18 16:14:18 --> Language Class Initialized
+INFO - 2016-08-18 16:14:18 --> Config Class Initialized
+INFO - 2016-08-18 16:14:18 --> Loader Class Initialized
+INFO - 2016-08-18 16:14:18 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:14:18 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:14:18 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:14:18 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:14:18 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:14:18 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:14:18 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:14:18 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:14:18 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:14:18 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:14:18 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:14:18 --> Initialize main hooks
+INFO - 2016-08-18 16:14:18 --> Model Class Initialized
+INFO - 2016-08-18 16:14:18 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:14:18 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:14:18 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:14:18 --> Model Class Initialized
+DEBUG - 2016-08-18 16:14:18 --> user has access
+DEBUG - 2016-08-18 16:14:18 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/header.php
+DEBUG - 2016-08-18 16:14:18 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_side.php
+DEBUG - 2016-08-18 16:14:18 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_top.php
+DEBUG - 2016-08-18 16:14:18 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/views/user/user.php
+DEBUG - 2016-08-18 16:14:18 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/footer.php
+INFO - 2016-08-18 16:14:18 --> Final output sent to browser
+DEBUG - 2016-08-18 16:14:18 --> Total execution time: 0.0129
+INFO - 2016-08-18 16:14:19 --> Config Class Initialized
+INFO - 2016-08-18 16:14:19 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:14:19 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:14:19 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:14:19 --> URI Class Initialized
+INFO - 2016-08-18 16:14:19 --> Router Class Initialized
+INFO - 2016-08-18 16:14:19 --> Output Class Initialized
+INFO - 2016-08-18 16:14:19 --> Security Class Initialized
+DEBUG - 2016-08-18 16:14:19 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:14:19 --> Input Class Initialized
+INFO - 2016-08-18 16:14:19 --> Language Class Initialized
+ERROR - 2016-08-18 16:14:19 --> 404 Page Not Found: /index
+INFO - 2016-08-18 16:14:51 --> Config Class Initialized
+INFO - 2016-08-18 16:14:51 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:14:51 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:14:51 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:14:51 --> URI Class Initialized
+DEBUG - 2016-08-18 16:14:51 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:14:51 --> Router Class Initialized
+INFO - 2016-08-18 16:14:51 --> Output Class Initialized
+INFO - 2016-08-18 16:14:51 --> Security Class Initialized
+DEBUG - 2016-08-18 16:14:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:14:51 --> Input Class Initialized
+INFO - 2016-08-18 16:14:51 --> Language Class Initialized
+INFO - 2016-08-18 16:14:51 --> Language Class Initialized
+INFO - 2016-08-18 16:14:51 --> Config Class Initialized
+INFO - 2016-08-18 16:14:51 --> Loader Class Initialized
+INFO - 2016-08-18 16:14:51 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:14:51 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:14:51 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:14:51 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:14:51 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:14:51 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:14:51 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:14:51 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:14:51 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:14:51 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:14:51 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:14:51 --> Initialize main hooks
+INFO - 2016-08-18 16:14:51 --> Model Class Initialized
+INFO - 2016-08-18 16:14:51 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:14:51 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:14:51 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:14:51 --> Model Class Initialized
+DEBUG - 2016-08-18 16:14:51 --> user has access
+DEBUG - 2016-08-18 16:14:51 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/header.php
+DEBUG - 2016-08-18 16:14:51 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_side.php
+DEBUG - 2016-08-18 16:14:51 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_top.php
+DEBUG - 2016-08-18 16:14:51 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/views/user/user.php
+DEBUG - 2016-08-18 16:14:51 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/footer.php
+INFO - 2016-08-18 16:14:51 --> Final output sent to browser
+DEBUG - 2016-08-18 16:14:51 --> Total execution time: 0.0252
+INFO - 2016-08-18 16:14:52 --> Config Class Initialized
+INFO - 2016-08-18 16:14:52 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:14:52 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:14:52 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:14:52 --> URI Class Initialized
+INFO - 2016-08-18 16:14:52 --> Router Class Initialized
+INFO - 2016-08-18 16:14:52 --> Output Class Initialized
+INFO - 2016-08-18 16:14:52 --> Security Class Initialized
+DEBUG - 2016-08-18 16:14:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:14:52 --> Input Class Initialized
+INFO - 2016-08-18 16:14:52 --> Language Class Initialized
+ERROR - 2016-08-18 16:14:52 --> 404 Page Not Found: /index
+INFO - 2016-08-18 16:15:11 --> Config Class Initialized
+INFO - 2016-08-18 16:15:11 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:15:11 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:15:11 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:15:11 --> URI Class Initialized
+DEBUG - 2016-08-18 16:15:11 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:15:11 --> Router Class Initialized
+INFO - 2016-08-18 16:15:11 --> Output Class Initialized
+INFO - 2016-08-18 16:15:11 --> Security Class Initialized
+DEBUG - 2016-08-18 16:15:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:15:11 --> Input Class Initialized
+INFO - 2016-08-18 16:15:11 --> Language Class Initialized
+INFO - 2016-08-18 16:15:11 --> Language Class Initialized
+INFO - 2016-08-18 16:15:11 --> Config Class Initialized
+INFO - 2016-08-18 16:15:11 --> Loader Class Initialized
+INFO - 2016-08-18 16:15:11 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:15:11 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:15:11 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:15:11 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:15:11 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:15:11 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:15:11 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:15:11 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:15:11 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:15:11 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:15:11 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:15:11 --> Initialize main hooks
+INFO - 2016-08-18 16:15:11 --> Model Class Initialized
+INFO - 2016-08-18 16:15:11 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:15:11 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:15:11 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:15:11 --> Model Class Initialized
+DEBUG - 2016-08-18 16:15:11 --> user has access
+DEBUG - 2016-08-18 16:15:11 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/header.php
+DEBUG - 2016-08-18 16:15:11 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_side.php
+DEBUG - 2016-08-18 16:15:11 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_top.php
+DEBUG - 2016-08-18 16:15:11 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/views/user/user.php
+DEBUG - 2016-08-18 16:15:11 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/footer.php
+INFO - 2016-08-18 16:15:11 --> Final output sent to browser
+DEBUG - 2016-08-18 16:15:11 --> Total execution time: 0.0080
+INFO - 2016-08-18 16:15:11 --> Config Class Initialized
+INFO - 2016-08-18 16:15:11 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:15:11 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:15:11 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:15:11 --> URI Class Initialized
+INFO - 2016-08-18 16:15:11 --> Router Class Initialized
+INFO - 2016-08-18 16:15:11 --> Output Class Initialized
+INFO - 2016-08-18 16:15:11 --> Security Class Initialized
+DEBUG - 2016-08-18 16:15:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:15:11 --> Input Class Initialized
+INFO - 2016-08-18 16:15:11 --> Language Class Initialized
+ERROR - 2016-08-18 16:15:11 --> 404 Page Not Found: /index
+INFO - 2016-08-18 16:15:11 --> Config Class Initialized
+INFO - 2016-08-18 16:15:11 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:15:11 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:15:11 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:15:11 --> URI Class Initialized
+DEBUG - 2016-08-18 16:15:11 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:15:11 --> Router Class Initialized
+INFO - 2016-08-18 16:15:11 --> Output Class Initialized
+INFO - 2016-08-18 16:15:11 --> Security Class Initialized
+DEBUG - 2016-08-18 16:15:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:15:11 --> Input Class Initialized
+INFO - 2016-08-18 16:15:11 --> Language Class Initialized
+INFO - 2016-08-18 16:15:11 --> Language Class Initialized
+INFO - 2016-08-18 16:15:11 --> Config Class Initialized
+INFO - 2016-08-18 16:15:11 --> Loader Class Initialized
+INFO - 2016-08-18 16:15:11 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:15:11 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:15:11 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:15:11 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:15:11 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:15:11 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:15:11 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:15:11 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:15:11 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:15:11 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:15:11 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:15:11 --> Initialize main hooks
+INFO - 2016-08-18 16:15:11 --> Model Class Initialized
+INFO - 2016-08-18 16:15:12 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:15:12 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:15:12 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:15:12 --> Model Class Initialized
+DEBUG - 2016-08-18 16:15:12 --> user has access
+INFO - 2016-08-18 16:15:12 --> Final output sent to browser
+DEBUG - 2016-08-18 16:15:12 --> Total execution time: 0.0189
+INFO - 2016-08-18 16:15:49 --> Config Class Initialized
+INFO - 2016-08-18 16:15:49 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:15:49 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:15:49 --> URI Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:15:49 --> Router Class Initialized
+INFO - 2016-08-18 16:15:49 --> Output Class Initialized
+INFO - 2016-08-18 16:15:49 --> Security Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:15:49 --> Input Class Initialized
+INFO - 2016-08-18 16:15:49 --> Language Class Initialized
+INFO - 2016-08-18 16:15:49 --> Language Class Initialized
+INFO - 2016-08-18 16:15:49 --> Config Class Initialized
+INFO - 2016-08-18 16:15:49 --> Loader Class Initialized
+INFO - 2016-08-18 16:15:49 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:15:49 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:15:49 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:15:49 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:15:49 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:15:49 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:15:49 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:15:49 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:15:49 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:15:49 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:15:49 --> Initialize main hooks
+INFO - 2016-08-18 16:15:49 --> Model Class Initialized
+INFO - 2016-08-18 16:15:49 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:15:49 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:15:49 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:15:49 --> Model Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> user has access
+DEBUG - 2016-08-18 16:15:49 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/header.php
+DEBUG - 2016-08-18 16:15:49 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_side.php
+DEBUG - 2016-08-18 16:15:49 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_top.php
+DEBUG - 2016-08-18 16:15:49 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/views/user/user.php
+DEBUG - 2016-08-18 16:15:49 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/footer.php
+INFO - 2016-08-18 16:15:49 --> Final output sent to browser
+DEBUG - 2016-08-18 16:15:49 --> Total execution time: 0.0213
+INFO - 2016-08-18 16:15:49 --> Config Class Initialized
+INFO - 2016-08-18 16:15:49 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:15:49 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:15:49 --> URI Class Initialized
+INFO - 2016-08-18 16:15:49 --> Router Class Initialized
+INFO - 2016-08-18 16:15:49 --> Output Class Initialized
+INFO - 2016-08-18 16:15:49 --> Security Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:15:49 --> Input Class Initialized
+INFO - 2016-08-18 16:15:49 --> Language Class Initialized
+ERROR - 2016-08-18 16:15:49 --> 404 Page Not Found: /index
+INFO - 2016-08-18 16:15:49 --> Config Class Initialized
+INFO - 2016-08-18 16:15:49 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:15:49 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:15:49 --> URI Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:15:49 --> Router Class Initialized
+INFO - 2016-08-18 16:15:49 --> Output Class Initialized
+INFO - 2016-08-18 16:15:49 --> Security Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:15:49 --> Input Class Initialized
+INFO - 2016-08-18 16:15:49 --> Language Class Initialized
+INFO - 2016-08-18 16:15:49 --> Language Class Initialized
+INFO - 2016-08-18 16:15:49 --> Config Class Initialized
+INFO - 2016-08-18 16:15:49 --> Loader Class Initialized
+INFO - 2016-08-18 16:15:49 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:15:49 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:15:49 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:15:49 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:15:49 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:15:49 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:15:49 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:15:49 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:15:49 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:15:49 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:15:49 --> Initialize main hooks
+INFO - 2016-08-18 16:15:49 --> Model Class Initialized
+INFO - 2016-08-18 16:15:49 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:15:49 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:15:49 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:15:49 --> Model Class Initialized
+DEBUG - 2016-08-18 16:15:49 --> user has access
+INFO - 2016-08-18 16:15:49 --> Final output sent to browser
+DEBUG - 2016-08-18 16:15:49 --> Total execution time: 0.0214
+INFO - 2016-08-18 16:15:52 --> Config Class Initialized
+INFO - 2016-08-18 16:15:52 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:15:52 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:15:52 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:15:52 --> URI Class Initialized
+DEBUG - 2016-08-18 16:15:52 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:15:52 --> Router Class Initialized
+INFO - 2016-08-18 16:15:52 --> Output Class Initialized
+INFO - 2016-08-18 16:15:52 --> Security Class Initialized
+DEBUG - 2016-08-18 16:15:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:15:52 --> Input Class Initialized
+INFO - 2016-08-18 16:15:52 --> Language Class Initialized
+INFO - 2016-08-18 16:15:52 --> Language Class Initialized
+INFO - 2016-08-18 16:15:52 --> Config Class Initialized
+INFO - 2016-08-18 16:15:52 --> Loader Class Initialized
+INFO - 2016-08-18 16:15:52 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:15:52 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:15:52 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:15:52 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:15:52 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:15:52 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:15:52 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:15:52 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:15:52 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:15:52 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:15:52 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:15:52 --> Initialize main hooks
+INFO - 2016-08-18 16:15:52 --> Model Class Initialized
+INFO - 2016-08-18 16:15:52 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:15:52 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:15:52 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:15:52 --> Model Class Initialized
+DEBUG - 2016-08-18 16:15:52 --> user has access
+INFO - 2016-08-18 16:15:52 --> Final output sent to browser
+DEBUG - 2016-08-18 16:15:52 --> Total execution time: 0.0152
+INFO - 2016-08-18 16:15:54 --> Config Class Initialized
+INFO - 2016-08-18 16:15:54 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:15:54 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:15:54 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:15:54 --> URI Class Initialized
+DEBUG - 2016-08-18 16:15:54 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:15:54 --> Router Class Initialized
+INFO - 2016-08-18 16:15:54 --> Output Class Initialized
+INFO - 2016-08-18 16:15:54 --> Security Class Initialized
+DEBUG - 2016-08-18 16:15:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:15:54 --> Input Class Initialized
+INFO - 2016-08-18 16:15:54 --> Language Class Initialized
+INFO - 2016-08-18 16:15:54 --> Language Class Initialized
+INFO - 2016-08-18 16:15:54 --> Config Class Initialized
+INFO - 2016-08-18 16:15:54 --> Loader Class Initialized
+INFO - 2016-08-18 16:15:54 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:15:54 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:15:54 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:15:54 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:15:54 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:15:54 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:15:54 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:15:54 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:15:54 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:15:54 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:15:54 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:15:54 --> Initialize main hooks
+INFO - 2016-08-18 16:15:54 --> Model Class Initialized
+INFO - 2016-08-18 16:15:54 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:15:54 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:15:54 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:15:54 --> Model Class Initialized
+DEBUG - 2016-08-18 16:15:54 --> user has access
+INFO - 2016-08-18 16:15:54 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:15:54 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:15:54 --> Language file loaded: language/german/form_validation_lang.php
+INFO - 2016-08-18 16:15:54 --> Final output sent to browser
+DEBUG - 2016-08-18 16:15:54 --> Total execution time: 0.0090
+INFO - 2016-08-18 16:16:01 --> Config Class Initialized
+INFO - 2016-08-18 16:16:01 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:16:01 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:16:01 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:16:01 --> URI Class Initialized
+DEBUG - 2016-08-18 16:16:01 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:16:01 --> Router Class Initialized
+INFO - 2016-08-18 16:16:01 --> Output Class Initialized
+INFO - 2016-08-18 16:16:01 --> Security Class Initialized
+DEBUG - 2016-08-18 16:16:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:16:01 --> Input Class Initialized
+INFO - 2016-08-18 16:16:01 --> Language Class Initialized
+INFO - 2016-08-18 16:16:01 --> Language Class Initialized
+INFO - 2016-08-18 16:16:01 --> Config Class Initialized
+INFO - 2016-08-18 16:16:01 --> Loader Class Initialized
+INFO - 2016-08-18 16:16:01 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:16:01 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:16:01 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:16:01 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:16:01 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:16:01 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:16:01 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:16:01 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:16:01 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:16:01 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:16:01 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:16:01 --> Initialize main hooks
+INFO - 2016-08-18 16:16:01 --> Model Class Initialized
+INFO - 2016-08-18 16:16:01 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:16:01 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:16:01 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:16:01 --> Model Class Initialized
+DEBUG - 2016-08-18 16:16:01 --> user has access
+INFO - 2016-08-18 16:16:01 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:16:01 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:16:01 --> Language file loaded: language/german/form_validation_lang.php
+INFO - 2016-08-18 16:16:01 --> Final output sent to browser
+DEBUG - 2016-08-18 16:16:01 --> Total execution time: 0.0081
+INFO - 2016-08-18 16:17:27 --> Config Class Initialized
+INFO - 2016-08-18 16:17:27 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:17:27 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:17:27 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:17:27 --> URI Class Initialized
+DEBUG - 2016-08-18 16:17:27 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:17:27 --> Router Class Initialized
+INFO - 2016-08-18 16:17:27 --> Output Class Initialized
+INFO - 2016-08-18 16:17:27 --> Security Class Initialized
+DEBUG - 2016-08-18 16:17:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:17:27 --> Input Class Initialized
+INFO - 2016-08-18 16:17:27 --> Language Class Initialized
+INFO - 2016-08-18 16:17:27 --> Language Class Initialized
+INFO - 2016-08-18 16:17:27 --> Config Class Initialized
+INFO - 2016-08-18 16:17:27 --> Loader Class Initialized
+INFO - 2016-08-18 16:17:27 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:17:27 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:17:27 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:17:27 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:17:27 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:17:27 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:17:27 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:17:27 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:17:27 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:17:27 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:17:27 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:17:27 --> Initialize main hooks
+INFO - 2016-08-18 16:17:27 --> Model Class Initialized
+INFO - 2016-08-18 16:17:27 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:17:27 --> Language file loaded: language/german/message_lang.php
+ERROR - 2016-08-18 16:17:27 --> Severity: Parsing Error --> syntax error, unexpected 'public' (T_PUBLIC) /usr/local/servcup/htdocs/application/modules/database/libraries/User.php 138
+INFO - 2016-08-18 16:17:32 --> Config Class Initialized
+INFO - 2016-08-18 16:17:32 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:17:32 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:17:32 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:17:32 --> URI Class Initialized
+DEBUG - 2016-08-18 16:17:32 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:17:32 --> Router Class Initialized
+INFO - 2016-08-18 16:17:32 --> Output Class Initialized
+INFO - 2016-08-18 16:17:32 --> Security Class Initialized
+DEBUG - 2016-08-18 16:17:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:17:32 --> Input Class Initialized
+INFO - 2016-08-18 16:17:32 --> Language Class Initialized
+INFO - 2016-08-18 16:17:32 --> Language Class Initialized
+INFO - 2016-08-18 16:17:32 --> Config Class Initialized
+INFO - 2016-08-18 16:17:32 --> Loader Class Initialized
+INFO - 2016-08-18 16:17:32 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:17:32 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:17:32 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:17:32 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:17:32 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:17:32 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:17:32 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:17:32 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:17:32 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:17:32 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:17:32 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:17:32 --> Initialize main hooks
+INFO - 2016-08-18 16:17:32 --> Model Class Initialized
+INFO - 2016-08-18 16:17:32 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:17:32 --> Language file loaded: language/german/message_lang.php
+ERROR - 2016-08-18 16:17:32 --> Severity: Parsing Error --> syntax error, unexpected ')' /usr/local/servcup/htdocs/application/modules/database/libraries/User.php 116
+INFO - 2016-08-18 16:17:37 --> Config Class Initialized
+INFO - 2016-08-18 16:17:37 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:17:37 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:17:37 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:17:37 --> URI Class Initialized
+DEBUG - 2016-08-18 16:17:37 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:17:37 --> Router Class Initialized
+INFO - 2016-08-18 16:17:37 --> Output Class Initialized
+INFO - 2016-08-18 16:17:37 --> Security Class Initialized
+DEBUG - 2016-08-18 16:17:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:17:37 --> Input Class Initialized
+INFO - 2016-08-18 16:17:37 --> Language Class Initialized
+INFO - 2016-08-18 16:17:37 --> Language Class Initialized
+INFO - 2016-08-18 16:17:37 --> Config Class Initialized
+INFO - 2016-08-18 16:17:37 --> Loader Class Initialized
+INFO - 2016-08-18 16:17:37 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:17:37 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:17:37 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:17:37 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:17:37 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:17:37 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:17:37 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:17:37 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:17:37 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:17:37 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:17:37 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:17:37 --> Initialize main hooks
+INFO - 2016-08-18 16:17:37 --> Model Class Initialized
+INFO - 2016-08-18 16:17:37 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:17:37 --> Language file loaded: language/german/message_lang.php
+ERROR - 2016-08-18 16:17:37 --> Severity: Parsing Error --> syntax error, unexpected 'public' (T_PUBLIC) /usr/local/servcup/htdocs/application/modules/database/libraries/User.php 138
+INFO - 2016-08-18 16:18:06 --> Config Class Initialized
+INFO - 2016-08-18 16:18:06 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:18:06 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:18:06 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:18:06 --> URI Class Initialized
+DEBUG - 2016-08-18 16:18:06 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:18:06 --> Router Class Initialized
+INFO - 2016-08-18 16:18:06 --> Output Class Initialized
+INFO - 2016-08-18 16:18:06 --> Security Class Initialized
+DEBUG - 2016-08-18 16:18:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:18:06 --> Input Class Initialized
+INFO - 2016-08-18 16:18:06 --> Language Class Initialized
+INFO - 2016-08-18 16:18:06 --> Language Class Initialized
+INFO - 2016-08-18 16:18:06 --> Config Class Initialized
+INFO - 2016-08-18 16:18:06 --> Loader Class Initialized
+INFO - 2016-08-18 16:18:06 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:18:06 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:18:06 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:18:06 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:18:06 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:18:06 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:18:06 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:18:06 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:18:06 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:18:06 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:18:06 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:18:06 --> Initialize main hooks
+INFO - 2016-08-18 16:18:06 --> Model Class Initialized
+INFO - 2016-08-18 16:18:06 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:18:06 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:18:06 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:18:06 --> Model Class Initialized
+DEBUG - 2016-08-18 16:18:06 --> user has access
+DEBUG - 2016-08-18 16:18:06 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/header.php
+DEBUG - 2016-08-18 16:18:06 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_side.php
+DEBUG - 2016-08-18 16:18:06 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_top.php
+DEBUG - 2016-08-18 16:18:06 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/views/user/user.php
+DEBUG - 2016-08-18 16:18:06 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/footer.php
+INFO - 2016-08-18 16:18:06 --> Final output sent to browser
+DEBUG - 2016-08-18 16:18:06 --> Total execution time: 0.0167
+INFO - 2016-08-18 16:18:07 --> Config Class Initialized
+INFO - 2016-08-18 16:18:07 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:18:07 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:18:07 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:18:07 --> URI Class Initialized
+INFO - 2016-08-18 16:18:07 --> Router Class Initialized
+INFO - 2016-08-18 16:18:07 --> Output Class Initialized
+INFO - 2016-08-18 16:18:07 --> Security Class Initialized
+DEBUG - 2016-08-18 16:18:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:18:07 --> Input Class Initialized
+INFO - 2016-08-18 16:18:07 --> Language Class Initialized
+ERROR - 2016-08-18 16:18:07 --> 404 Page Not Found: /index
+INFO - 2016-08-18 16:18:07 --> Config Class Initialized
+INFO - 2016-08-18 16:18:07 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:18:07 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:18:07 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:18:07 --> URI Class Initialized
+DEBUG - 2016-08-18 16:18:07 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:18:07 --> Router Class Initialized
+INFO - 2016-08-18 16:18:07 --> Output Class Initialized
+INFO - 2016-08-18 16:18:07 --> Security Class Initialized
+DEBUG - 2016-08-18 16:18:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:18:07 --> Input Class Initialized
+INFO - 2016-08-18 16:18:07 --> Language Class Initialized
+INFO - 2016-08-18 16:18:07 --> Language Class Initialized
+INFO - 2016-08-18 16:18:07 --> Config Class Initialized
+INFO - 2016-08-18 16:18:07 --> Loader Class Initialized
+INFO - 2016-08-18 16:18:07 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:18:07 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:18:07 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:18:07 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:18:07 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:18:07 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:18:07 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:18:07 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:18:07 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:18:07 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:18:07 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:18:07 --> Initialize main hooks
+INFO - 2016-08-18 16:18:07 --> Model Class Initialized
+INFO - 2016-08-18 16:18:07 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:18:07 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:18:07 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:18:07 --> Model Class Initialized
+DEBUG - 2016-08-18 16:18:07 --> user has access
+INFO - 2016-08-18 16:18:07 --> Final output sent to browser
+DEBUG - 2016-08-18 16:18:07 --> Total execution time: 0.0126
+INFO - 2016-08-18 16:18:09 --> Config Class Initialized
+INFO - 2016-08-18 16:18:09 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:18:09 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:18:09 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:18:09 --> URI Class Initialized
+DEBUG - 2016-08-18 16:18:09 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:18:09 --> Router Class Initialized
+INFO - 2016-08-18 16:18:09 --> Output Class Initialized
+INFO - 2016-08-18 16:18:09 --> Security Class Initialized
+DEBUG - 2016-08-18 16:18:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:18:09 --> Input Class Initialized
+INFO - 2016-08-18 16:18:09 --> Language Class Initialized
+INFO - 2016-08-18 16:18:09 --> Language Class Initialized
+INFO - 2016-08-18 16:18:09 --> Config Class Initialized
+INFO - 2016-08-18 16:18:09 --> Loader Class Initialized
+INFO - 2016-08-18 16:18:09 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:18:09 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:18:09 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:18:09 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:18:09 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:18:09 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:18:09 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:18:09 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:18:09 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:18:09 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:18:09 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:18:09 --> Initialize main hooks
+INFO - 2016-08-18 16:18:09 --> Model Class Initialized
+INFO - 2016-08-18 16:18:09 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:18:09 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:18:09 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:18:09 --> Model Class Initialized
+DEBUG - 2016-08-18 16:18:09 --> user has access
+INFO - 2016-08-18 16:18:09 --> Final output sent to browser
+DEBUG - 2016-08-18 16:18:09 --> Total execution time: 0.0141
+INFO - 2016-08-18 16:18:12 --> Config Class Initialized
+INFO - 2016-08-18 16:18:12 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:18:12 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:18:12 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:18:12 --> URI Class Initialized
+DEBUG - 2016-08-18 16:18:12 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:18:12 --> Router Class Initialized
+INFO - 2016-08-18 16:18:12 --> Output Class Initialized
+INFO - 2016-08-18 16:18:12 --> Security Class Initialized
+DEBUG - 2016-08-18 16:18:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:18:12 --> Input Class Initialized
+INFO - 2016-08-18 16:18:12 --> Language Class Initialized
+INFO - 2016-08-18 16:18:12 --> Language Class Initialized
+INFO - 2016-08-18 16:18:12 --> Config Class Initialized
+INFO - 2016-08-18 16:18:12 --> Loader Class Initialized
+INFO - 2016-08-18 16:18:12 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:18:12 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:18:12 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:18:12 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:18:12 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:18:12 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:18:12 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:18:12 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:18:12 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:18:12 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:18:12 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:18:12 --> Initialize main hooks
+INFO - 2016-08-18 16:18:12 --> Model Class Initialized
+INFO - 2016-08-18 16:18:12 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:18:12 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:18:12 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:18:12 --> Model Class Initialized
+DEBUG - 2016-08-18 16:18:12 --> user has access
+INFO - 2016-08-18 16:18:12 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:18:12 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:18:12 --> Final output sent to browser
+DEBUG - 2016-08-18 16:18:12 --> Total execution time: 0.0123
+INFO - 2016-08-18 16:18:20 --> Config Class Initialized
+INFO - 2016-08-18 16:18:20 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:18:20 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:18:20 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:18:20 --> URI Class Initialized
+DEBUG - 2016-08-18 16:18:20 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:18:20 --> Router Class Initialized
+INFO - 2016-08-18 16:18:20 --> Output Class Initialized
+INFO - 2016-08-18 16:18:20 --> Security Class Initialized
+DEBUG - 2016-08-18 16:18:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:18:20 --> Input Class Initialized
+INFO - 2016-08-18 16:18:20 --> Language Class Initialized
+INFO - 2016-08-18 16:18:20 --> Language Class Initialized
+INFO - 2016-08-18 16:18:20 --> Config Class Initialized
+INFO - 2016-08-18 16:18:20 --> Loader Class Initialized
+INFO - 2016-08-18 16:18:20 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:18:20 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:18:20 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:18:20 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:18:20 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:18:20 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:18:20 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:18:20 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:18:20 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:18:20 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:18:20 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:18:20 --> Initialize main hooks
+INFO - 2016-08-18 16:18:20 --> Model Class Initialized
+INFO - 2016-08-18 16:18:20 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:18:20 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:18:20 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:18:20 --> Model Class Initialized
+DEBUG - 2016-08-18 16:18:20 --> user has access
+INFO - 2016-08-18 16:18:20 --> Final output sent to browser
+DEBUG - 2016-08-18 16:18:20 --> Total execution time: 0.0108
+INFO - 2016-08-18 16:18:21 --> Config Class Initialized
+INFO - 2016-08-18 16:18:21 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:18:21 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:18:21 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:18:21 --> URI Class Initialized
+DEBUG - 2016-08-18 16:18:21 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:18:21 --> Router Class Initialized
+INFO - 2016-08-18 16:18:21 --> Output Class Initialized
+INFO - 2016-08-18 16:18:21 --> Security Class Initialized
+DEBUG - 2016-08-18 16:18:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:18:21 --> Input Class Initialized
+INFO - 2016-08-18 16:18:21 --> Language Class Initialized
+INFO - 2016-08-18 16:18:21 --> Language Class Initialized
+INFO - 2016-08-18 16:18:21 --> Config Class Initialized
+INFO - 2016-08-18 16:18:21 --> Loader Class Initialized
+INFO - 2016-08-18 16:18:21 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:18:21 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:18:21 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:18:21 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:18:21 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:18:21 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:18:21 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:18:21 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:18:21 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:18:21 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:18:21 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:18:21 --> Initialize main hooks
+INFO - 2016-08-18 16:18:21 --> Model Class Initialized
+INFO - 2016-08-18 16:18:21 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:18:21 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:18:21 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:18:21 --> Model Class Initialized
+DEBUG - 2016-08-18 16:18:21 --> user has access
+INFO - 2016-08-18 16:18:21 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:18:21 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:18:21 --> Final output sent to browser
+DEBUG - 2016-08-18 16:18:21 --> Total execution time: 0.0217
+INFO - 2016-08-18 16:19:35 --> Config Class Initialized
+INFO - 2016-08-18 16:19:35 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:19:35 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:19:35 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:19:35 --> URI Class Initialized
+DEBUG - 2016-08-18 16:19:35 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:19:35 --> Router Class Initialized
+INFO - 2016-08-18 16:19:35 --> Output Class Initialized
+INFO - 2016-08-18 16:19:35 --> Security Class Initialized
+DEBUG - 2016-08-18 16:19:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:19:35 --> Input Class Initialized
+INFO - 2016-08-18 16:19:35 --> Language Class Initialized
+INFO - 2016-08-18 16:19:35 --> Language Class Initialized
+INFO - 2016-08-18 16:19:35 --> Config Class Initialized
+INFO - 2016-08-18 16:19:35 --> Loader Class Initialized
+INFO - 2016-08-18 16:19:35 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:19:35 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:19:35 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:19:35 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:19:35 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:19:35 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:19:35 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:35 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:19:35 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:19:35 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:19:35 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:19:35 --> Initialize main hooks
+INFO - 2016-08-18 16:19:35 --> Model Class Initialized
+INFO - 2016-08-18 16:19:35 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:19:35 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:19:35 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:19:35 --> Model Class Initialized
+DEBUG - 2016-08-18 16:19:35 --> user has access
+INFO - 2016-08-18 16:19:35 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:19:35 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:19:35 --> Model Class Initialized
+INFO - 2016-08-18 16:19:35 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:35 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:35 --> Final output sent to browser
+DEBUG - 2016-08-18 16:19:35 --> Total execution time: 0.0235
+INFO - 2016-08-18 16:19:37 --> Config Class Initialized
+INFO - 2016-08-18 16:19:37 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:19:37 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:19:37 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:19:37 --> URI Class Initialized
+DEBUG - 2016-08-18 16:19:37 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:19:37 --> Router Class Initialized
+INFO - 2016-08-18 16:19:37 --> Output Class Initialized
+INFO - 2016-08-18 16:19:37 --> Security Class Initialized
+DEBUG - 2016-08-18 16:19:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:19:37 --> Input Class Initialized
+INFO - 2016-08-18 16:19:37 --> Language Class Initialized
+INFO - 2016-08-18 16:19:37 --> Language Class Initialized
+INFO - 2016-08-18 16:19:37 --> Config Class Initialized
+INFO - 2016-08-18 16:19:37 --> Loader Class Initialized
+INFO - 2016-08-18 16:19:37 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:19:37 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:19:37 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:19:37 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:19:37 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:19:37 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:19:37 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:37 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:19:37 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:19:37 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:19:37 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:19:37 --> Initialize main hooks
+INFO - 2016-08-18 16:19:37 --> Model Class Initialized
+INFO - 2016-08-18 16:19:37 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:19:37 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:19:37 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:19:37 --> Model Class Initialized
+DEBUG - 2016-08-18 16:19:37 --> user has access
+INFO - 2016-08-18 16:19:37 --> Final output sent to browser
+DEBUG - 2016-08-18 16:19:37 --> Total execution time: 0.0252
+INFO - 2016-08-18 16:19:40 --> Config Class Initialized
+INFO - 2016-08-18 16:19:40 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:19:40 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:19:40 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:19:40 --> URI Class Initialized
+DEBUG - 2016-08-18 16:19:40 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:19:40 --> Router Class Initialized
+INFO - 2016-08-18 16:19:40 --> Output Class Initialized
+INFO - 2016-08-18 16:19:40 --> Security Class Initialized
+DEBUG - 2016-08-18 16:19:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:19:40 --> Input Class Initialized
+INFO - 2016-08-18 16:19:40 --> Language Class Initialized
+INFO - 2016-08-18 16:19:40 --> Language Class Initialized
+INFO - 2016-08-18 16:19:40 --> Config Class Initialized
+INFO - 2016-08-18 16:19:40 --> Loader Class Initialized
+INFO - 2016-08-18 16:19:40 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:19:40 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:19:40 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:19:40 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:19:40 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:19:40 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:19:40 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:40 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:19:40 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:19:40 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:19:40 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:19:40 --> Initialize main hooks
+INFO - 2016-08-18 16:19:40 --> Model Class Initialized
+INFO - 2016-08-18 16:19:40 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:19:40 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:19:40 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:19:40 --> Model Class Initialized
+DEBUG - 2016-08-18 16:19:40 --> user has access
+INFO - 2016-08-18 16:19:40 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:19:40 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:19:40 --> Model Class Initialized
+INFO - 2016-08-18 16:19:40 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:40 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:40 --> Final output sent to browser
+DEBUG - 2016-08-18 16:19:40 --> Total execution time: 0.0228
+INFO - 2016-08-18 16:19:41 --> Config Class Initialized
+INFO - 2016-08-18 16:19:41 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:19:41 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:19:41 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:19:41 --> URI Class Initialized
+DEBUG - 2016-08-18 16:19:41 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:19:41 --> Router Class Initialized
+INFO - 2016-08-18 16:19:41 --> Output Class Initialized
+INFO - 2016-08-18 16:19:41 --> Security Class Initialized
+DEBUG - 2016-08-18 16:19:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:19:41 --> Input Class Initialized
+INFO - 2016-08-18 16:19:41 --> Language Class Initialized
+INFO - 2016-08-18 16:19:41 --> Language Class Initialized
+INFO - 2016-08-18 16:19:41 --> Config Class Initialized
+INFO - 2016-08-18 16:19:41 --> Loader Class Initialized
+INFO - 2016-08-18 16:19:41 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:19:41 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:19:41 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:19:41 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:19:41 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:19:41 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:19:41 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:41 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:19:41 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:19:41 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:19:41 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:19:41 --> Initialize main hooks
+INFO - 2016-08-18 16:19:41 --> Model Class Initialized
+INFO - 2016-08-18 16:19:41 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:19:41 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:19:41 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:19:41 --> Model Class Initialized
+DEBUG - 2016-08-18 16:19:41 --> user has access
+INFO - 2016-08-18 16:19:41 --> Final output sent to browser
+DEBUG - 2016-08-18 16:19:41 --> Total execution time: 0.0199
+INFO - 2016-08-18 16:19:44 --> Config Class Initialized
+INFO - 2016-08-18 16:19:44 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:19:44 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:19:44 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:19:44 --> URI Class Initialized
+DEBUG - 2016-08-18 16:19:44 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:19:44 --> Router Class Initialized
+INFO - 2016-08-18 16:19:44 --> Output Class Initialized
+INFO - 2016-08-18 16:19:44 --> Security Class Initialized
+DEBUG - 2016-08-18 16:19:44 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:19:44 --> Input Class Initialized
+INFO - 2016-08-18 16:19:44 --> Language Class Initialized
+INFO - 2016-08-18 16:19:44 --> Language Class Initialized
+INFO - 2016-08-18 16:19:44 --> Config Class Initialized
+INFO - 2016-08-18 16:19:44 --> Loader Class Initialized
+INFO - 2016-08-18 16:19:44 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:19:44 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:19:44 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:19:44 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:19:44 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:19:44 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:19:44 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:44 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:19:44 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:19:44 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:19:44 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:19:44 --> Initialize main hooks
+INFO - 2016-08-18 16:19:44 --> Model Class Initialized
+INFO - 2016-08-18 16:19:44 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:19:44 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:19:44 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:19:44 --> Model Class Initialized
+DEBUG - 2016-08-18 16:19:44 --> user has access
+INFO - 2016-08-18 16:19:44 --> Final output sent to browser
+DEBUG - 2016-08-18 16:19:44 --> Total execution time: 0.0199
+INFO - 2016-08-18 16:19:45 --> Config Class Initialized
+INFO - 2016-08-18 16:19:45 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:19:45 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:19:45 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:19:45 --> URI Class Initialized
+DEBUG - 2016-08-18 16:19:45 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:19:45 --> Router Class Initialized
+INFO - 2016-08-18 16:19:45 --> Output Class Initialized
+INFO - 2016-08-18 16:19:45 --> Security Class Initialized
+DEBUG - 2016-08-18 16:19:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:19:45 --> Input Class Initialized
+INFO - 2016-08-18 16:19:45 --> Language Class Initialized
+INFO - 2016-08-18 16:19:45 --> Language Class Initialized
+INFO - 2016-08-18 16:19:45 --> Config Class Initialized
+INFO - 2016-08-18 16:19:45 --> Loader Class Initialized
+INFO - 2016-08-18 16:19:45 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:19:45 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:19:45 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:19:45 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:19:45 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:19:45 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:19:45 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:45 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:19:45 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:19:45 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:19:45 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:19:45 --> Initialize main hooks
+INFO - 2016-08-18 16:19:45 --> Model Class Initialized
+INFO - 2016-08-18 16:19:45 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:19:45 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:19:45 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:19:45 --> Model Class Initialized
+DEBUG - 2016-08-18 16:19:45 --> user has access
+INFO - 2016-08-18 16:19:45 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:19:45 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:19:45 --> Model Class Initialized
+INFO - 2016-08-18 16:19:45 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:45 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:45 --> Final output sent to browser
+DEBUG - 2016-08-18 16:19:45 --> Total execution time: 0.0248
+INFO - 2016-08-18 16:19:47 --> Config Class Initialized
+INFO - 2016-08-18 16:19:47 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:19:47 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:19:47 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:19:47 --> URI Class Initialized
+DEBUG - 2016-08-18 16:19:47 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:19:47 --> Router Class Initialized
+INFO - 2016-08-18 16:19:47 --> Output Class Initialized
+INFO - 2016-08-18 16:19:47 --> Security Class Initialized
+DEBUG - 2016-08-18 16:19:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:19:47 --> Input Class Initialized
+INFO - 2016-08-18 16:19:47 --> Language Class Initialized
+INFO - 2016-08-18 16:19:47 --> Language Class Initialized
+INFO - 2016-08-18 16:19:47 --> Config Class Initialized
+INFO - 2016-08-18 16:19:47 --> Loader Class Initialized
+INFO - 2016-08-18 16:19:47 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:19:47 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:19:47 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:19:47 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:19:47 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:19:47 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:19:47 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:19:47 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:19:47 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:19:47 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:19:47 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:19:47 --> Initialize main hooks
+INFO - 2016-08-18 16:19:47 --> Model Class Initialized
+INFO - 2016-08-18 16:19:47 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:19:47 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:19:47 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:19:47 --> Model Class Initialized
+DEBUG - 2016-08-18 16:19:47 --> user has access
+INFO - 2016-08-18 16:19:47 --> Final output sent to browser
+DEBUG - 2016-08-18 16:19:47 --> Total execution time: 0.0158
+INFO - 2016-08-18 16:20:06 --> Config Class Initialized
+INFO - 2016-08-18 16:20:06 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:20:06 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:20:06 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:20:06 --> URI Class Initialized
+DEBUG - 2016-08-18 16:20:06 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:20:06 --> Router Class Initialized
+INFO - 2016-08-18 16:20:06 --> Output Class Initialized
+INFO - 2016-08-18 16:20:06 --> Security Class Initialized
+DEBUG - 2016-08-18 16:20:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:20:06 --> Input Class Initialized
+INFO - 2016-08-18 16:20:06 --> Language Class Initialized
+INFO - 2016-08-18 16:20:06 --> Language Class Initialized
+INFO - 2016-08-18 16:20:06 --> Config Class Initialized
+INFO - 2016-08-18 16:20:06 --> Loader Class Initialized
+INFO - 2016-08-18 16:20:06 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:20:06 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:20:06 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:20:06 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:20:06 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:20:06 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:20:06 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:20:06 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:20:06 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:20:06 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:20:06 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:20:06 --> Initialize main hooks
+INFO - 2016-08-18 16:20:06 --> Model Class Initialized
+INFO - 2016-08-18 16:20:06 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:20:06 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:20:06 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:20:06 --> Model Class Initialized
+DEBUG - 2016-08-18 16:20:06 --> user has access
+INFO - 2016-08-18 16:20:06 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:20:06 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:20:06 --> Language file loaded: language/german/form_validation_lang.php
+INFO - 2016-08-18 16:20:06 --> Model Class Initialized
+INFO - 2016-08-18 16:20:06 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:20:06 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:20:06 --> Final output sent to browser
+DEBUG - 2016-08-18 16:20:06 --> Total execution time: 0.0292
+INFO - 2016-08-18 16:20:08 --> Config Class Initialized
+INFO - 2016-08-18 16:20:08 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:20:08 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:20:08 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:20:08 --> URI Class Initialized
+DEBUG - 2016-08-18 16:20:08 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:20:08 --> Router Class Initialized
+INFO - 2016-08-18 16:20:08 --> Output Class Initialized
+INFO - 2016-08-18 16:20:08 --> Security Class Initialized
+DEBUG - 2016-08-18 16:20:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:20:08 --> Input Class Initialized
+INFO - 2016-08-18 16:20:08 --> Language Class Initialized
+INFO - 2016-08-18 16:20:08 --> Language Class Initialized
+INFO - 2016-08-18 16:20:08 --> Config Class Initialized
+INFO - 2016-08-18 16:20:08 --> Loader Class Initialized
+INFO - 2016-08-18 16:20:08 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:20:08 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:20:08 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:20:08 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:20:08 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:20:08 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:20:08 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:20:08 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:20:08 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:20:08 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:20:08 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:20:08 --> Initialize main hooks
+INFO - 2016-08-18 16:20:08 --> Model Class Initialized
+INFO - 2016-08-18 16:20:08 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:20:08 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:20:08 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:20:08 --> Model Class Initialized
+DEBUG - 2016-08-18 16:20:08 --> user has access
+INFO - 2016-08-18 16:20:08 --> Final output sent to browser
+DEBUG - 2016-08-18 16:20:08 --> Total execution time: 0.0161
+INFO - 2016-08-18 16:20:13 --> Config Class Initialized
+INFO - 2016-08-18 16:20:13 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:20:13 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:20:13 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:20:13 --> URI Class Initialized
+DEBUG - 2016-08-18 16:20:13 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:20:13 --> Router Class Initialized
+INFO - 2016-08-18 16:20:13 --> Output Class Initialized
+INFO - 2016-08-18 16:20:13 --> Security Class Initialized
+DEBUG - 2016-08-18 16:20:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:20:13 --> Input Class Initialized
+INFO - 2016-08-18 16:20:13 --> Language Class Initialized
+INFO - 2016-08-18 16:20:13 --> Language Class Initialized
+INFO - 2016-08-18 16:20:13 --> Config Class Initialized
+INFO - 2016-08-18 16:20:13 --> Loader Class Initialized
+INFO - 2016-08-18 16:20:13 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:20:13 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:20:13 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:20:13 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:20:13 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:20:13 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:20:13 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:20:13 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:20:13 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:20:13 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:20:13 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:20:13 --> Initialize main hooks
+INFO - 2016-08-18 16:20:13 --> Model Class Initialized
+INFO - 2016-08-18 16:20:13 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:20:13 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:20:13 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:20:13 --> Model Class Initialized
+DEBUG - 2016-08-18 16:20:13 --> user has access
+INFO - 2016-08-18 16:20:13 --> Final output sent to browser
+DEBUG - 2016-08-18 16:20:13 --> Total execution time: 0.0166
+INFO - 2016-08-18 16:20:16 --> Config Class Initialized
+INFO - 2016-08-18 16:20:16 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:20:16 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:20:16 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:20:16 --> URI Class Initialized
+DEBUG - 2016-08-18 16:20:16 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:20:16 --> Router Class Initialized
+INFO - 2016-08-18 16:20:16 --> Output Class Initialized
+INFO - 2016-08-18 16:20:16 --> Security Class Initialized
+DEBUG - 2016-08-18 16:20:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:20:16 --> Input Class Initialized
+INFO - 2016-08-18 16:20:16 --> Language Class Initialized
+INFO - 2016-08-18 16:20:16 --> Language Class Initialized
+INFO - 2016-08-18 16:20:16 --> Config Class Initialized
+INFO - 2016-08-18 16:20:16 --> Loader Class Initialized
+INFO - 2016-08-18 16:20:16 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:20:16 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:20:16 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:20:16 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:20:16 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:20:16 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:20:16 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:20:16 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:20:16 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:20:16 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:20:16 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:20:16 --> Initialize main hooks
+INFO - 2016-08-18 16:20:16 --> Model Class Initialized
+INFO - 2016-08-18 16:20:16 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:20:16 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:20:16 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:20:16 --> Model Class Initialized
+DEBUG - 2016-08-18 16:20:16 --> user has access
+INFO - 2016-08-18 16:20:16 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:20:16 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:20:16 --> Model Class Initialized
+INFO - 2016-08-18 16:20:16 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:20:16 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:20:16 --> Final output sent to browser
+DEBUG - 2016-08-18 16:20:16 --> Total execution time: 0.0376
+INFO - 2016-08-18 16:20:17 --> Config Class Initialized
+INFO - 2016-08-18 16:20:17 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:20:17 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:20:17 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:20:17 --> URI Class Initialized
+DEBUG - 2016-08-18 16:20:17 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:20:17 --> Router Class Initialized
+INFO - 2016-08-18 16:20:17 --> Output Class Initialized
+INFO - 2016-08-18 16:20:17 --> Security Class Initialized
+DEBUG - 2016-08-18 16:20:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:20:17 --> Input Class Initialized
+INFO - 2016-08-18 16:20:17 --> Language Class Initialized
+INFO - 2016-08-18 16:20:17 --> Language Class Initialized
+INFO - 2016-08-18 16:20:17 --> Config Class Initialized
+INFO - 2016-08-18 16:20:17 --> Loader Class Initialized
+INFO - 2016-08-18 16:20:17 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:20:17 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:20:17 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:20:17 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:20:17 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:20:17 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:20:17 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:20:17 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:20:17 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:20:17 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:20:17 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:20:17 --> Initialize main hooks
+INFO - 2016-08-18 16:20:17 --> Model Class Initialized
+INFO - 2016-08-18 16:20:17 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:20:17 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:20:17 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:20:17 --> Model Class Initialized
+DEBUG - 2016-08-18 16:20:17 --> user has access
+INFO - 2016-08-18 16:20:17 --> Final output sent to browser
+DEBUG - 2016-08-18 16:20:17 --> Total execution time: 0.0121
+INFO - 2016-08-18 16:20:18 --> Config Class Initialized
+INFO - 2016-08-18 16:20:18 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:20:18 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:20:18 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:20:18 --> URI Class Initialized
+DEBUG - 2016-08-18 16:20:18 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:20:18 --> Router Class Initialized
+INFO - 2016-08-18 16:20:18 --> Output Class Initialized
+INFO - 2016-08-18 16:20:18 --> Security Class Initialized
+DEBUG - 2016-08-18 16:20:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:20:18 --> Input Class Initialized
+INFO - 2016-08-18 16:20:18 --> Language Class Initialized
+INFO - 2016-08-18 16:20:18 --> Language Class Initialized
+INFO - 2016-08-18 16:20:18 --> Config Class Initialized
+INFO - 2016-08-18 16:20:18 --> Loader Class Initialized
+INFO - 2016-08-18 16:20:18 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:20:18 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:20:18 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:20:18 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:20:18 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:20:18 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:20:18 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:20:18 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:20:18 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:20:18 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:20:18 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:20:18 --> Initialize main hooks
+INFO - 2016-08-18 16:20:18 --> Model Class Initialized
+INFO - 2016-08-18 16:20:18 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:20:18 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:20:18 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:20:18 --> Model Class Initialized
+DEBUG - 2016-08-18 16:20:18 --> user has access
+INFO - 2016-08-18 16:20:18 --> Final output sent to browser
+DEBUG - 2016-08-18 16:20:18 --> Total execution time: 0.0166
+INFO - 2016-08-18 16:21:52 --> Config Class Initialized
+INFO - 2016-08-18 16:21:52 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:21:52 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:21:52 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:21:52 --> URI Class Initialized
+DEBUG - 2016-08-18 16:21:52 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:21:52 --> Router Class Initialized
+INFO - 2016-08-18 16:21:52 --> Output Class Initialized
+INFO - 2016-08-18 16:21:52 --> Security Class Initialized
+DEBUG - 2016-08-18 16:21:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:21:52 --> Input Class Initialized
+INFO - 2016-08-18 16:21:52 --> Language Class Initialized
+INFO - 2016-08-18 16:21:52 --> Language Class Initialized
+INFO - 2016-08-18 16:21:52 --> Config Class Initialized
+INFO - 2016-08-18 16:21:52 --> Loader Class Initialized
+INFO - 2016-08-18 16:21:52 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:21:52 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:21:52 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:21:52 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:21:52 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:21:52 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:21:52 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:21:52 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:21:52 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:21:52 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:21:52 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:21:52 --> Initialize main hooks
+INFO - 2016-08-18 16:21:52 --> Model Class Initialized
+INFO - 2016-08-18 16:21:52 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:21:52 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:21:52 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:21:52 --> Model Class Initialized
+DEBUG - 2016-08-18 16:21:52 --> user has access
+DEBUG - 2016-08-18 16:21:52 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/header.php
+DEBUG - 2016-08-18 16:21:52 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_side.php
+DEBUG - 2016-08-18 16:21:52 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_top.php
+DEBUG - 2016-08-18 16:21:52 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/views/user/user.php
+DEBUG - 2016-08-18 16:21:52 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/footer.php
+INFO - 2016-08-18 16:21:52 --> Final output sent to browser
+DEBUG - 2016-08-18 16:21:52 --> Total execution time: 0.0093
+INFO - 2016-08-18 16:21:52 --> Config Class Initialized
+INFO - 2016-08-18 16:21:52 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:21:52 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:21:52 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:21:52 --> URI Class Initialized
+INFO - 2016-08-18 16:21:52 --> Router Class Initialized
+INFO - 2016-08-18 16:21:52 --> Output Class Initialized
+INFO - 2016-08-18 16:21:52 --> Security Class Initialized
+DEBUG - 2016-08-18 16:21:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:21:52 --> Input Class Initialized
+INFO - 2016-08-18 16:21:52 --> Language Class Initialized
+ERROR - 2016-08-18 16:21:52 --> 404 Page Not Found: /index
+INFO - 2016-08-18 16:21:53 --> Config Class Initialized
+INFO - 2016-08-18 16:21:53 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:21:53 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:21:53 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:21:53 --> URI Class Initialized
+DEBUG - 2016-08-18 16:21:53 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:21:53 --> Router Class Initialized
+INFO - 2016-08-18 16:21:53 --> Output Class Initialized
+INFO - 2016-08-18 16:21:53 --> Security Class Initialized
+DEBUG - 2016-08-18 16:21:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:21:53 --> Input Class Initialized
+INFO - 2016-08-18 16:21:53 --> Language Class Initialized
+INFO - 2016-08-18 16:21:53 --> Language Class Initialized
+INFO - 2016-08-18 16:21:53 --> Config Class Initialized
+INFO - 2016-08-18 16:21:53 --> Loader Class Initialized
+INFO - 2016-08-18 16:21:53 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:21:53 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:21:53 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:21:53 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:21:53 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:21:53 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:21:53 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:21:53 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:21:53 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:21:53 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:21:53 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:21:53 --> Initialize main hooks
+INFO - 2016-08-18 16:21:53 --> Model Class Initialized
+INFO - 2016-08-18 16:21:53 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:21:53 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:21:53 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:21:53 --> Model Class Initialized
+DEBUG - 2016-08-18 16:21:53 --> user has access
+INFO - 2016-08-18 16:21:53 --> Final output sent to browser
+DEBUG - 2016-08-18 16:21:53 --> Total execution time: 0.0184
+INFO - 2016-08-18 16:21:54 --> Config Class Initialized
+INFO - 2016-08-18 16:21:54 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:21:54 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:21:54 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:21:54 --> URI Class Initialized
+DEBUG - 2016-08-18 16:21:54 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:21:54 --> Router Class Initialized
+INFO - 2016-08-18 16:21:54 --> Output Class Initialized
+INFO - 2016-08-18 16:21:54 --> Security Class Initialized
+DEBUG - 2016-08-18 16:21:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:21:54 --> Input Class Initialized
+INFO - 2016-08-18 16:21:54 --> Language Class Initialized
+INFO - 2016-08-18 16:21:54 --> Language Class Initialized
+INFO - 2016-08-18 16:21:54 --> Config Class Initialized
+INFO - 2016-08-18 16:21:54 --> Loader Class Initialized
+INFO - 2016-08-18 16:21:54 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:21:54 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:21:54 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:21:54 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:21:54 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:21:54 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:21:54 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:21:54 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:21:54 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:21:54 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:21:54 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:21:54 --> Initialize main hooks
+INFO - 2016-08-18 16:21:54 --> Model Class Initialized
+INFO - 2016-08-18 16:21:54 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:21:54 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:21:54 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:21:54 --> Model Class Initialized
+DEBUG - 2016-08-18 16:21:54 --> user has access
+INFO - 2016-08-18 16:21:54 --> Final output sent to browser
+DEBUG - 2016-08-18 16:21:54 --> Total execution time: 0.0231
+INFO - 2016-08-18 16:21:56 --> Config Class Initialized
+INFO - 2016-08-18 16:21:56 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:21:56 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:21:56 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:21:56 --> URI Class Initialized
+DEBUG - 2016-08-18 16:21:56 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:21:56 --> Router Class Initialized
+INFO - 2016-08-18 16:21:56 --> Output Class Initialized
+INFO - 2016-08-18 16:21:56 --> Security Class Initialized
+DEBUG - 2016-08-18 16:21:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:21:56 --> Input Class Initialized
+INFO - 2016-08-18 16:21:56 --> Language Class Initialized
+INFO - 2016-08-18 16:21:56 --> Language Class Initialized
+INFO - 2016-08-18 16:21:56 --> Config Class Initialized
+INFO - 2016-08-18 16:21:56 --> Loader Class Initialized
+INFO - 2016-08-18 16:21:56 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:21:56 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:21:56 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:21:56 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:21:56 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:21:56 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:21:56 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:21:56 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:21:56 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:21:56 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:21:56 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:21:56 --> Initialize main hooks
+INFO - 2016-08-18 16:21:56 --> Model Class Initialized
+INFO - 2016-08-18 16:21:56 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:21:56 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:21:56 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:21:56 --> Model Class Initialized
+DEBUG - 2016-08-18 16:21:56 --> user has access
+INFO - 2016-08-18 16:21:56 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:21:56 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:21:56 --> Model Class Initialized
+INFO - 2016-08-18 16:21:56 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:21:56 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:21:56 --> Final output sent to browser
+DEBUG - 2016-08-18 16:21:56 --> Total execution time: 0.0356
+INFO - 2016-08-18 16:21:57 --> Config Class Initialized
+INFO - 2016-08-18 16:21:57 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:21:57 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:21:57 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:21:57 --> URI Class Initialized
+DEBUG - 2016-08-18 16:21:57 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:21:57 --> Router Class Initialized
+INFO - 2016-08-18 16:21:57 --> Output Class Initialized
+INFO - 2016-08-18 16:21:57 --> Security Class Initialized
+DEBUG - 2016-08-18 16:21:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:21:57 --> Input Class Initialized
+INFO - 2016-08-18 16:21:57 --> Language Class Initialized
+INFO - 2016-08-18 16:21:57 --> Language Class Initialized
+INFO - 2016-08-18 16:21:57 --> Config Class Initialized
+INFO - 2016-08-18 16:21:57 --> Loader Class Initialized
+INFO - 2016-08-18 16:21:57 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:21:57 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:21:57 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:21:57 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:21:57 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:21:57 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:21:57 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:21:57 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:21:57 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:21:57 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:21:57 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:21:57 --> Initialize main hooks
+INFO - 2016-08-18 16:21:57 --> Model Class Initialized
+INFO - 2016-08-18 16:21:57 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:21:57 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:21:57 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:21:57 --> Model Class Initialized
+DEBUG - 2016-08-18 16:21:57 --> user has access
+INFO - 2016-08-18 16:21:57 --> Final output sent to browser
+DEBUG - 2016-08-18 16:21:57 --> Total execution time: 0.0198
+INFO - 2016-08-18 16:24:34 --> Config Class Initialized
+INFO - 2016-08-18 16:24:34 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:24:34 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:24:34 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:24:34 --> URI Class Initialized
+DEBUG - 2016-08-18 16:24:34 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:24:34 --> Router Class Initialized
+INFO - 2016-08-18 16:24:34 --> Output Class Initialized
+INFO - 2016-08-18 16:24:34 --> Security Class Initialized
+DEBUG - 2016-08-18 16:24:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:24:34 --> Input Class Initialized
+INFO - 2016-08-18 16:24:34 --> Language Class Initialized
+INFO - 2016-08-18 16:24:34 --> Language Class Initialized
+INFO - 2016-08-18 16:24:34 --> Config Class Initialized
+INFO - 2016-08-18 16:24:34 --> Loader Class Initialized
+INFO - 2016-08-18 16:24:34 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:24:34 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:24:34 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:24:34 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:24:34 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:24:34 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:24:34 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:24:34 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:24:34 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:24:34 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:24:34 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:24:34 --> Initialize main hooks
+INFO - 2016-08-18 16:24:34 --> Model Class Initialized
+INFO - 2016-08-18 16:24:34 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:24:34 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:24:34 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:24:34 --> Model Class Initialized
+DEBUG - 2016-08-18 16:24:34 --> user has access
+DEBUG - 2016-08-18 16:24:34 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/header.php
+DEBUG - 2016-08-18 16:24:34 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_side.php
+DEBUG - 2016-08-18 16:24:34 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/user/navigation_top.php
+DEBUG - 2016-08-18 16:24:34 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/views/user/user.php
+DEBUG - 2016-08-18 16:24:34 --> File loaded: /usr/local/servcup/htdocs/application/views/widgets/footer.php
+INFO - 2016-08-18 16:24:34 --> Final output sent to browser
+DEBUG - 2016-08-18 16:24:34 --> Total execution time: 0.0369
+INFO - 2016-08-18 16:24:34 --> Config Class Initialized
+INFO - 2016-08-18 16:24:34 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:24:34 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:24:34 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:24:34 --> URI Class Initialized
+INFO - 2016-08-18 16:24:34 --> Router Class Initialized
+INFO - 2016-08-18 16:24:34 --> Output Class Initialized
+INFO - 2016-08-18 16:24:34 --> Security Class Initialized
+DEBUG - 2016-08-18 16:24:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:24:34 --> Input Class Initialized
+INFO - 2016-08-18 16:24:34 --> Language Class Initialized
+ERROR - 2016-08-18 16:24:34 --> 404 Page Not Found: /index
+INFO - 2016-08-18 16:24:34 --> Config Class Initialized
+INFO - 2016-08-18 16:24:34 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:24:34 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:24:34 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:24:34 --> URI Class Initialized
+DEBUG - 2016-08-18 16:24:34 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:24:34 --> Router Class Initialized
+INFO - 2016-08-18 16:24:34 --> Output Class Initialized
+INFO - 2016-08-18 16:24:34 --> Security Class Initialized
+DEBUG - 2016-08-18 16:24:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:24:34 --> Input Class Initialized
+INFO - 2016-08-18 16:24:34 --> Language Class Initialized
+INFO - 2016-08-18 16:24:34 --> Language Class Initialized
+INFO - 2016-08-18 16:24:34 --> Config Class Initialized
+INFO - 2016-08-18 16:24:34 --> Loader Class Initialized
+INFO - 2016-08-18 16:24:34 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:24:34 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:24:34 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:24:34 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:24:34 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:24:34 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:24:34 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:24:35 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:24:35 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:24:35 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:24:35 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:24:35 --> Initialize main hooks
+INFO - 2016-08-18 16:24:35 --> Model Class Initialized
+INFO - 2016-08-18 16:24:35 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:24:35 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:24:35 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:24:35 --> Model Class Initialized
+DEBUG - 2016-08-18 16:24:35 --> user has access
+INFO - 2016-08-18 16:24:35 --> Final output sent to browser
+DEBUG - 2016-08-18 16:24:35 --> Total execution time: 0.0256
+INFO - 2016-08-18 16:24:36 --> Config Class Initialized
+INFO - 2016-08-18 16:24:36 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:24:36 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:24:36 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:24:36 --> URI Class Initialized
+DEBUG - 2016-08-18 16:24:36 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:24:36 --> Router Class Initialized
+INFO - 2016-08-18 16:24:36 --> Output Class Initialized
+INFO - 2016-08-18 16:24:36 --> Security Class Initialized
+DEBUG - 2016-08-18 16:24:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:24:36 --> Input Class Initialized
+INFO - 2016-08-18 16:24:36 --> Language Class Initialized
+INFO - 2016-08-18 16:24:36 --> Language Class Initialized
+INFO - 2016-08-18 16:24:36 --> Config Class Initialized
+INFO - 2016-08-18 16:24:36 --> Loader Class Initialized
+INFO - 2016-08-18 16:24:36 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:24:36 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:24:36 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:24:36 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:24:36 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:24:36 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:24:36 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:24:36 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:24:36 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:24:36 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:24:36 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:24:36 --> Initialize main hooks
+INFO - 2016-08-18 16:24:36 --> Model Class Initialized
+INFO - 2016-08-18 16:24:36 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:24:36 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:24:36 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:24:36 --> Model Class Initialized
+DEBUG - 2016-08-18 16:24:36 --> user has access
+INFO - 2016-08-18 16:24:36 --> Final output sent to browser
+DEBUG - 2016-08-18 16:24:36 --> Total execution time: 0.0087
+INFO - 2016-08-18 16:24:39 --> Config Class Initialized
+INFO - 2016-08-18 16:24:39 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:24:39 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:24:39 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:24:39 --> URI Class Initialized
+DEBUG - 2016-08-18 16:24:39 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:24:39 --> Router Class Initialized
+INFO - 2016-08-18 16:24:39 --> Output Class Initialized
+INFO - 2016-08-18 16:24:39 --> Security Class Initialized
+DEBUG - 2016-08-18 16:24:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:24:39 --> Input Class Initialized
+INFO - 2016-08-18 16:24:39 --> Language Class Initialized
+INFO - 2016-08-18 16:24:39 --> Language Class Initialized
+INFO - 2016-08-18 16:24:39 --> Config Class Initialized
+INFO - 2016-08-18 16:24:39 --> Loader Class Initialized
+INFO - 2016-08-18 16:24:39 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:24:39 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:24:39 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:24:39 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:24:39 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:24:39 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:24:39 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:24:39 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:24:39 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:24:39 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:24:39 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:24:39 --> Initialize main hooks
+INFO - 2016-08-18 16:24:39 --> Model Class Initialized
+INFO - 2016-08-18 16:24:39 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:24:39 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:24:39 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:24:39 --> Model Class Initialized
+DEBUG - 2016-08-18 16:24:39 --> user has access
+INFO - 2016-08-18 16:24:39 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:24:39 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:24:39 --> Model Class Initialized
+INFO - 2016-08-18 16:24:39 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:24:39 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:24:39 --> Final output sent to browser
+DEBUG - 2016-08-18 16:24:39 --> Total execution time: 0.0243
+INFO - 2016-08-18 16:24:40 --> Config Class Initialized
+INFO - 2016-08-18 16:24:40 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:24:40 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:24:40 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:24:40 --> URI Class Initialized
+DEBUG - 2016-08-18 16:24:40 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:24:40 --> Router Class Initialized
+INFO - 2016-08-18 16:24:40 --> Output Class Initialized
+INFO - 2016-08-18 16:24:40 --> Security Class Initialized
+DEBUG - 2016-08-18 16:24:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:24:40 --> Input Class Initialized
+INFO - 2016-08-18 16:24:40 --> Language Class Initialized
+INFO - 2016-08-18 16:24:40 --> Language Class Initialized
+INFO - 2016-08-18 16:24:40 --> Config Class Initialized
+INFO - 2016-08-18 16:24:40 --> Loader Class Initialized
+INFO - 2016-08-18 16:24:40 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:24:40 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:24:40 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:24:40 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:24:40 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:24:40 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:24:40 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:24:40 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:24:40 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:24:40 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:24:40 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:24:40 --> Initialize main hooks
+INFO - 2016-08-18 16:24:40 --> Model Class Initialized
+INFO - 2016-08-18 16:24:40 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:24:40 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:24:40 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:24:40 --> Model Class Initialized
+DEBUG - 2016-08-18 16:24:40 --> user has access
+INFO - 2016-08-18 16:24:40 --> Final output sent to browser
+DEBUG - 2016-08-18 16:24:40 --> Total execution time: 0.0107
+INFO - 2016-08-18 16:24:56 --> Config Class Initialized
+INFO - 2016-08-18 16:24:56 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:24:56 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:24:56 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:24:56 --> URI Class Initialized
+DEBUG - 2016-08-18 16:24:56 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:24:56 --> Router Class Initialized
+INFO - 2016-08-18 16:24:56 --> Output Class Initialized
+INFO - 2016-08-18 16:24:56 --> Security Class Initialized
+DEBUG - 2016-08-18 16:24:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:24:56 --> Input Class Initialized
+INFO - 2016-08-18 16:24:56 --> Language Class Initialized
+INFO - 2016-08-18 16:24:56 --> Language Class Initialized
+INFO - 2016-08-18 16:24:56 --> Config Class Initialized
+INFO - 2016-08-18 16:24:56 --> Loader Class Initialized
+INFO - 2016-08-18 16:24:56 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:24:56 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:24:56 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:24:56 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:24:56 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:24:56 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:24:56 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:24:56 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:24:56 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:24:56 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:24:56 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:24:56 --> Initialize main hooks
+INFO - 2016-08-18 16:24:56 --> Model Class Initialized
+INFO - 2016-08-18 16:24:56 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:24:56 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:24:56 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:24:56 --> Model Class Initialized
+DEBUG - 2016-08-18 16:24:56 --> user has access
+INFO - 2016-08-18 16:24:56 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:24:56 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:24:56 --> Language file loaded: language/german/form_validation_lang.php
+INFO - 2016-08-18 16:24:56 --> Model Class Initialized
+INFO - 2016-08-18 16:24:56 --> Final output sent to browser
+DEBUG - 2016-08-18 16:24:56 --> Total execution time: 0.0095
+INFO - 2016-08-18 16:24:58 --> Config Class Initialized
+INFO - 2016-08-18 16:24:58 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:24:58 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:24:58 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:24:58 --> URI Class Initialized
+DEBUG - 2016-08-18 16:24:58 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:24:58 --> Router Class Initialized
+INFO - 2016-08-18 16:24:58 --> Output Class Initialized
+INFO - 2016-08-18 16:24:58 --> Security Class Initialized
+DEBUG - 2016-08-18 16:24:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:24:58 --> Input Class Initialized
+INFO - 2016-08-18 16:24:58 --> Language Class Initialized
+INFO - 2016-08-18 16:24:58 --> Language Class Initialized
+INFO - 2016-08-18 16:24:58 --> Config Class Initialized
+INFO - 2016-08-18 16:24:58 --> Loader Class Initialized
+INFO - 2016-08-18 16:24:58 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:24:58 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:24:58 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:24:58 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:24:58 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:24:58 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:24:58 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:24:58 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:24:58 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:24:58 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:24:58 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:24:58 --> Initialize main hooks
+INFO - 2016-08-18 16:24:58 --> Model Class Initialized
+INFO - 2016-08-18 16:24:58 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:24:58 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:24:58 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:24:58 --> Model Class Initialized
+DEBUG - 2016-08-18 16:24:58 --> user has access
+INFO - 2016-08-18 16:24:58 --> Final output sent to browser
+DEBUG - 2016-08-18 16:24:58 --> Total execution time: 0.0145
+INFO - 2016-08-18 16:24:59 --> Config Class Initialized
+INFO - 2016-08-18 16:24:59 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:24:59 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:24:59 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:24:59 --> URI Class Initialized
+DEBUG - 2016-08-18 16:24:59 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:24:59 --> Router Class Initialized
+INFO - 2016-08-18 16:24:59 --> Output Class Initialized
+INFO - 2016-08-18 16:24:59 --> Security Class Initialized
+DEBUG - 2016-08-18 16:24:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:24:59 --> Input Class Initialized
+INFO - 2016-08-18 16:24:59 --> Language Class Initialized
+INFO - 2016-08-18 16:24:59 --> Language Class Initialized
+INFO - 2016-08-18 16:24:59 --> Config Class Initialized
+INFO - 2016-08-18 16:24:59 --> Loader Class Initialized
+INFO - 2016-08-18 16:24:59 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:24:59 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:24:59 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:24:59 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:24:59 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:24:59 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:24:59 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:24:59 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:24:59 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:24:59 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:24:59 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:24:59 --> Initialize main hooks
+INFO - 2016-08-18 16:24:59 --> Model Class Initialized
+INFO - 2016-08-18 16:24:59 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:24:59 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:24:59 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:24:59 --> Model Class Initialized
+DEBUG - 2016-08-18 16:24:59 --> user has access
+INFO - 2016-08-18 16:24:59 --> Final output sent to browser
+DEBUG - 2016-08-18 16:24:59 --> Total execution time: 0.0086
+INFO - 2016-08-18 16:25:11 --> Config Class Initialized
+INFO - 2016-08-18 16:25:11 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:25:11 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:25:11 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:25:11 --> URI Class Initialized
+DEBUG - 2016-08-18 16:25:11 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:25:11 --> Router Class Initialized
+INFO - 2016-08-18 16:25:11 --> Output Class Initialized
+INFO - 2016-08-18 16:25:11 --> Security Class Initialized
+DEBUG - 2016-08-18 16:25:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:25:11 --> Input Class Initialized
+INFO - 2016-08-18 16:25:11 --> Language Class Initialized
+INFO - 2016-08-18 16:25:11 --> Language Class Initialized
+INFO - 2016-08-18 16:25:11 --> Config Class Initialized
+INFO - 2016-08-18 16:25:11 --> Loader Class Initialized
+INFO - 2016-08-18 16:25:11 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:25:11 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:25:11 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:25:11 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:25:11 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:25:11 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:25:11 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:25:11 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:25:11 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:25:11 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:25:11 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:25:11 --> Initialize main hooks
+INFO - 2016-08-18 16:25:11 --> Model Class Initialized
+INFO - 2016-08-18 16:25:11 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:25:11 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:25:11 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:25:11 --> Model Class Initialized
+DEBUG - 2016-08-18 16:25:11 --> user has access
+INFO - 2016-08-18 16:25:11 --> Final output sent to browser
+DEBUG - 2016-08-18 16:25:11 --> Total execution time: 0.0095
+INFO - 2016-08-18 16:25:49 --> Config Class Initialized
+INFO - 2016-08-18 16:25:49 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:25:49 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:25:49 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:25:49 --> URI Class Initialized
+DEBUG - 2016-08-18 16:25:49 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:25:49 --> Router Class Initialized
+INFO - 2016-08-18 16:25:49 --> Output Class Initialized
+INFO - 2016-08-18 16:25:49 --> Security Class Initialized
+DEBUG - 2016-08-18 16:25:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:25:49 --> Input Class Initialized
+INFO - 2016-08-18 16:25:49 --> Language Class Initialized
+INFO - 2016-08-18 16:25:49 --> Language Class Initialized
+INFO - 2016-08-18 16:25:49 --> Config Class Initialized
+INFO - 2016-08-18 16:25:49 --> Loader Class Initialized
+INFO - 2016-08-18 16:25:49 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:25:49 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:25:49 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:25:49 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:25:49 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:25:49 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:25:49 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:25:49 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:25:49 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:25:49 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:25:49 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:25:49 --> Initialize main hooks
+INFO - 2016-08-18 16:25:49 --> Model Class Initialized
+INFO - 2016-08-18 16:25:49 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:25:49 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:25:49 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:25:49 --> Model Class Initialized
+DEBUG - 2016-08-18 16:25:49 --> user has access
+INFO - 2016-08-18 16:25:49 --> Helper loaded: form_helper
+INFO - 2016-08-18 16:25:49 --> Form Validation Class Initialized
+INFO - 2016-08-18 16:25:49 --> Language file loaded: language/german/form_validation_lang.php
+INFO - 2016-08-18 16:25:49 --> Model Class Initialized
+INFO - 2016-08-18 16:25:49 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:25:49 --> Final output sent to browser
+DEBUG - 2016-08-18 16:25:49 --> Total execution time: 0.0204
+INFO - 2016-08-18 16:25:50 --> Config Class Initialized
+INFO - 2016-08-18 16:25:50 --> Hooks Class Initialized
+DEBUG - 2016-08-18 16:25:50 --> UTF-8 Support Enabled
+INFO - 2016-08-18 16:25:50 --> Utf8 Class Initialized
+INFO - 2016-08-18 16:25:50 --> URI Class Initialized
+DEBUG - 2016-08-18 16:25:50 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/config/routes.php
+INFO - 2016-08-18 16:25:50 --> Router Class Initialized
+INFO - 2016-08-18 16:25:50 --> Output Class Initialized
+INFO - 2016-08-18 16:25:50 --> Security Class Initialized
+DEBUG - 2016-08-18 16:25:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-08-18 16:25:50 --> Input Class Initialized
+INFO - 2016-08-18 16:25:50 --> Language Class Initialized
+INFO - 2016-08-18 16:25:50 --> Language Class Initialized
+INFO - 2016-08-18 16:25:50 --> Config Class Initialized
+INFO - 2016-08-18 16:25:50 --> Loader Class Initialized
+INFO - 2016-08-18 16:25:50 --> Helper loaded: language_helper
+INFO - 2016-08-18 16:25:50 --> Helper loaded: render_helper
+INFO - 2016-08-18 16:25:50 --> Helper loaded: acl_helper
+INFO - 2016-08-18 16:25:50 --> Helper loaded: global_helper
+INFO - 2016-08-18 16:25:50 --> Helper loaded: security_helper
+INFO - 2016-08-18 16:25:50 --> Helper loaded: domain_helper
+INFO - 2016-08-18 16:25:50 --> Database Driver Class Initialized
+INFO - 2016-08-18 16:25:50 --> Session: Class initialized using 'files' driver.
+INFO - 2016-08-18 16:25:50 --> Controller Class Initialized
+DEBUG - 2016-08-18 16:25:50 --> Database MX_Controller Initialized
+DEBUG - 2016-08-18 16:25:50 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/language/german/module_lang.php
+DEBUG - 2016-08-18 16:25:50 --> Initialize main hooks
+INFO - 2016-08-18 16:25:50 --> Model Class Initialized
+INFO - 2016-08-18 16:25:50 --> Helper loaded: url_helper
+INFO - 2016-08-18 16:25:50 --> Language file loaded: language/german/message_lang.php
+DEBUG - 2016-08-18 16:25:50 --> File loaded: /usr/local/servcup/htdocs/application/modules/database/libraries/User.php
+INFO - 2016-08-18 16:25:50 --> Model Class Initialized
+DEBUG - 2016-08-18 16:25:50 --> user has access
+INFO - 2016-08-18 16:25:50 --> Final output sent to browser
+DEBUG - 2016-08-18 16:25:50 --> Total execution time: 0.0110

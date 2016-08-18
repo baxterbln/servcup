@@ -49,7 +49,7 @@ $(function() {
             $(".username").text(LG_username_character).show();
             error = true;
         }
-        if ($('#password').val() == "") {
+        if ($('#user_id').val() == "" && $('#password').val() == "") {
             $(".password").text(LG_password_empty).show();
             error = true;
         }
@@ -79,9 +79,18 @@ $(function() {
                             $('.password_repeat').html(data.password_repeat).show();
                         }
                     } else {
-                        bootbox.alert(LG_user_added, function() {
-                            $('#userlist').bootstrapTable('refresh');
-                        });
+                        if($('#user_id').val() != "") {
+                            bootbox.alert(LG_user_added, function() {
+                                $('#userlist').bootstrapTable('refresh');
+                                resetForm();
+                            });
+                        }else{
+                            bootbox.alert(LG_user_added, function() {
+                                $('#userlist').bootstrapTable('refresh');
+                                $('#username').prop('disabled', false);
+                                resetForm();
+                            });
+                        }
                     }
                 }
             });
@@ -103,10 +112,17 @@ function makePasswd() {
         var c = Math.floor(Math.random() * chars.length + 1);
         passwd += chars.charAt(c)
     }
-
     return passwd;
 }
+function resetForm()
+{
+    $('#saveUserForm')[0].reset();
+    $('#user_id').val('');
+    $('#username').prop('disabled', false);
+    $(".formtitle").text(LG_add_user);
 
+
+}
 window.operateEvents = {
     'click .edit': function(e, value, row, index) {
         $.ajax({

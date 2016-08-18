@@ -5,6 +5,7 @@ var LG_username_character = 'Erlaubte Zeichen A-Z, a-z, 0-9, _';
 var LG_password_empty = 'Das Passwort darf nicht leer sein';
 var LG_password_repeat_error = 'Die eingegebenen Passwörter stimmen nicht überein';
 var LG_user_added = 'Benutzer wurde gespeichert';
+var LG_user_saved = 'Benutzer wurde geändert';
 var LG_Edit = 'Ändern';
 var LG_Delete = 'Löschen';
 var LG_add_user = 'Benutzer hinzufügen';

@@ -86,7 +86,7 @@ class User
 
                     $this->_CI->DatabaseModel->updateUser($data, $this->_CI->input->post('user_id'));
                 }else{
-                    //$this->_CI->DatabaseModel->addUser($data);
+                    $this->_CI->DatabaseModel->addUser($data);
                 }
 
                 return sendOutput($data);
@@ -109,14 +109,20 @@ class User
         $this->_CI->load->library('form_validation');
         $this->_CI->form_validation->set_error_delimiters('', '');
 
+        $formcheck = false;
+
         if (!$update) {
             $this->_CI->form_validation->set_rules('username', 'Username', 'trim|xss_clean|required');
+            $formcheck = true;
         }
 
-        $this->_CI->form_validation->set_rules('password', 'Password', 'trim|xss_clean|required|min_length[6]');
-        $this->_CI->form_validation->set_rules('password_repeat', 'Password repeat', 'trim|xss_clean|required|min_length[6]|matches[password]');
+        if ( !$update || ( $update && $this->_CI->input->post('password') != "") ) {
+            $this->_CI->form_validation->set_rules('password', 'Password', 'trim|xss_clean|required|min_length[6]');
+            $this->_CI->form_validation->set_rules('password_repeat', 'Password repeat', 'trim|xss_clean|required|min_length[6]|matches[password]');
+            $formcheck = true;
+        }
 
-        if ($this->_CI->form_validation->run($this->_CI) == false) {
+        if ($formcheck && $this->_CI->form_validation->run($this->_CI) == false) {
             $errors = array(
                 'username' => form_error('username'),
                 'password' => form_error('password'),

@@ -8,6 +8,7 @@ $js['username character'] = 'Erlaubte Zeichen A-Z, a-z, 0-9, _';
 $js['password empty'] = 'Das Passwort darf nicht leer sein';
 $js['password repeat error'] = 'Die eingegebenen Passwörter stimmen nicht überein';
 $js['user added'] = 'Benutzer wurde gespeichert';
+$js['user saved'] = 'Benutzer wurde geändert';
 $js['Edit'] = 'Ändern';
 $js['Delete'] = 'Löschen';
 $js['add user'] = 'Benutzer hinzufügen';
