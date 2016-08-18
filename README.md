@@ -1,6 +1,7 @@
 # servcup (on development)
 
 Full Hosting Controlpanel based on codigniter with HMVC Support.
+Serverpart / Processes will be realized with golang
 
 Features:
 
