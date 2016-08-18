@@ -21,7 +21,6 @@ $(function() {
                 events: operateEvents,
                 formatter: operateFormatter
             }
-
         ]
     });
 
@@ -79,12 +78,12 @@ $(function() {
                             $('.password_repeat').html(data.password_repeat).show();
                         }
                     } else {
-                        if($('#user_id').val() != "") {
+                        if ($('#user_id').val() != "") {
                             bootbox.alert(LG_user_added, function() {
                                 $('#userlist').bootstrapTable('refresh');
                                 resetForm();
                             });
-                        }else{
+                        } else {
                             bootbox.alert(LG_user_added, function() {
                                 $('#userlist').bootstrapTable('refresh');
                                 $('#username').prop('disabled', false);
@@ -114,15 +113,14 @@ function makePasswd() {
     }
     return passwd;
 }
-function resetForm()
-{
+
+function resetForm() {
     $('#saveUserForm')[0].reset();
     $('#user_id').val('');
     $('#username').prop('disabled', false);
     $(".formtitle").text(LG_add_user);
-
-
 }
+
 window.operateEvents = {
     'click .edit': function(e, value, row, index) {
         $.ajax({
@@ -136,7 +134,7 @@ window.operateEvents = {
             success: function(data) {
 
                 var username = data.username;
-                username = username.replace("_"+data.customer_id, "");
+                username = username.replace("_" + data.customer_id, "");
 
                 $('#username').val(username);
                 $('#username').prop('disabled', true);
@@ -147,41 +145,41 @@ window.operateEvents = {
 
                 if (data.remote == '%') {
                     $('#remote').prop('checked', true);
-                }else{
+                } else {
                     $('#remote').prop('checked', false);
                 }
             }
         });
     },
-    'click .stats': function(e, value, row, index) {
-        var win = window.open('/domain/stats', '_blank');
-        win.focus();
-    },
     'click .delete': function(e, value, row, index) {
 
         bootbox.dialog({
-            message: LG_confirm_delete_domain_message,
-            title: LG_confirm_delete_domain,
+            message: LG_confirm_delete_user_message,
+            title: LG_confirm_delete_user,
             buttons: {
                 danger: {
                     label: LG_Delete,
                     className: "btn-danger",
                     callback: function() {
                         $.ajax({
-                            url: '/domain/deleteDomain',
+                            url: '/database/deleteUser',
                             type: 'post',
                             dataType: 'json',
                             data: {
-                                domain_id: row.id,
-                                domain: row.domain
+                                user_id: row.id,
+                                username: row.username
                             },
                             success: function(data) {
-                                if (data.status != 200) {
-                                    bootbox.alert(LG_not_owner, function() {});
+                                if (data.status == "503") {
+                                    window.location.href = "/login";
+                                } else if (data.status == "500") {
+                                    // No access to object
+                                    bootbox.alert(LG_access_denied, function() {});
+                                } else if (data.status == "501") {
+                                    // user had assigned database
+                                    bootbox.alert(LG_database_exist, function() {});
                                 } else {
-                                    bootbox.alert(LG_domain_delete_successful, function() {
-                                        $('#domainlist').bootstrapTable('refresh');
-                                    });
+                                    $('#userlist').bootstrapTable('refresh');
                                 }
                             }
                         });
@@ -191,47 +189,11 @@ window.operateEvents = {
                     label: LG_Cancel,
                     className: "btn-primary",
                     callback: function() {
-
                     }
                 }
             }
         });
-    },
-    'click .suspend': function(e, value, row, index) {
-
-        var setStatus = 0;
-        var confirm_message = LG_confirm_suspend_domain;
-        var success_message = LG_domain_deactivated;
-
-        if (row.active == 0) {
-            setStatus = 1;
-            confirm_message = LG_confirm_unsuspend_domain;
-            success_message = LG_domain_activated;
-        }
-        bootbox.confirm(confirm_message, function(confirmed) {
-            if (confirmed) {
-                $.ajax({
-                    url: '/domain/suspendDomain',
-                    type: 'post',
-                    dataType: 'json',
-                    data: {
-                        domain_id: row.id,
-                        domain: row.domain,
-                        status: setStatus
-                    },
-                    success: function(data) {
-                        if (data.status != 200) {
-                            bootbox.alert(LG_not_owner, function() {});
-                        } else {
-                            bootbox.alert(success_message, function() {
-                                $('#domainlist').bootstrapTable('refresh');
-                            });
-                        }
-                    }
-                });
-            }
-        });
-    },
+    }
 };
 
 function operateFormatter(value, row, index) {

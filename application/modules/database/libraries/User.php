@@ -27,7 +27,7 @@ class User
 
             renderPage(role().'/user', $this->data, true);
         } else {
-            NoAccess();
+            return sendOutput(array('status' => 500));
         }
     }
 
@@ -39,7 +39,7 @@ class User
 
             return sendOutput($users);
         } else {
-            NoAccess();
+            return sendOutput(array('status' => 500));
         }
     }
 
@@ -49,7 +49,7 @@ class User
             $data = $this->_CI->DatabaseModel->getUser($this->_CI->input->post('username'), $this->_CI->input->post('id'));
             return sendOutput($data);
         }else{
-            NoAccess();
+            return sendOutput(array('status' => 500));
         }
     }
 
@@ -92,16 +92,23 @@ class User
                 return sendOutput($data);
             }
         } else {
-            NoAccess();
+            return sendOutput(array('status' => 500));
         }
-    }
-
-    public function editUser($userid, $username)
-    {
     }
 
     public function deleteUser()
     {
+        if ( hasAccess(array('manage_database')) && $this->_CI->DatabaseModel->checkOwner('username', $this->_CI->input->post('username'), 'sql_user') )
+        {
+            if($this->_CI->DatabaseModel->checkAssignUser($this->_CI->input->post('username'))){ // User is assigned to database, error
+                return sendOutput(array('status' => 501));
+            }else{
+                $this->_CI->DatabaseModel->deleteUser($this->_CI->input->post('user_id'), $this->_CI->input->post('username'));
+                return sendOutput(array('status' => 200));
+            }
+        } else {
+            return sendOutput(array('status' => 500));
+        }
     }
 
     private function validate($update = false)

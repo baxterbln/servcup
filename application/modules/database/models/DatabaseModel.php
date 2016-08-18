@@ -164,6 +164,24 @@ class DatabaseModel extends CI_Model
     }
 
     /**
+	 * deleteUser
+	 * delete sql user
+     *
+     * @param   int     $id    Id of user
+     * @param   string  $username   MySQL username
+     *
+     * @return  string  username
+	 * @access  public
+	 */
+    public function deleteUser($id, $username)
+    {
+        $this->db->where( array('id' => $id, 'customer_id' => $this->customer_id, 'username' => $username) );
+        $this->db->delete('sql_user');
+
+        $this->deleteDBUser($username);
+    }
+
+    /**
 	 * createDBUser
 	 * Create MySQL User
      *
@@ -177,6 +195,23 @@ class DatabaseModel extends CI_Model
     {
         $dbm = $this->load->database(getServer('mysql')->name, true);
         $dbm->query("CREATE USER '". $user ."'@'".$host."' IDENTIFIED BY '". $password ."';");
+        $dbm->query("FLUSH PRIVILEGES;");
+    }
+
+    /**
+	 * deleteDBUser
+	 * Delete serverside mysql user
+     *
+     * @param   string     $user        MySQL username
+     *
+	 * @access  private
+	 */
+    private function deleteDBUser($user)
+    {
+        $lasthost = $this->getDbHost($user);
+
+        $dbm = $this->load->database(getServer('mysql')->name, true);
+        $dbm->query("DROP USER '".$user."'@'".$lasthost."';");
         $dbm->query("FLUSH PRIVILEGES;");
     }
 
@@ -221,9 +256,6 @@ class DatabaseModel extends CI_Model
     /**
 	 * createDatabase
 	 * create MySQL Database
-	 *
-     * array['password'] string password of mysql user
-     * array['remote'] string allowed host for mysql connect
      *
      * @param   string     $database    Name of database
      *
@@ -238,9 +270,6 @@ class DatabaseModel extends CI_Model
     /**
 	 * createDatabase
 	 * get host for update
-	 *
-     * array['password'] string password of mysql user
-     * array['remote'] string allowed host for mysql connect
      *
      * @param   string     $user   MySQL username
      * @return  string  $hostname  Hostname for user
@@ -258,9 +287,6 @@ class DatabaseModel extends CI_Model
     /**
      * checkOwner
      * check if customer owner of user
-     *
-     * array['password'] string password of mysql user
-     * array['remote'] string allowed host for mysql connect
      *
      * @param   string  $field  Table field
      * @param   string  $key    Value for table field
@@ -280,5 +306,23 @@ class DatabaseModel extends CI_Model
         return false;
     }
 
-
+    /**
+     * checkAssignUser
+     * check has user assigned database
+     *
+     * @param   string     $user   MySQL username
+     * @return  bool    true|false
+     * @access  public
+     */
+    public function checkAssignUser($username)
+    {
+        $this->db->where('db_user', $username);
+        $this->db->where('customer_id', $this->customer_id);
+        $result = $this->db->get('sql_databases');
+        if($result->num_rows() > 0)
+        {
+            return true;
+        }
+        return false;
+    }
 }
