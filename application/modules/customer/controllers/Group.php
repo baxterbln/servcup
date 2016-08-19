@@ -10,64 +10,64 @@ class Group extends MX_Controller {
         parent::__construct();
         $this->lang->load("module");
         $this->load->model('CustomerModel');
-        $this->data['jsLang'] = writeJsLang(dirname ( __FILE__ ));
+        $this->data['jsLang'] = write_js_lang(dirname ( __FILE__ ));
     }
 
     public function index()
 	{
-		if(hasAccess(array('manage_groups')))
+		if(has_access(array('manage_groups')))
 		{
 			$this->data['site'] = 'group';
             $this->data['jsFiles'] = array('group.js');
 
-        	renderPage('group', $this->data);
+        	render_page('group', $this->data);
 		}
     }
 
     public function getGroups()
 	{
-        if(hasAccess(array('manage_groups')))
+        if(has_access(array('manage_groups')))
 		{
             $groups['total'] = $this->CustomerModel->getGroups(TRUE);
 			$groups['rows'] = $this->CustomerModel->getGroups();
 
-            return sendOutput($groups);
+            return send_output($groups);
         }
     }
 
 	public function addGroup()
 	{
-        if(hasAccess(array('manage_groups', 'add_groups')))
+        if(has_access(array('manage_groups', 'add_groups')))
 		{
             $this->data['site'] = 'groupForm';
             $this->data['jsFiles'] = array('groupForm.js');
             $this->data['title'] = lang('add group');
 
-            renderPage('group_form', $this->data);
+            render_page('group_form', $this->data);
         }
     }
 
 
 	public function editGroup($id)
 	{
-        if(hasAccess(array('manage_groups','edit_groups')))
+        if(has_access(array('manage_groups','edit_groups')))
 		{
             $this->data['group'] = $this->CustomerModel->getGroup($id);
             $this->data['site'] = 'groupForm';
             $this->data['jsFiles'] = array('groupForm.js');
             $this->data['title'] = str_replace('#NAME', $this->data['group']->name, lang('edit group'));
 
-            renderPage('group_form', $this->data);
+            render_page('group_form', $this->data);
         }
 	}
 
     public function saveGroup()
 	{
-        if(hasAccess(array('manage_groups','edit_groups', 'add_groups')) || hasAccess('reseller', array('manage_groups', 'edit_groups', 'add_groups')))
+        if(has_access(array('manage_groups','edit_groups', 'add_groups')) || has_access('reseller', array('manage_groups', 'edit_groups', 'add_groups')))
 		{
             $validate = $this->validate();
 			if($validate != 1){
-				return sendOutput($validate);
+				return send_output($validate);
 			}
 
             $data = $this->input->post();
@@ -96,13 +96,13 @@ class Group extends MX_Controller {
                 $return = array('group_id' => $group_id, 'status' => '200');
             }
 
-            sendOutput($return);
+            return send_output($return);
         }
 	}
 
     public function deleteGroup($group_id)
 	{
-        if(hasAccess(array('manage_groups', 'delete_groups')))
+        if(has_access(array('manage_groups', 'delete_groups')))
 		{
             $this->CustomerModel->deleteGroup($group_id);
         }

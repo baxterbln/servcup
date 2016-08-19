@@ -11,14 +11,14 @@ class Database extends MX_Controller {
         parent::__construct();
 
 		$this->lang->load("module");
-		$this->data['jsLang'] = writeJsLang(dirname ( __FILE__ ));
+		$this->data['jsLang'] = write_js_lang(dirname ( __FILE__ ));
 		$this->customer_id = $this->session->userdata('customer_id');
     }
 
     public function index()
     {
         $this->load->library('Databases', $this->data);
-		$this->databases->listDatabases();
+		$this->databases->list_databases();
     }
 
     public function user()
@@ -27,22 +27,22 @@ class Database extends MX_Controller {
 		$this->user->user();
     }
 
-    public function getUsers()
+    public function get_users()
     {
         $this->load->library('User', $this->data);
-		$this->user->getUsers();
+		$this->user->get_users();
     }
 
-	public function getUser()
+	public function get_user()
     {
         $this->load->library('User', $this->data);
-		$this->user->getUser();
+		$this->user->get_user();
     }
 
-    public function saveUser()
+    public function save_user()
     {
         $this->load->library('User', $this->data);
-		$this->user->saveUser();
+		$this->user->save_user();
     }
 
 	public function deleteUser()
@@ -50,5 +50,18 @@ class Database extends MX_Controller {
         $this->load->library('User', $this->data);
 		$this->user->deleteUser();
     }
+
+	public function get_databases()
+    {
+        $this->load->library('Databases', $this->data);
+		$this->databases->get_databases();
+    }
+
+	public function save_database()
+    {
+        $this->load->library('Databases', $this->data);
+		$this->databases->save_database();
+    }
+
 
 }

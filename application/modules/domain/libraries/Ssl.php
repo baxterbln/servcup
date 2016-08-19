@@ -17,21 +17,21 @@ class Ssl {
 
     public function ssl()
 	{
-        if(hasAccess(array('manage_ssl')))
+        if(has_access(array('manage_ssl')))
 		{
 			$this->data['site'] = 'ssl';
 			$this->data['title'] = lang('Manage SSL');
 			$this->data['jsFiles'] = array('ssl.js');
 
-			renderPage(role().'/ssl', $this->data, true);
+			render_page(role().'/ssl', $this->data, true);
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 
 	public function getAllDomains()
 	{
-        if(hasAccess(array('manage_ssl'))) {
+        if(has_access(array('manage_ssl'))) {
 
 			$domains['total'] = $this->_CI->DomainModel->getAllSSLDomains(TRUE);
 			$domains['rows'] = $this->_CI->DomainModel->getAllSSLDomains();
@@ -42,9 +42,9 @@ class Ssl {
                     array_push($domains['rows'][$key]->domains, $alias->alias);
                 }
             }
-			return sendOutput($domains);
+			return send_output($domains);
         } else {
-            NoAccess();
+            no_access();
         }
     }
 
@@ -53,7 +53,7 @@ class Ssl {
         $domain = $this->_CI->input->post('domain');
 		$domain_id = $this->_CI->input->post('domain_id');
 
-        if(hasAccess(array('manage_ssl'))) {
+        if(has_access(array('manage_ssl'))) {
             if($this->_CI->DomainModel->checkDomainOwner($domain_id, $domain) > 0) {
 
                 $domainData = $this->_CI->DomainModel->getDomain($domain_id, $domain);
@@ -67,7 +67,7 @@ class Ssl {
                     $data = $this->getCertificateData($domain);
                     $this->_CI->DomainModel->updateCertificateDomain($data, $domain_id);
                 }  catch (Exception $e) {
-                    return sendOutput(array('status' => 500, 'error' =>  $e->getMessage()));
+                    return send_output(array('status' => 500, 'error' =>  $e->getMessage()));
                 }
 
                 if($domainData->type == 'domain') {
@@ -79,15 +79,15 @@ class Ssl {
                             $data = $this->getCertificateData($value->alias);
                             $this->_CI->DomainModel->updateCertificateAlias($data, $value->alias, $value->id);
                         } catch (Exception $e) {
-                            return sendOutput(array('status' => 500, 'error' =>  $e->getMessage()));
+                            return send_output(array('status' => 500, 'error' =>  $e->getMessage()));
                         }
                     }
                 }
-                addTask('updateDomain', $domain_id);
-                return sendOutput(array('status' => 200));
+                add_task('updateDomain', $domain_id);
+                return send_output(array('status' => 200));
             }
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 
@@ -104,7 +104,7 @@ class Ssl {
         $data['SSLCertificateCreated'] = null;
         $data['SSLCertificateExpire'] = null;
 
-        if(hasAccess(array('manage_ssl'))) {
+        if(has_access(array('manage_ssl'))) {
             if($this->_CI->DomainModel->checkDomainOwner($domain_id, $domain) > 0) {
 
                 $domainData = $this->_CI->DomainModel->getDomain($domain_id, $domain);
@@ -116,7 +116,7 @@ class Ssl {
                     $this->_CI->letsencrypt->revokeCertificate($domain);
                     $this->_CI->DomainModel->updateCertificateDomain($data, $domain_id);
                 } catch (Exception $e) {
-                    return sendOutput(array('status' => 500, 'error' =>  $e->getMessage()));
+                    return send_output(array('status' => 500, 'error' =>  $e->getMessage()));
                 }
 
                 if($domainData->type == 'domain') {
@@ -126,15 +126,15 @@ class Ssl {
                             $this->_CI->letsencrypt->revokeCertificate($value->alias);
                             $this->_CI->DomainModel->updateCertificateAlias($data, $value->alias, $value->id);
                         } catch (Exception $e) {
-                            return sendOutput(array('status' => 500, 'error' =>  $e->getMessage()));
+                            return send_output(array('status' => 500, 'error' =>  $e->getMessage()));
                         }
                     }
                 }
-                addTask('updateDomain', $domain_id);
-                return sendOutput(array('status' => 200));
+                add_task('updateDomain', $domain_id);
+                return send_output(array('status' => 200));
             }
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 

@@ -18,54 +18,54 @@ class Forward {
 
     public function forwards()
 	{
-		if(hasAccess(array('manage_alias')))
+		if(has_access(array('manage_alias')))
 		{
 			$this->data['site'] = 'domains';
 			$this->data['title'] = lang('Manage forwards');
 			$this->data['jsFiles'] = array('forwards.js');
 
-			renderPage(role().'/forwards', $this->data, true);
+			render_page(role().'/forwards', $this->data, true);
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 
 	public function getForwards()
 	{
-		if(hasAccess(array('manage_alias'))) {
+		if(has_access(array('manage_alias'))) {
 
 			$domains['total'] = $this->_CI->DomainModel->getForwards(TRUE);
 			$domains['rows'] = $this->_CI->DomainModel->getForwards();
 
-			return sendOutput($domains);
+			return send_output($domains);
         } else {
-            NoAccess();
+            no_access();
         }
     }
 
 	public function addForward()
 	{
-		if(hasAccess(array('manage_alias')))
+		if(has_access(array('manage_alias')))
 		{
 			$this->data['site'] = 'domains';
 			$this->data['title'] = lang('Add forward');
 			$this->data['jsFiles'] = array('forwardForm.js');
 			$this->data['domains'] = $this->_CI->DomainModel->listDomains();
 
-			renderPage(role().'/forward_form', $this->data, true);
+			render_page(role().'/forward_form', $this->data, true);
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 
 	public function saveForward()
 	{
-		if(hasAccess(array('manage_alias'), true))
+		if(has_access(array('manage_alias'), true))
 		{
 			// Validation
 			$validate = $this->validate();
 			if($validate != 1){
-				return sendOutput($validate);
+				return send_output($validate);
 			}
 
 			$domain_id = $this->_CI->input->post('domain_id');
@@ -89,8 +89,8 @@ class Forward {
 
 				$data = array(
 					'customer_id' => $this->customer_id,
-                    'server_id' => getServer('mail')->id,
-                    'server_ip' => getServer('mail')->ip,
+                    'server_id' => get_server('mail')->id,
+                    'server_ip' => get_server('mail')->ip,
 					'active' => 1,
 					'parent_id' => $domain_id,
 					'domain' => $forwardDomain,
@@ -112,20 +112,20 @@ class Forward {
 						unset($data['type']);
 
 						$this->_CI->DomainModel->updateForward($data, $alias_id);
-						addTask('updateDomain', $domain_id);
+						add_task('updateDomain', $domain_id);
 
-						return sendOutput(array('status' => '200'));
+						return send_output(array('status' => '200'));
 
 					} else { // Insert
 
 						// Check if exist
 						if ($this->_CI->DomainModel->checkDomain($forwardDomain) > 0) {
-							return sendOutput(array('domain' => lang('exist in domain'), 'status' => 501));
+							return send_output(array('domain' => lang('exist in domain'), 'status' => 501));
 						}
 
 						// Check if in alias exists
 						if ($this->_CI->DomainModel->checkAlias($forwardDomain) > 0) {
-							return sendOutput(array('domain' => lang('exist in alias'), 'status' => 501));
+							return send_output(array('domain' => lang('exist in alias'), 'status' => 501));
 						}
 
 						// Insert Domain
@@ -133,23 +133,23 @@ class Forward {
 						if($alias_id != false) {
 
 							$return = array('domain_id' => $domain_id, 'alias_id' => $alias_id, 'status' => '200');
-							addTask('addDomain', $domain_id);
-							return sendOutput($return);
+							add_task('addDomain', $domain_id);
+							return send_output($return);
 						}
 					}
 				} else {
-					return sendOutput(array('domain' => lang('access denied'), 'status' => 501));
+					return send_output(array('domain' => lang('access denied'), 'status' => 501));
 				}
 			}
 		} else{
 			$return = array('status' => 503);
-			return sendOutput($return);
+			return send_output($return);
 		}
 	}
 
 	public function editForward($id, $domain)
  	{
-		if(hasAccess(array('manage_alias')))
+		if(has_access(array('manage_alias')))
 		{
 			if($this->_CI->DomainModel->checkDomainOwner($id, $domain) > 0) {
 
@@ -164,12 +164,12 @@ class Forward {
 				$this->data['title'] = lang('Edit forward').': '.$this->data['domain']->domain;
 				$this->data['domains'] = $this->_CI->DomainModel->listDomains();
 
-				renderPage(role().'/forward_form', $this->data, true);
+				render_page(role().'/forward_form', $this->data, true);
 			}else{
 				print "tztztz";
 			}
 		} else {
-            NoAccess();
+            no_access();
         }
 	}
 
@@ -184,11 +184,11 @@ class Forward {
 		if($this->_CI->DomainModel->checkDomainOwner($domain_id, $domain) > 0) {
 
 			$this->_CI->DomainModel->DeleteDomain($domain_id);
-			addTask('deleteDomain', $domain_id);
+			add_task('deleteDomain', $domain_id);
 
-			return sendOutput(array('status' => 200));
+			return send_output(array('status' => 200));
 		} else {
-			return sendOutput(array('status' => 403));
+			return send_output(array('status' => 403));
 		}
 	}
 

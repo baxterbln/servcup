@@ -11,7 +11,7 @@ class Domain extends MX_Controller {
         parent::__construct();
 
 		$this->lang->load("module");
-		$this->data['jsLang'] = writeJsLang(dirname ( __FILE__ ));
+		$this->data['jsLang'] = write_js_lang(dirname ( __FILE__ ));
 		$this->customer_id = $this->session->userdata('customer_id');
     }
 
@@ -192,7 +192,7 @@ class Domain extends MX_Controller {
 
 	/* Global calls */
 
-	public function DomainAvailable()
+	public function domain_available()
 	{
 		$domain = $this->input->post('domain');
 
@@ -206,17 +206,17 @@ class Domain extends MX_Controller {
 			}
 		}
 
-		if(DomainAvailable($domain)){
+		if(domain_available($domain)){
 			$return = array('status' => 200, 'domain' => $domain, 'available' => 1, 'epp' => $isEpp);
 		}else{
 			$return = array('status' => 400, 'domain' => $domain, 'available' => 0, 'epp' => $isEpp);
 		}
-		return sendOutput($return);
+		return send_output($return);
 	}
 
 	public function directoryListing()
 	{
-		$homeFolder = getSetting('client_path')."/c".$this->customer_id;
+		$homeFolder = get_setting('client_path')."/c".$this->customer_id;
 
 		$searchFolder = $this->input->get('q');
 
@@ -236,7 +236,7 @@ class Domain extends MX_Controller {
 		    }
 		}
 
-		return sendOutput($paths);
+		return send_output($paths);
 	}
 
 	public function openStats()
@@ -249,7 +249,7 @@ class Domain extends MX_Controller {
 
 			$error['title'] = lang('System Error');
 			$error['error'] = lang('no piwik user');
-			renderPage('errors/html/error_system', $error, true);
+			render_page('errors/html/error_system', $error, true);
 		}
 	}
 }

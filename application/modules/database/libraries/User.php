@@ -14,48 +14,47 @@ class User
         $this->data = $data;
         $this->_CI = &get_instance();
         $this->_CI->load->model('DatabaseModel');
-        //$this->_CI->lang->load("module");
         $this->customer_id = $this->_CI->session->userdata('customer_id');
     }
 
     public function user()
     {
-        if (hasAccess(array('manage_database'))) {
+        if (has_access(array('manage_database'))) {
             $this->data['site'] = 'database';
             $this->data['title'] = lang('Manage database user');
             $this->data['jsFiles'] = array('user.js');
 
-            renderPage(role().'/user', $this->data, true);
+            render_page(role().'/user', $this->data, true);
         } else {
-            return sendOutput(array('status' => 500));
+            return send_output(array('status' => 500));
         }
     }
 
-    public function getUsers()
+    public function get_users()
     {
-        if (hasAccess(array('manage_database'))) {
-            $users['total'] = $this->_CI->DatabaseModel->getUsers(true);
-            $users['rows'] = $this->_CI->DatabaseModel->getUsers();
+        if (has_access(array('manage_database'))) {
+            $users['total'] = $this->_CI->DatabaseModel->get_users(true);
+            $users['rows'] = $this->_CI->DatabaseModel->get_users();
 
-            return sendOutput($users);
+            return send_output($users);
         } else {
-            return sendOutput(array('status' => 500));
+            return send_output(array('status' => 500));
         }
     }
 
-    public function getUser()
+    public function get_user()
     {
-        if (hasAccess(array('manage_database')) && $this->_CI->DatabaseModel->checkOwner('username', $this->_CI->input->post('username'), 'sql_user')) {
+        if (has_access(array('manage_database')) && $this->_CI->DatabaseModel->checkOwner('username', $this->_CI->input->post('username'), 'sql_user')) {
             $data = $this->_CI->DatabaseModel->getUser($this->_CI->input->post('username'), $this->_CI->input->post('id'));
-            return sendOutput($data);
+            return send_output($data);
         }else{
-            return sendOutput(array('status' => 500));
+            return send_output(array('status' => 500));
         }
     }
 
-    public function saveUser()
+    public function save_user()
     {
-        if (hasAccess(array('manage_database'))) {
+        if (has_access(array('manage_database'))) {
 
             $update = false;
             if($this->_CI->input->post('user_id')) {
@@ -64,7 +63,7 @@ class User
 
             $validate = $this->validate($update);
             if ($validate != 1) {
-                return sendOutput($validate);
+                return send_output($validate);
             } else {
                 $dbuser = $this->_CI->input->post('username').'_'.$this->customer_id;
                 $dbpass = $this->_CI->input->post('password');
@@ -72,7 +71,7 @@ class User
                 $remote = ($this->_CI->input->post('remote') == 1) ? '%' : 'localhost';
 
                 $data = array(
-                    'server_id' => getServer('mysql')->id,
+                    'server_id' => get_server('mysql')->id,
                     'customer_id' => $this->customer_id,
                     'username' => $dbuser,
                     'password' => $dbpass,
@@ -89,25 +88,25 @@ class User
                     $this->_CI->DatabaseModel->addUser($data);
                 }
 
-                return sendOutput($data);
+                return send_output($data);
             }
         } else {
-            return sendOutput(array('status' => 500));
+            return send_output(array('status' => 500));
         }
     }
 
     public function deleteUser()
     {
-        if ( hasAccess(array('manage_database')) && $this->_CI->DatabaseModel->checkOwner('username', $this->_CI->input->post('username'), 'sql_user') )
+        if ( has_access(array('manage_database')) && $this->_CI->DatabaseModel->checkOwner('username', $this->_CI->input->post('username'), 'sql_user') )
         {
             if($this->_CI->DatabaseModel->checkAssignUser($this->_CI->input->post('username'))){ // User is assigned to database, error
-                return sendOutput(array('status' => 501));
+                return send_output(array('status' => 501));
             }else{
                 $this->_CI->DatabaseModel->deleteUser($this->_CI->input->post('user_id'), $this->_CI->input->post('username'));
-                return sendOutput(array('status' => 200));
+                return send_output(array('status' => 200));
             }
         } else {
-            return sendOutput(array('status' => 500));
+            return send_output(array('status' => 500));
         }
     }
 
@@ -151,7 +150,7 @@ class User
     {
         $this->_CI->form_validation->set_message('alphaNumeric', 'Is not alpha numeric');
 
-        return (!preg_match('/^([a-z_])+$/i', $str)) ? false : true;
+        return (!preg_match('/^([a-zA-Z0-9_])+$/i', $str)) ? false : true;
     }
 
     public function check_existUser($user)

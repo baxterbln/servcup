@@ -11,7 +11,7 @@ class DatabaseModel extends CI_Model
         $this->customer_id = $this->session->userdata('customer_id');
     }
 
-    public function getUsers($count = FALSE)
+    public function get_users($count = FALSE)
     {
         $this->db->select('*');
         $this->db->from('sql_user');
@@ -40,7 +40,16 @@ class DatabaseModel extends CI_Model
         }
     }
 
-    public function getDatabases($count = FALSE)
+    public function listingUser()
+    {
+        $this->db->select('username');
+        $this->db->from('sql_user');
+        $this->db->where(array('customer_id' => $this->customer_id));
+
+        return  $this->db->get()->result();
+    }
+
+    public function get_databases($count = FALSE)
     {
         $this->db->select('*');
         $this->db->from('sql_databases');
@@ -91,6 +100,26 @@ class DatabaseModel extends CI_Model
     }
 
     /**
+	 * checkExistDB
+	 * Check if db exist
+	 *
+     * @param   string  $database Database name
+	 * @access  public
+     *
+     * @return  bool    true|false
+	 */
+    public function checkExistDB($database)
+    {
+        $this->db->where('db_name', $database);
+        $result = $this->db->get('sql_databases');
+        if($result->num_rows() > 0)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    /**
 	 * addUser
 	 * Save new user
 	 *
@@ -128,7 +157,7 @@ class DatabaseModel extends CI_Model
     }
 
     /**
-	 * getUser
+	 * get_user
 	 * fetch user data
      *
      * @param   string  $username   MySQL username
@@ -137,7 +166,7 @@ class DatabaseModel extends CI_Model
      * @return  object[]
 	 * @access  public
 	 */
-    public function getUser($username, $id)
+    public function get_user($username, $id)
     {
         $this->db->select('*');
         $this->db->where('username', $username);
@@ -193,7 +222,7 @@ class DatabaseModel extends CI_Model
 	 */
     public function createDBUser($user, $password, $host)
     {
-        $dbm = $this->load->database(getServer('mysql')->name, true);
+        $dbm = $this->load->database(get_server('mysql')->name, true);
         $dbm->query("CREATE USER '". $user ."'@'".$host."' IDENTIFIED BY '". $password ."';");
         $dbm->query("FLUSH PRIVILEGES;");
     }
@@ -210,7 +239,7 @@ class DatabaseModel extends CI_Model
     {
         $lasthost = $this->getDbHost($user);
 
-        $dbm = $this->load->database(getServer('mysql')->name, true);
+        $dbm = $this->load->database(get_server('mysql')->name, true);
         $dbm->query("DROP USER '".$user."'@'".$lasthost."';");
         $dbm->query("FLUSH PRIVILEGES;");
     }
@@ -230,7 +259,7 @@ class DatabaseModel extends CI_Model
         $user = $this->getUsername($id);
         $lasthost = $this->getDbHost($user);
 
-        $dbm = $this->load->database(getServer('mysql')->name, true);
+        $dbm = $this->load->database(get_server('mysql')->name, true);
         $dbm->query("ALTER USER '".$user."'@'".$lasthost."' IDENTIFIED BY '". $password ."';");
         $dbm->query("UPDATE user SET Host='". $host ."' WHERE User='". $user ."';");
         $dbm->query("FLUSH PRIVILEGES;");
@@ -242,14 +271,33 @@ class DatabaseModel extends CI_Model
      *
      * @param   string     $user        MySQL User
      * @param   string     $database    Name of database
-     * @param   string     $host        allowed host for access
      *
 	 * @access  private
 	 */
-    private function grantPrivileges($user, $database, $host)
+    private function grantPrivileges($user, $database)
     {
-        $dbm = $this->load->database(getServer('mysql')->name, true);
-        $dbm->query("GRANT CREATE, ALTER, DELETE, INSERT, SELECT, DROP, UPDATE  ON * . * TO '". $user ."'@'".$host."';");
+        $host = $this->getDbHost($user);
+
+        $dbm = $this->load->database(get_server('mysql')->name, true);
+        $dbm->query("GRANT ALL PRIVILEGES ON ".$database.".* TO '". $user ."'@'".$host."';");
+        $dbm->query("FLUSH PRIVILEGES;");
+    }
+
+    /**
+	 * revokePrivileges
+	 * Remove MySQL Privileges
+     *
+     * @param   string     $user        MySQL User
+     * @param   string     $database    Name of database
+     *
+	 * @access  private
+	 */
+    private function revokePrivileges($user, $database)
+    {
+        $host = $this->getDbHost($user);
+
+        $dbm = $this->load->database(get_server('mysql')->name, true);
+        $dbm->query("REVOKE ALL PRIVILEGES ON ".$database.".* FROM '". $user ."'@'".$host."';");
         $dbm->query("FLUSH PRIVILEGES;");
     }
 
@@ -261,10 +309,13 @@ class DatabaseModel extends CI_Model
      *
 	 * @access  public
 	 */
-    public function createDatabase($database)
+    public function createDatabase($data)
     {
-        $dbm = $this->load->database(getServer('mysql')->name, true);
-        $dbm->dbforge->create_database( $database );
+        $this->db->insert('sql_databases', $data);
+
+        $dbm = $this->load->database(get_server('mysql')->name, true);
+        $dbm->query("CREATE DATABASE ".$data['db_name']." CHARACTER SET utf8 COLLATE utf8_general_ci;");
+        $this->grantPrivileges($data['db_user'], $data['db_name']);
     }
 
     /**
@@ -278,7 +329,7 @@ class DatabaseModel extends CI_Model
 	 */
     private function getDbHost($user)
     {
-        $dbm = $this->load->database(getServer('mysql')->name, true);
+        $dbm = $this->load->database(get_server('mysql')->name, true);
         $dbm->select('Host');
         $dbm->where('User', $user);
         return $dbm->get('user')->row()->Host;

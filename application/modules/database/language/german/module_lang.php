@@ -13,3 +13,8 @@ $lang['allow remote access'] = 'Remote Zugriff';
 $lang['create'] = 'Erstellen';
 $lang['user exist'] = 'Benutzername existiert bereits.';
 $lang['username character'] = 'Erlaubte Zeichen A-Z, a-z, 0-9, _';
+
+$lang['Add DB'] = 'Datenbank hinzufügen';
+$lang['Database Name'] = 'DB-Name';
+$lang['No user exist'] = 'Kein Benutzer vorhanden';
+$lang['db exist'] = 'Datenbank existiert bereits.';

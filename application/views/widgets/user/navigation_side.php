@@ -19,7 +19,7 @@
     </div>
     <nav class="menu">
         <ul class="nav metismenu" id="sidebar-menu">
-        <?php echo readMenuEntrys(); ?>
+        <?php echo read_menu_entrys(); ?>
       </ul>
     </nav>
   </div>

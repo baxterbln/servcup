@@ -1,31 +1,31 @@
 <?php
 
-if(!function_exists('getSetting'))
+if(!function_exists('get_setting'))
 {
-    function getSetting($key)
+    function get_setting($key)
     {
         $ci =& get_instance();
         $ci->load->model('Hostadm');
 
-        return $ci->Hostadm->getSetting($key)->value;
+        return $ci->Hostadm->get_setting($key)->value;
     }
 }
 
-if(!function_exists('addTask'))
+if(!function_exists('add_task'))
 {
-    function addTask($task, $object)
+    function add_task($task, $object)
     {
         $ci =& get_instance();
         $ci->load->model('Hostadm');
 
-        return $ci->Hostadm->addTask($task, $object);
+        return $ci->Hostadm->add_task($task, $object);
     }
 }
 
 
-if(!function_exists('sendOutput'))
+if(!function_exists('send_output'))
 {
-    function sendOutput($data)
+    function send_output($data)
     {
         $ci =& get_instance();
         return $ci->output
@@ -36,9 +36,9 @@ if(!function_exists('sendOutput'))
 }
 
 
-if(!function_exists('writeJsLang'))
+if(!function_exists('write_js_lang'))
 {
-    function writeJsLang($path)
+    function write_js_lang($path)
     {
         $ci =& get_instance();
         $idiom = $ci->session->get_userdata('language');
@@ -58,28 +58,28 @@ if(!function_exists('writeJsLang'))
     }
 }
 
-if(!function_exists('moduleActive'))
+if(!function_exists('module_active'))
 {
-    function moduleActive($name, $checkPath = true)
+    function module_active($name, $check_path = true)
     {
         $ci =& get_instance();
         $modulePath = $ci->config->item('modules_path').$name;
         $moduleName = $name.'_module';
-        if ($checkPath) {
+        if ($check_path) {
             if(!is_dir($modulePath)) {
                 return false;
             }
         }
-        if(getSetting($moduleName) == 1) {
+        if(get_setting($moduleName) == 1) {
             return true;
         }else{
             return false;
         }
     }
 }
-if(!function_exists('randomPassword'))
+if(!function_exists('random_password'))
 {
-    function randomPassword() {
+    function random_password() {
     	$alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-!%@';
     	$pass = array(); //remember to declare $pass as an array
     	$alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
@@ -91,13 +91,13 @@ if(!function_exists('randomPassword'))
 	}
 }
 
-if(!function_exists('getServer'))
+if(!function_exists('get_server'))
 {
-    function getServer($function) {
+    function get_server($function) {
         $ci =& get_instance();
         $ci->load->model('Hostadm');
 
         $group = $ci->Hostadm->getUsedServer($ci->session->userdata('customer_id'));
-        return $ci->Hostadm->getServer($function, $group);
+        return $ci->Hostadm->get_server($function, $group);
     }
 }

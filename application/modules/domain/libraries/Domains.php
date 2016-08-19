@@ -24,15 +24,15 @@ class Domains {
      */
     public function listDomains()
 	{
-		if(hasAccess(array('manage_domain')))
+		if(has_access(array('manage_domain')))
 		{
 			$this->data['site'] = 'domains';
 			$this->data['title'] = lang('Manage domains');
 			$this->data['jsFiles'] = array('domain.js');
 
-			renderPage(role().'/domain', $this->data, true);
+			render_page(role().'/domain', $this->data, true);
 		} else {
-            NoAccess();
+            no_access();
         }
 
 	}
@@ -45,15 +45,15 @@ class Domains {
      */
     public function addDomain()
 	{
-		if(hasAccess(array('manage_domain')))
+		if(has_access(array('manage_domain')))
 		{
 			$this->data['site'] = 'domains';
 			$this->data['title'] = lang('Add new domain');
 			$this->data['jsFiles'] = array('domainForm.js');
 
-			renderPage(role().'/domain_form', $this->data, true);
+			render_page(role().'/domain_form', $this->data, true);
         } else {
-            NoAccess();
+            no_access();
         }
 
 	}
@@ -67,7 +67,7 @@ class Domains {
 	 */
     public function editDomain($id, $domain)
 	{
-		if(hasAccess(array('manage_domain')))
+		if(has_access(array('manage_domain')))
 		{
 			if($this->_CI->DomainModel->checkDomainOwner($id, $domain) > 0) {
 
@@ -112,31 +112,31 @@ class Domains {
                 $this->data['excludePsDirs'] = $excludePsDirs;
 
 
-				renderPage(role().'/domain_form', $this->data, true);
+				render_page(role().'/domain_form', $this->data, true);
 			} else {
-				NoAccess();
+				no_access();
 			}
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 
     public function getDomains()
 	{
-		if(hasAccess(array('manage_domain'))) {
+		if(has_access(array('manage_domain'))) {
 
 			$domains['total'] = $this->_CI->DomainModel->getDomains(TRUE);
 			$domains['rows'] = $this->_CI->DomainModel->getDomains();
 
-			return sendOutput($domains);
+			return send_output($domains);
         } else {
-            NoAccess();
+            no_access();
         }
     }
 
     public function suspendDomain()
 	{
-		if(hasAccess(array('manage_domain')))
+		if(has_access(array('manage_domain')))
 		{
 			$domain = $this->_CI->input->post('domain');
 			$domain_id = $this->_CI->input->post('domain_id');
@@ -146,16 +146,16 @@ class Domains {
 				$this->_CI->DomainModel->suspendDomain($domain_id, $status);
 
 				if($status == 0) {
-					addTask('suspendDomain', $domain_id);
+					add_task('suspendDomain', $domain_id);
 				}else{
-					addTask('activateDomain', $domain_id);
+					add_task('activateDomain', $domain_id);
 				}
-				return sendOutput(array('status' => 200));
+				return send_output(array('status' => 200));
 			} else {
-				return sendOutput(array('status' => 403));
+				return send_output(array('status' => 403));
 			}
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 
@@ -163,7 +163,7 @@ class Domains {
 	{
         $this->_CI->load->model('DnsModel');
 
-		if(hasAccess(array('manage_domain')))
+		if(has_access(array('manage_domain')))
 		{
 			$domain = $this->_CI->input->post('domain');
 			$domain_id = $this->_CI->input->post('domain_id');
@@ -179,27 +179,27 @@ class Domains {
 				$this->_CI->DomainModel->removeAliase($domain_id);
 
 				// Delete domain from piwik
-				if(moduleActive('piwik', false)) {
+				if(module_active('piwik', false)) {
 					$this->_CI->load->library('piwik');
 					$this->_CI->piwik->delete_site($domain);
 				}
 
 				// Delete email records if module used
-				if(moduleActive('mail', false)) {
+				if(module_active('mail', false)) {
 					$this->_CI->DomainModel->deleteMailAlias($domain);
 					$this->_CI->DomainModel->deleteMailCatchAll($domain);
 					$this->_CI->DomainModel->deleteMailUser($domain);
 				}
 
 				$this->_CI->DomainModel->DeleteDomain($domain_id);
-				addTask('deleteDomain', $domain_id);
+				add_task('deleteDomain', $domain_id);
 
-				return sendOutput(array('status' => 200));
+				return send_output(array('status' => 200));
 			} else {
-				return sendOutput(array('status' => 403));
+				return send_output(array('status' => 403));
 			}
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 
@@ -228,11 +228,11 @@ class Domains {
 	{
         $this->_CI->load->model('DnsModel');
 
-		if(hasAccess(array('manage_domain'), true))
+		if(has_access(array('manage_domain'), true))
 		{
 			$validate = $this->validate();
 			if($validate != 1){
-				return sendOutput($validate);
+				return send_output($validate);
 			}
 			$domain = $this->_CI->input->post('domain');
 			$active = ($this->_CI->input->post('active') == 1) ? 1 : 0;
@@ -246,7 +246,7 @@ class Domains {
 			$aliases = preg_split('/[\n\r]+/', trim($this->_CI->input->post('alias')));
 			$redirect_destination = ($redirect != '') ? $this->_CI->input->post('destination') : '';
 
-			$this->server_ip = getServer('mail')->ip;
+			$this->server_ip = get_server('mail')->ip;
 
             if($cache == 0){
                 $this->resetCacheSettings($this->_CI->input->post('domain_id'));
@@ -262,7 +262,7 @@ class Domains {
 						'field' => 'domain',
 						'status' => 501
 					);
-					return sendOutput($errors);
+					return send_output($errors);
 				}
 
 				foreach( $aliases as $index => $line )
@@ -273,7 +273,7 @@ class Domains {
 							'field' => 'alias',
 							'status' => 501
 						);
-						return sendOutput($errors);
+						return send_output($errors);
 					}
 				}
 			}
@@ -283,7 +283,7 @@ class Domains {
 
 			$data = array(
 				'customer_id' => $this->customer_id,
-				'server_id' => getServer('mail')->id,
+				'server_id' => get_server('mail')->id,
                 'server_ip' => $this->server_ip,
 				'active' => $active,
 				'php_version' => $this->_CI->input->post('php'),
@@ -314,7 +314,7 @@ class Domains {
 				$dns_id = $this->_CI->DnsModel->getDnsDomainId($domain_id);
 
 				// Remove alias DNS Records
-				if(moduleActive('dns') && $dns_id != 0) {
+				if(module_active('dns') && $dns_id != 0) {
 					foreach ($this->_CI->DomainModel->getAliasDomains($domain_id) as $key => $value) {
 						$this->_CI->DnsModel->removeAliaseRecords($value->alias, $dns_id);
 					}
@@ -328,14 +328,14 @@ class Domains {
 					$addAlias = array('domain_id' => $domain_id, 'alias' => trim($line), 'customer_id' => $this->customer_id);
 					$this->_CI->DomainModel->addAlias($addAlias);
 				}
-				if(moduleActive('dns') && $dns_id != 0) {
+				if(module_active('dns') && $dns_id != 0) {
 					$this->addAliasRecords($aliases, $dns_id);
 				}
 
-				addTask('updateDomain', $domain_id);
+				add_task('updateDomain', $domain_id);
 
 				$return = array('message' => lang('Domain has been successfully changed'), 'status' => '200');
-				return sendOutput($return);
+				return send_output($return);
 
 			}
 			else{
@@ -351,21 +351,21 @@ class Domains {
 					$return = array('domain_id' => $domain_id, 'status' => '200');
 
 					// Add records for dns
-					if(moduleActive('dns')) {
+					if(module_active('dns')) {
 						$this->addDNS($domain_id, $domain, $aliases);
 					}
-                    if(moduleActive('piwik', false)) {
+                    if(module_active('piwik', false)) {
                         $this->addPiwikDomain($domain);
                     }
 
-					addTask('addDomain', $domain_id);
+					add_task('addDomain', $domain_id);
 
-					return sendOutput($return);
+					return send_output($return);
 				}
 			}
 		} else{
 			$return = array('status' => 503);
-			return sendOutput($return);
+			return send_output($return);
 		}
 	}
 
@@ -373,13 +373,13 @@ class Domains {
 	{
         $this->_CI->load->model('DnsModel');
 
-		$addDomain = array('domain_id' => $domain_id, 'name' => $domain, 'type' => 'NATIVE', 'server_id' => getServer('mail')->id, 'customer_id' => $this->customer_id);
+		$addDomain = array('domain_id' => $domain_id, 'name' => $domain, 'type' => 'NATIVE', 'server_id' => get_server('mail')->id, 'customer_id' => $this->customer_id);
 		$dns_id = $this->_CI->DnsModel->addDNSDomain($addDomain);
 		if($dns_id > 0) {
 
-			$records[] = array('domain_id' => $dns_id, 'name' => $domain, 'content' => getSetting('primary_dns').' abuse@cconnect.es 1', 'type' => 'SOA', 'ttl' => '86400', 'prio' => NULL);
-			$records[] = array('domain_id' => $dns_id, 'name' => $domain, 'content' => getSetting('primary_dns'), 'type' => 'NS', 'ttl' => '86400', 'prio' => NULL);
-			$records[] = array('domain_id' => $dns_id, 'name' => $domain, 'content' => getSetting('secundary_dns'), 'type' => 'NS', 'ttl' => '86400', 'prio' => NULL);
+			$records[] = array('domain_id' => $dns_id, 'name' => $domain, 'content' => get_setting('primary_dns').' abuse@cconnect.es 1', 'type' => 'SOA', 'ttl' => '86400', 'prio' => NULL);
+			$records[] = array('domain_id' => $dns_id, 'name' => $domain, 'content' => get_setting('primary_dns'), 'type' => 'NS', 'ttl' => '86400', 'prio' => NULL);
+			$records[] = array('domain_id' => $dns_id, 'name' => $domain, 'content' => get_setting('secundary_dns'), 'type' => 'NS', 'ttl' => '86400', 'prio' => NULL);
 			$records[] = array('domain_id' => $dns_id, 'name' => $domain, 'content' => $this->server_ip, 'type' => 'A', 'ttl' => '120', 'prio' => NULL);
 			$records[] = array('domain_id' => $dns_id, 'name' => '*.'.$domain, 'content' => $this->server_ip, 'type' => 'A', 'ttl' => '120', 'prio' => NULL);
 			$records[] = array('domain_id' => $dns_id, 'name' => 'mail'.$domain, 'content' => $this->server_ip, 'type' => 'A', 'ttl' => '120', 'prio' => NULL);
@@ -406,7 +406,7 @@ class Domains {
 
     private function addPiwikDomain($domain)
 	{
-		if(moduleActive('piwik', false)) {
+		if(module_active('piwik', false)) {
 			$this->_CI->load->library('piwik');
 
 			$piwik = $this->_CI->DomainModel->getPiwikUser();
@@ -414,7 +414,7 @@ class Domains {
 			if(!isset($piwik->username)) {
 				$piwik = new stdClass;
 				$piwik->username = $this->customer_id;
-				$piwik->password = randomPassword();
+				$piwik->password = random_password();
 			}
 
 			if(!$this->_CI->piwik->user_exist($piwik->username)) {
@@ -446,7 +446,7 @@ class Domains {
 			$this->_CI->form_validation->set_rules('domain', 'Domain', 'trim|xss_clean|required|callback_check_fqdn');
 		}
 
-        if (!checkPath(trim($this->_CI->input->post('path')))) {
+        if (!check_path(trim($this->_CI->input->post('path')))) {
             $pathError = lang('The Pathname is not valid');
         }
 		$this->_CI->form_validation->set_rules('path', lang('Path'), 'trim|xss_clean|required|callback_check_path');
@@ -482,7 +482,7 @@ class Domains {
 					'alias' => $line.": ".lang('The alias is already exist'),
 					'status' => 501
 				);
-				return sendOutput($errors);
+				return send_output($errors);
 			}
 
 			if(!preg_match( "/^((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{1,63}$/mi", trim($line), $match )) {
@@ -490,7 +490,7 @@ class Domains {
 					'alias' => $line.": ".lang('The alias is invalid'),
 					'status' => 501
 				);
-				return sendOutput($errors);
+				return send_output($errors);
 			}
 		}
 
@@ -499,7 +499,7 @@ class Domains {
 	public function check_fqdn($str)
 	{
 		$this->_CI->form_validation->set_message( 'check_fqdn', lang('The domainname is not valid') );
-		return checkFqdn($str);
+		return check_fqdn($str);
     }
 
     public function resetCacheSettings($domain_id)
@@ -524,7 +524,7 @@ class Domains {
 
     public function saveCache()
     {
-        if(hasAccess(array('manage_domain'), true))
+        if(has_access(array('manage_domain'), true))
 		{
             $cacheSettings = json_decode($this->_CI->input->post('cacheSettings'));
             $excludeDirs = json_decode($this->_CI->input->post('excludeDirs'));
@@ -564,18 +564,18 @@ class Domains {
 
             $this->_CI->DomainModel->updateCache($data, $this->_CI->input->post('domain_id'));
 
-            addTask('updateDomain', $this->_CI->input->post('domain_id'));
+            add_task('updateDomain', $this->_CI->input->post('domain_id'));
 
             $return = array('message' => lang('Domain has been successfully changed'), 'status' => '200');
-		    return sendOutput($return);
+		    return send_output($return);
         } else {
-            NoAccess();
+            no_access();
         }
     }
 
     public function savePageSpeed()
     {
-        if(hasAccess(array('manage_domain'), true))
+        if(has_access(array('manage_domain'), true))
 		{
             $psSettings = json_decode($this->_CI->input->post('psSettings'));
             $excludeDirs = json_decode($this->_CI->input->post('excludeDirs'));
@@ -621,12 +621,12 @@ class Domains {
 
             $this->_CI->DomainModel->updatePagespeed($data, $this->_CI->input->post('domain_id'));
 
-            addTask('updateDomain', $this->_CI->input->post('domain_id'));
+            add_task('updateDomain', $this->_CI->input->post('domain_id'));
 
             $return = array('message' => lang('Domain has been successfully changed'), 'status' => '200');
-    		return sendOutput($return);
+    		return send_output($return);
         } else {
-            NoAccess();
+            no_access();
         }
     }
 

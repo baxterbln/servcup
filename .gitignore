@@ -1,5 +1,5 @@
-config.php
-database.php
+application/config/config.php
+application/config/database.php
 .Trash-1000
 .tags
 .tags1

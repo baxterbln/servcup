@@ -10,29 +10,29 @@ class Customer extends MX_Controller {
         parent::__construct();
 		$this->lang->load("module");
         $this->load->model('CustomerModel');
-		$this->data['jsLang'] = writeJsLang(dirname ( __FILE__ ));
+		$this->data['jsLang'] = write_js_lang(dirname ( __FILE__ ));
 	}
 
 	public function index()
 	{
-		if(hasAccess(array('manage_customer')))
+		if(has_access(array('manage_customer')))
 		{
 			$this->data['site'] = 'customer';
 			$this->data['jsFiles'] = array('customer.js');
-        	renderPage('customer', $this->data);
+        	render_page('customer', $this->data);
 		}
     }
 
 	public function addCustomer()
 	{
-		if(hasAccess(array('manage_customer', 'add_customer')))
+		if(has_access(array('manage_customer', 'add_customer')))
 		{
 			$this->data['site'] = 'customerForm';
 			$this->data['groups'] = $this->CustomerModel->getGroups();
 			$this->data['jsFiles'] = array('StrongPass.js', 'customerForm.js');
 			$this->data['title'] = 'Neuen Kunden anlegen';
 
-			renderPage('customer_form.php', $this->data);
+			render_page('customer_form.php', $this->data);
 		}
 	}
 
@@ -50,27 +50,27 @@ class Customer extends MX_Controller {
 
 			$this->data['title'] = 'Kunden ändern (Kunden-Nummer: '.$this->data['user']->customer_id.')';
 
-			renderPage('customer_form.php', $this->data);
+			render_page('customer_form.php', $this->data);
 		}
 	}
 
 	public function saveCustomer()
 	{
-		if(hasAccess(array('manage_customer'))) {
+		if(has_access(array('manage_customer'))) {
 
 			$this->update = false;
 
 			// Validate input
 			$validate = $this->validate();
 			if($validate != 1){
-				return sendOutput($validate);
+				return send_output($validate);
 			}
 
 			if ($this->input->post('customer_id') != "") {
 				$customer_id = $this->input->post('customer_id');
 
 				if($this->CustomerModel->CheckWritePermission($customer_id) == 0) {
-					return sendOutput(array('status' => '400'));
+					return send_output(array('status' => '400'));
 				}
 				$this->update = true;
 			}
@@ -80,7 +80,7 @@ class Customer extends MX_Controller {
 
 				// no customer exist, create first one
 				if ($customer_id == 0) {
-					$customer_id = getSetting('customer_id') + 1;
+					$customer_id = get_setting('customer_id') + 1;
 				}else{
 					$customer_id = intval($customer_id) + 1;
 				}
@@ -101,7 +101,7 @@ class Customer extends MX_Controller {
 			);
 
 			if ($this->update) {
-				if(hasAccess(array('manage_customer', 'edit_customer'))) {
+				if(has_access(array('manage_customer', 'edit_customer'))) {
 
 					$this->CustomerModel->updateCustomer($customerData, $customer_id);
 
@@ -123,7 +123,7 @@ class Customer extends MX_Controller {
 			}
 			else {
 
-				if(hasAccess(array('manage_customer', 'add_customer'))) {
+				if(has_access(array('manage_customer', 'add_customer'))) {
 
 					$base = array('user_id' => $this->session->userdata('uid'), 'customer_id' => $customer_id);
 					$customerData = array_merge($customerData, $base);
@@ -153,15 +153,15 @@ class Customer extends MX_Controller {
 				}
 			}
 
-			return sendOutput($return);
+			return send_output($return);
 		}else{
-			return sendOutput(array('status' => '500'));
+			return send_output(array('status' => '500'));
 		}
 	}
 
 	public function saveAdditional()
 	{
-		if(hasAccess(array('manage_customer'))) {
+		if(has_access(array('manage_customer'))) {
 
 			$customer_id = $this->input->post('customer_id');
 
@@ -181,22 +181,22 @@ class Customer extends MX_Controller {
 			if($this->CustomerModel->updateAdditional($this->security->xss_clean($customerData), $customer_id)){
 
 				$return = array('status' => '200');
-				return sendOutput($return);
+				return send_output($return);
 			}else{
 				$return = array('status' => '500');
-				return sendOutput($return);
+				return send_output($return);
 			}
 		}
 	}
 
     public function getCustomers()
 	{
-		if(hasAccess(array('manage_customer'))) {
+		if(has_access(array('manage_customer'))) {
 
 			$customers['total'] = $this->CustomerModel->getCustomers(TRUE);
 			$customers['rows'] = $this->CustomerModel->getCustomers();
 
-			return sendOutput($customers);
+			return send_output($customers);
 		}
     }
 

@@ -6,7 +6,7 @@ if (!defined('BASEPATH')) {
 
 class Hostadm extends CI_Model
 {
-    public function getSetting($key)
+    public function get_setting($key)
     {
         $this->db->select('value');
         $this->db->from('settings');
@@ -15,12 +15,12 @@ class Hostadm extends CI_Model
         return $this->db->get()->row();
     }
 
-    public function addTask($task, $object)
+    public function add_task($task, $object)
     {
         $this->db->insert('tasks', array('task' => $task, 'object' => $object));
     }
 
-    public function getServer($function, $group)
+    public function get_server($function, $group)
     {
         //SELECT server.ip FROM `server`, `server_groups` WHERE server.group_id = server_groups.id AND mail = 1
         $this->db->select('server.name AS name, server.ip as ip, server_groups.id AS id');

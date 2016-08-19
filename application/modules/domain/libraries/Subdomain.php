@@ -18,28 +18,28 @@ class Subdomain {
 
     public function subdomains()
 	{
-        if(hasAccess(array('manage_alias')))
+        if(has_access(array('manage_alias')))
 		{
 			$this->data['site'] = 'subdomains';
 			$this->data['title'] = lang('Manage subdomains');
 			$this->data['jsFiles'] = array('subdomains.js');
 
-			renderPage(role().'/subdomains', $this->data, true);
+			render_page(role().'/subdomains', $this->data, true);
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 
     public function getSubdomains()
 	{
-		if(hasAccess(array('manage_domain'))) {
+		if(has_access(array('manage_domain'))) {
 
 			$domains['total'] = $this->_CI->DomainModel->getSubdomains(TRUE);
 			$domains['rows'] = $this->_CI->DomainModel->getSubdomains();
 
-			return sendOutput($domains);
+			return send_output($domains);
 		} else {
-            NoAccess();
+            no_access();
         }
     }
 
@@ -51,7 +51,7 @@ class Subdomain {
      */
 	public function addSubdomain()
 	{
-		if(hasAccess(array('manage_domain')))
+		if(has_access(array('manage_domain')))
 		{
 			$this->data['site'] = 'add_subdomain';
 			$this->data['title'] = lang('Add new subdomain');
@@ -59,9 +59,9 @@ class Subdomain {
 			$this->data['cssFiles'] = array('autocomplete.min.css');
 			$this->data['domains'] = $this->_CI->DomainModel->listDomains();
 
-			renderPage(role().'/subdomain_form', $this->data, true);
+			render_page(role().'/subdomain_form', $this->data, true);
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 
@@ -75,7 +75,7 @@ class Subdomain {
 	 */
     public function editSubdomain($id, $domain)
 	{
-		if(hasAccess(array('manage_domain')))
+		if(has_access(array('manage_domain')))
 		{
 			if($this->_CI->DomainModel->checkDomainOwner($id, $domain) > 0) {
 
@@ -90,22 +90,22 @@ class Subdomain {
 				$this->data['title'] = lang('Edit subdomain').': '.$this->data['domain']->domain;
 				$this->data['domains'] = $this->_CI->DomainModel->listDomains();
 
-				renderPage(role().'/subdomain_form', $this->data, true);
+				render_page(role().'/subdomain_form', $this->data, true);
 			}else{
 				print "tztztz";
 			}
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 
 	public function saveSubdomain()
 	{
-		if(hasAccess(array('manage_domain')))
+		if(has_access(array('manage_domain')))
 		{
 			$validate = $this->validate();
 			if($validate != 1){
-				return sendOutput($validate);
+				return send_output($validate);
 			}
 
             $domain_id = $this->_CI->input->post('domain_id');
@@ -134,8 +134,8 @@ class Subdomain {
 			}else{
 				$data = array(
 					'customer_id' => $this->customer_id,
-                    'server_id' => getServer('mail')->id,
-                    'server_ip' => getServer('mail')->ip,
+                    'server_id' => get_server('mail')->id,
+                    'server_ip' => get_server('mail')->ip,
 					'active' => $active,
 					'parent_id' => $domain_id,
 					'domain' => $subdomain,
@@ -161,15 +161,15 @@ class Subdomain {
 						unset($data['type']);
 
 						$this->_CI->DomainModel->updateSubdomain($data, $sub_id);
-						addTask('updateDomain', $domain_id);
+						add_task('updateDomain', $domain_id);
 
-						return sendOutput(array('status' => '200'));
+						return send_output(array('status' => '200'));
 
 					} else { // Insert
 
 						// Check if exist
 						if ($this->_CI->DomainModel->checkDomain($subdomain) > 0) {
-							return sendOutput(array('domain' => lang('exist in domain'), 'status' => 501));
+							return send_output(array('domain' => lang('exist in domain'), 'status' => 501));
 						}
 
 						// Insert Domain
@@ -178,23 +178,23 @@ class Subdomain {
 
 							$return = array('domain_id' => $domain_id, 'sub_id' => $sub_id, 'status' => '200');
                             $this->addPiwikDomain($subdomain);
-							addTask('addDomain', $domain_id);
-							return sendOutput($return);
+							add_task('addDomain', $domain_id);
+							return send_output($return);
 						}
 					}
 				} else {
-					return sendOutput(array('domain' => lang('access denied'), 'status' => 501));
+					return send_output(array('domain' => lang('access denied'), 'status' => 501));
 				}
 			}
 		} else{
 			$return = array('status' => 503);
-			return sendOutput($return);
+			return send_output($return);
 		}
 	}
 
     public function deleteSubdomain()
 	{
-		if(hasAccess(array('manage_domain')))
+		if(has_access(array('manage_domain')))
 		{
 			$domain = $this->_CI->input->post('domain');
 			$domain_id = $this->_CI->input->post('domain_id');
@@ -202,26 +202,26 @@ class Subdomain {
 			if($this->_CI->DomainModel->checkDomainOwner($domain_id, $domain) > 0) {
 
 				// Delete domain from piwik
-				if(moduleActive('piwik', false)) {
+				if(module_active('piwik', false)) {
 					$this->_CI->load->library('piwik');
 					$this->_CI->piwik->delete_site($domain);
 				}
 
 				$this->_CI->DomainModel->DeleteDomain($domain_id);
-				addTask('deleteDomain', $domain_id);
+				add_task('deleteDomain', $domain_id);
 
-				return sendOutput(array('status' => 200));
+				return send_output(array('status' => 200));
 			} else {
-				return sendOutput(array('status' => 403));
+				return send_output(array('status' => 403));
 			}
         } else {
-            NoAccess();
+            no_access();
         }
 	}
 
     private function addPiwikDomain($domain)
 	{
-		if(moduleActive('piwik', false)) {
+		if(module_active('piwik', false)) {
 			$this->_CI->load->library('piwik');
 
 			$piwik = $this->_CI->DomainModel->getPiwikUser();
@@ -229,7 +229,7 @@ class Subdomain {
 			if(!isset($piwik->username)) {
 				$piwik = new stdClass;
 				$piwik->username = $this->customer_id;
-				$piwik->password = randomPassword();
+				$piwik->password = random_password();
 			}
 
 			if(!$this->_CI->piwik->user_exist($piwik->username)) {
@@ -262,7 +262,7 @@ class Subdomain {
 		}else{
             $this->_CI->form_validation->set_rules('domain_id', 'domain', 'trim|required');
         }
-        if (!checkPath(trim($this->_CI->input->post('path')))) {
+        if (!check_path(trim($this->_CI->input->post('path')))) {
             $pathError = lang('The Pathname is not valid');
         }
 

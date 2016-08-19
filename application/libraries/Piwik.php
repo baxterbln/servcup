@@ -25,9 +25,9 @@ class Piwik
         $this->_ci =& get_instance();
         //$this->_ci->load->config('piwik');
 
-        $this->piwik_url = getSetting('piwik_url');;
+        $this->piwik_url = get_setting('piwik_url');;
         //$this->site_id = $this->_ci->config->item('site_id');
-        $this->token = getSetting('piwik_token');
+        $this->token = get_setting('piwik_token');
         $this->geoip_on = $this->_ci->config->item('geoip_on');
 
         if($this->geoip_on)

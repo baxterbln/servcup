@@ -1,8 +1,8 @@
 <?php
 
-if(!function_exists('renderPage'))
+if(!function_exists('render_page'))
 {
-    function renderPage($template, $data, $sub = false)
+    function render_page($template, $data, $sub = false)
     {
         $ci =& get_instance();
         $ci->load->view('widgets/header', $data);
@@ -13,9 +13,9 @@ if(!function_exists('renderPage'))
     }
 }
 
-if(!function_exists('readMenuEntrys'))
+if(!function_exists('read_menu_entrys'))
 {
-    function readMenuEntrys()
+    function read_menu_entrys()
     {
         $ci =& get_instance();
         $menuentry = array();
@@ -44,20 +44,20 @@ if(!function_exists('readMenuEntrys'))
 
             $ci->config->set_item(role().'_menu', $menuentry);
         }
-        return buildMenu();
+        return build_menu();
     }
 }
 
-if(!function_exists('buildMenu'))
+if(!function_exists('build_menu'))
 {
-    function buildMenu() {
+    function build_menu() {
         $ci =& get_instance();
 
         $myMenu = "";
         //print_r($ci->config->item(role().'_menu'));
         if(is_array($ci->config->item(role().'_menu'))) {
     		foreach($ci->config->item(role().'_menu') as $arr){
-      			$myMenu .= createMenu($arr);
+      			$myMenu .= create_menu($arr);
     		}
         }
 
@@ -65,9 +65,9 @@ if(!function_exists('buildMenu'))
     }
 }
 
-if(!function_exists('createMenu'))
+if(!function_exists('create_menu'))
 {
-    function createMenu($arr)
+    function create_menu($arr)
     {
         $ci =& get_instance();
         $str = '';
@@ -90,7 +90,7 @@ if(!function_exists('createMenu'))
                     $str .= "<ul>";
                 }
 				foreach($arr['children'] as $subarr){
-        			$str .= createMenu($subarr,$str);
+        			$str .= create_menu($subarr,$str);
 				}
 				$str .="</ul>";
          	}
@@ -100,11 +100,11 @@ if(!function_exists('createMenu'))
     }
 }
 
-if(!function_exists('NoAccess'))
+if(!function_exists('no_access'))
 {
-    function NoAccess() {
+    function no_access() {
         $error['title'] = lang('System Error');
 		$error['error'] = lang('no access');
-		renderPage('errors/html/error_system', $error, true);
+		render_page('errors/html/error_system', $error, true);
     }
 }

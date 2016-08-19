@@ -18,3 +18,11 @@ $js['confirm delete user'] = 'Benutzer löschen?';
 $js['confirm delete user message'] = 'Soll der Benutzer wirklich gelöscht werden?';
 $js['access denied'] = 'Sie haben keine Berechtigung das Object zu ändern!';
 $js['database exist'] = 'Dem Benutzer ist noch eine Datenbank zugewiesen!';
+
+$js['database'] = 'Datenbank';
+$js['add db'] = 'Datenbank hinzufügen';
+$js['edit db'] = 'Datenbank ändern';
+$js['confirm delete db'] = 'Datenbank löschen?';
+$js['confirm delete db message'] = 'Soll die Datenbank wirklich gelöscht werden?';
+$js['db added'] = 'Datenbank wurde gespeichert';
+$js['db saved'] = 'Datenbank wurde geändert';

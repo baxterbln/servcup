@@ -11,8 +11,8 @@ class Dashboard extends MX_Controller {
 	public function index()
 	{
 		$data['site'] = 'dashboard';
-		//hasAccess('admin', array('manage_domain'));
+		//has_access('admin', array('manage_domain'));
 
-		renderPage(role().'/dashboard', $data);
+		render_page(role().'/dashboard', $data);
 	}
 }
