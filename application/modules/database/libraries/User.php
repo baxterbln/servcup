@@ -17,6 +17,15 @@ class User
         $this->customer_id = $this->_CI->session->userdata('customer_id');
     }
 
+    /**
+     * user
+     * administrate user
+     *
+     * @access  public
+     *
+     * @return  html
+     * @return  json    on error
+     */
     public function user()
     {
         if (has_access(array('manage_database'))) {
@@ -30,6 +39,14 @@ class User
         }
     }
 
+    /**
+     * get_users
+     * get database user list
+     *
+     * @access  public
+     *
+     * @return  json
+     */
     public function get_users()
     {
         if (has_access(array('manage_database'))) {
@@ -42,6 +59,16 @@ class User
         }
     }
 
+    /**
+     * get_user
+     * get database user data
+     *
+     * @param string    $_POST['username']    Name of the database user
+     * @param string    $_POST['id']          Id of the database user
+     * @access  public
+     *
+     * @return  json
+     */
     public function get_user()
     {
         if (has_access(array('manage_database')) && $this->_CI->DatabaseModel->check_owner('username', $this->_CI->input->post('username'), 'sql_user')) {
@@ -52,6 +79,18 @@ class User
         }
     }
 
+    /**
+	 * save_user
+	 * create or update database user
+	 *
+	 * @access  public
+     * @param  string    $_POST['username']          Username
+     * @param  string    $_POST['password']          password
+     * @param  string    $_POST['password_repeat']   password repeat
+     * @param  int       $_POST['remote']            enable remote access (0/1)
+     *
+     * @return  json
+	 */
     public function save_user()
     {
         if (has_access(array('manage_database'))) {
@@ -95,6 +134,16 @@ class User
         }
     }
 
+    /**
+	 * delete_user
+	 * delete database user
+	 *
+	 * @access  public
+     * @param  string   $_POST['username'] Database username
+     * @param  int      $_POST['user_id']  Id of database user
+     *
+     * @return  json
+	 */
     public function delete_user()
     {
         if ( has_access(array('manage_database')) && $this->_CI->DatabaseModel->check_owner('username', $this->_CI->input->post('username'), 'sql_user') )
@@ -110,6 +159,15 @@ class User
         }
     }
 
+    /**
+	 * validate
+	 * validation
+	 *
+	 * @access  public
+     * @param  bool  $update    if update (true) or not (false, default)
+     *
+     * @return  array
+	 */
     private function validate($update = false)
     {
         $this->_CI->load->library('form_validation');
@@ -146,6 +204,15 @@ class User
         }
     }
 
+    /**
+	 * check_alphanumeric
+	 * Check if string alpha-numeric
+	 *
+	 * @access  public
+     * @param  string  $str    checked string
+     *
+     * @return  bool
+	 */
     public function check_alphanumeric($str)
     {
         $this->_CI->form_validation->set_message('alphaNumeric', 'Is not alpha numeric');
@@ -153,6 +220,15 @@ class User
         return (!preg_match('/^([a-zA-Z0-9_])+$/i', $str)) ? false : true;
     }
 
+    /**
+	 * check_existUser
+	 * Check is user already exist
+	 *
+	 * @access  public
+     * @param  string  $user    username
+     *
+     * @return  bool
+	 */
     public function check_existUser($user)
     {
         $this->_CI->form_validation->set_message('UserExist', 'user ist already exist');

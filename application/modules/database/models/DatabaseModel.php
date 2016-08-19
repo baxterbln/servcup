@@ -11,6 +11,20 @@ class DatabaseModel extends CI_Model
         $this->customer_id = $this->session->userdata('customer_id');
     }
 
+    /**
+	 * get_users
+	 * get saved database users
+	 *
+     * @param   bool    $count optional for counting all results
+     * @param   string  $_GET['search'] search string
+     * @param   int     $_GET['limit']
+     * @param   int     $_GET['offset']
+     * @param   string  $_GET['sort']
+     * @param   string  $_GET['order']
+	 * @access  public
+     *
+     * @return  array[]
+	 */
     public function get_users($count = FALSE)
     {
         $this->db->select('*');
@@ -40,6 +54,14 @@ class DatabaseModel extends CI_Model
         }
     }
 
+    /**
+	 * listing_user
+	 * get full result of database users
+	 *
+	 * @access  public
+     *
+     * @return  array[]
+	 */
     public function listing_user()
     {
         $this->db->select('username');
@@ -49,6 +71,20 @@ class DatabaseModel extends CI_Model
         return  $this->db->get()->result();
     }
 
+    /**
+	 * get_databases
+	 * get saved databases
+	 *
+     * @param   bool    $count optional for counting all results
+     * @param   string  $_GET['search'] search string
+     * @param   int     $_GET['limit']
+     * @param   int     $_GET['offset']
+     * @param   string  $_GET['sort']
+     * @param   string  $_GET['order']
+	 * @access  public
+     *
+     * @return  array[]
+	 */
     public function get_databases($count = FALSE)
     {
         $this->db->select('*');

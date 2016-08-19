@@ -15,6 +15,14 @@ class Databases {
         $this->customer_id = $this->_CI->session->userdata('customer_id');
     }
 
+    /**
+	 * list_databases
+	 * get full result of database with users
+	 *
+	 * @access  public
+     *
+     * @return  html
+	 */
     public function list_databases()
     {
         if(has_access(array('manage_database')))
@@ -30,6 +38,14 @@ class Databases {
         }
     }
 
+    /**
+	 * get_databases
+	 * get result of databases
+	 *
+	 * @access  public
+     *
+     * @return  html
+	 */
     public function get_databases()
     {
         if (has_access(array('manage_database'))) {
@@ -42,6 +58,16 @@ class Databases {
         }
     }
 
+    /**
+	 * save_database
+	 * create or update database
+	 *
+	 * @access  public
+     * @param   $_POST['dbname']    Name of the database
+     * @param   $_POST['username']  username for the database
+     *
+     * @return  html
+	 */
     public function save_database()
     {
         if (has_access(array('manage_database'))) {
@@ -83,9 +109,4 @@ class Databases {
             return send_output(array('status' => 500));
         }
     }
-
-
-
-
-
 }
