@@ -36,6 +36,7 @@
                                             <h3 class="title formtitle" style="padding-bottom: 40px;"><?php echo lang('Add DB'); ?></h3>
                                             <form id="saveDBForm">
                                                 <input type="hidden" name="db_id" id="db_id" value="">
+                                                <input type="hidden" name="db_name" id="db_name" value="">
                                                 <div class="form-group row" style="padding-bottom: 20px;">
                                                     <label class="col-sm-4 form-control-label"><?php echo lang('Database Name'); ?>:</label>
                                                     <div class="col-sm-8">

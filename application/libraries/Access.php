@@ -55,12 +55,13 @@ class Access {
 		/* Load the permissions */
 		$permissions = (array) $this->_CI->Acl->getPermissions($this->_CI->session->userdata('group_id')); //$this->_CI->config->item('permission');
 
+		//print_r($permissions);
+
 		foreach ($permissions as $action => $role)
 		{
 			if (in_array($action, $required_permissions))
 			{
 				if($role == 1){
-					log_message('debug', "user has access");
 					return TRUE;
 				}else{
 					log_message('debug', "user has no access");

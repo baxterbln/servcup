@@ -1,7 +1,5 @@
 <?php
-if (!defined('BASEPATH')) {
-    exit('No direct script access allowed');
-}
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User
 {
@@ -19,12 +17,11 @@ class User
 
     /**
      * user
-     * administrate user
+     * administrate user.
      *
-     * @access  public
      *
-     * @return  html
-     * @return  json    on error
+     * @return html
+     * @return json on error
      */
     public function user()
     {
@@ -41,11 +38,10 @@ class User
 
     /**
      * get_users
-     * get database user list
+     * get database user list.
      *
-     * @access  public
      *
-     * @return  json
+     * @return json
      */
     public function get_users()
     {
@@ -61,42 +57,40 @@ class User
 
     /**
      * get_user
-     * get database user data
+     * get database user data.
      *
-     * @param string    $_POST['username']    Name of the database user
-     * @param string    $_POST['id']          Id of the database user
-     * @access  public
+     * @param string $_POST['username'] Name of the database user
+     * @param string $_POST['id']       Id of the database user
      *
-     * @return  json
+     * @return json
      */
     public function get_user()
     {
         if (has_access(array('manage_database')) && $this->_CI->DatabaseModel->check_owner('username', $this->_CI->input->post('username'), 'sql_user')) {
             $data = $this->_CI->DatabaseModel->get_user($this->_CI->input->post('username'), $this->_CI->input->post('id'));
+
             return send_output($data);
-        }else{
+        } else {
             return send_output(array('status' => 500));
         }
     }
 
     /**
-	 * save_user
-	 * create or update database user
-	 *
-	 * @access  public
-     * @param  string    $_POST['username']          Username
-     * @param  string    $_POST['password']          password
-     * @param  string    $_POST['password_repeat']   password repeat
-     * @param  int       $_POST['remote']            enable remote access (0/1)
+     * save_user
+     * create or update database user.
      *
-     * @return  json
-	 */
+     * @param string $_POST['username']        Username
+     * @param string $_POST['password']        password
+     * @param string $_POST['password_repeat'] password repeat
+     * @param int    $_POST['remote']          enable remote access (0/1)
+     *
+     * @return json
+     */
     public function save_user()
     {
         if (has_access(array('manage_database'))) {
-
             $update = false;
-            if($this->_CI->input->post('user_id')) {
+            if ($this->_CI->input->post('user_id')) {
                 $update = true;
             }
 
@@ -117,13 +111,13 @@ class User
                     'remote' => $remote,
                 );
 
-                if($update) {
+                if ($update) {
                     unset($data['server_id']);
                     unset($data['customer_id']);
                     unset($data['username']);
 
                     $this->_CI->DatabaseModel->update_user($data, $this->_CI->input->post('user_id'));
-                }else{
+                } else {
                     $this->_CI->DatabaseModel->add_user($data);
                 }
 
@@ -135,23 +129,22 @@ class User
     }
 
     /**
-	 * delete_user
-	 * delete database user
-	 *
-	 * @access  public
-     * @param  string   $_POST['username'] Database username
-     * @param  int      $_POST['user_id']  Id of database user
+     * delete_user
+     * delete database user.
      *
-     * @return  json
-	 */
+     * @param string $_POST['username'] Database username
+     * @param int    $_POST['user_id']  Id of database user
+     *
+     * @return json
+     */
     public function delete_user()
     {
-        if ( has_access(array('manage_database')) && $this->_CI->DatabaseModel->check_owner('username', $this->_CI->input->post('username'), 'sql_user') )
-        {
-            if($this->_CI->DatabaseModel->check_assign_user($this->_CI->input->post('username'))){ // User is assigned to database, error
+        if (has_access(array('manage_database')) && $this->_CI->DatabaseModel->check_owner('username', $this->_CI->input->post('username'), 'sql_user')) {
+            if ($this->_CI->DatabaseModel->check_assign_user($this->_CI->input->post('username'))) { // User is assigned to database, error
                 return send_output(array('status' => 501));
-            }else{
+            } else {
                 $this->_CI->DatabaseModel->delete_user($this->_CI->input->post('user_id'), $this->_CI->input->post('username'));
+
                 return send_output(array('status' => 200));
             }
         } else {
@@ -160,14 +153,13 @@ class User
     }
 
     /**
-	 * validate
-	 * validation
-	 *
-	 * @access  public
-     * @param  bool  $update    if update (true) or not (false, default)
+     * validate
+     * validation.
      *
-     * @return  array
-	 */
+     * @param bool $update if update (true) or not (false, default)
+     *
+     * @return array
+     */
     private function validate($update = false)
     {
         $this->_CI->load->library('form_validation');
@@ -180,7 +172,7 @@ class User
             $formcheck = true;
         }
 
-        if ( !$update || ( $update && $this->_CI->input->post('password') != "") ) {
+        if (!$update || ($update && $this->_CI->input->post('password') != '')) {
             $this->_CI->form_validation->set_rules('password', 'Password', 'trim|xss_clean|required|min_length[6]');
             $this->_CI->form_validation->set_rules('password_repeat', 'Password repeat', 'trim|xss_clean|required|min_length[6]|matches[password]');
             $formcheck = true;
@@ -205,14 +197,13 @@ class User
     }
 
     /**
-	 * check_alphanumeric
-	 * Check if string alpha-numeric
-	 *
-	 * @access  public
-     * @param  string  $str    checked string
+     * check_alphanumeric
+     * Check if string alpha-numeric.
      *
-     * @return  bool
-	 */
+     * @param string $str checked string
+     *
+     * @return bool
+     */
     public function check_alphanumeric($str)
     {
         $this->_CI->form_validation->set_message('alphaNumeric', 'Is not alpha numeric');
@@ -221,14 +212,13 @@ class User
     }
 
     /**
-	 * check_existUser
-	 * Check is user already exist
-	 *
-	 * @access  public
-     * @param  string  $user    username
+     * check_existUser
+     * Check is user already exist.
      *
-     * @return  bool
-	 */
+     * @param string $user username
+     *
+     * @return bool
+     */
     public function check_existUser($user)
     {
         $this->_CI->form_validation->set_message('UserExist', 'user ist already exist');

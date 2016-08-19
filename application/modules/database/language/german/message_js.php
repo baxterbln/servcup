@@ -26,3 +26,4 @@ $js['confirm delete db'] = 'Datenbank löschen?';
 $js['confirm delete db message'] = 'Soll die Datenbank wirklich gelöscht werden?';
 $js['db added'] = 'Datenbank wurde gespeichert';
 $js['db saved'] = 'Datenbank wurde geändert';
+$js['db deleted'] = 'Datenbank wurde gelöscht';

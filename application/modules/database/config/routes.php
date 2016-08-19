@@ -5,6 +5,7 @@ $route['database'] = 'database';
 $route['database/saveDatabase'] = 'database/save_database';
 $route['database/deleteDatabase'] = 'database/delete_database';
 $route['database/getDatabases'] = 'database/get_databases';
+$route['database/getDatabase'] = 'database/get_database';
 
 $route['database/user'] = 'database/user';
 $route['database/saveUser'] = 'database/save_user';

@@ -229,6 +229,40 @@ class DatabaseModel extends CI_Model
     }
 
     /**
+	 * get_db_username
+	 * get username from db, required for delete and update
+     *
+     * @param   int     $id    Id of database
+     *
+     * @return  string  username
+	 * @access  private
+	 */
+    private function get_db_username($id)
+    {
+        $this->db->select('db_user');
+        $this->db->where('customer_id', $this->customer_id);
+        $this->db->where('id', $id);
+        return $this->db->get('sql_databases')->row()->db_user;
+    }
+
+    /**
+	 * get_database
+	 * get username from db, required for delete and update
+     *
+     * @param   int     $id    Id of database
+     *
+     * @return  string  username
+	 * @access  public
+	 */
+    public function get_database($id)
+    {
+        $this->db->select('id, db_name, db_user, customer_id');
+        $this->db->where('customer_id', $this->customer_id);
+        $this->db->where('id', $id);
+        return $this->db->get('sql_databases')->row();
+    }
+
+    /**
 	 * delete_user
 	 * delete sql user
      *
@@ -298,6 +332,7 @@ class DatabaseModel extends CI_Model
         $dbm = $this->load->database(get_server('mysql')->name, true);
         $dbm->query("ALTER USER '".$user."'@'".$lasthost."' IDENTIFIED BY '". $password ."';");
         $dbm->query("UPDATE user SET Host='". $host ."' WHERE User='". $user ."';");
+        $dbm->query("UPDATE db SET Host='". $host ."' WHERE User='". $user ."';");
         $dbm->query("FLUSH PRIVILEGES;");
     }
 
@@ -352,6 +387,21 @@ class DatabaseModel extends CI_Model
         $dbm = $this->load->database(get_server('mysql')->name, true);
         $dbm->query("CREATE DATABASE ".$data['db_name']." CHARACTER SET utf8 COLLATE utf8_general_ci;");
         $this->grant_privileges($data['db_user'], $data['db_name']);
+    }
+
+    /**
+	 * create_database
+	 * create MySQL Database
+     *
+     * @param   string     $database    Name of database
+     *
+	 * @access  public
+	 */
+    public function drop_database($database)
+    {
+        $dbm = $this->load->database(get_server('mysql')->name, true);
+        $dbm->query("DROP DATABASE ".$database.";");
+        $dbm->query("FLUSH PRIVILEGES;");
     }
 
     /**
@@ -411,5 +461,36 @@ class DatabaseModel extends CI_Model
             return true;
         }
         return false;
+    }
+
+    /**
+	 * delete_database
+	 * delete mysql database
+     *
+     * @param   int     $id    Id of database
+     * @param   string  $db_name   MySQL database name
+     *
+	 * @access  public
+	 */
+    public function delete_database($id, $db_name)
+    {
+        $user = $this->get_db_username($id);
+        $this->revoke_privileges($user, $db_name);
+        $this->drop_database($db_name);
+
+        $this->db->where( array('id' => $id, 'customer_id' => $this->customer_id, 'db_name' => $db_name) );
+        $this->db->delete('sql_databases');
+    }
+
+    public function update_database($id, $user, $database, $data)
+    {
+        $host = $this->get_db_host($user);
+
+        $dbm = $this->load->database(get_server('mysql')->name, true);
+        $dbm->query("UPDATE db SET Host='". $host ."', User='". $user ."' WHERE db='". $database ."';");
+        $dbm->query("FLUSH PRIVILEGES;");
+        
+        $this->db->where(array('customer_id' => $this->customer_id, 'id' => $id));
+        $this->db->update('sql_databases', $data);
     }
 }

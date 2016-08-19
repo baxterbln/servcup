@@ -1,4 +1,5 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Databases {
 
@@ -59,6 +60,26 @@ class Databases {
     }
 
     /**
+	 * get_database
+	 * get database data
+	 *
+	 * @access  public
+     *
+     * @return  json
+	 */
+    public function get_database()
+    {
+        if (has_access(array('manage_database')) && $this->_CI->DatabaseModel->check_owner('db_name', trim($this->_CI->input->post('db_name')), 'sql_databases')) {
+
+            $data = $this->_CI->DatabaseModel->get_database(trim($this->_CI->input->post('db_id')));
+
+            return send_output($data);
+        } else {
+            return send_output(array('status' => 500));
+        }
+    }
+
+    /**
 	 * save_database
 	 * create or update database
 	 *
@@ -104,8 +125,55 @@ class Databases {
                 }
             }else{
 
+
+                if($this->_CI->DatabaseModel->check_owner('db_name', trim($this->_CI->input->post('db_name')), 'sql_databases'))
+                {
+                    unset($data['server_id']);
+                    unset($data['customer_id']);
+                    unset($data['db_type']);
+                    unset($data['remote']);
+                    unset($data['db_name']);
+
+                    if($this->_CI->input->post('username') == "") {
+                        return send_output(array('username' => lang('No user exist'), 'status' => 501));
+                    }
+
+                    $this->_CI->DatabaseModel->update_database(
+                        trim($this->_CI->input->post('db_id')),
+                        $this->_CI->input->post('username'),
+                        trim($this->_CI->input->post('db_name')),
+                        $data
+                    );
+                    return send_output(array('status' => 200));
+                }
+                else{
+                    return send_output(array('status' => 500));
+                }
             }
         } else {
+            return send_output(array('status' => 500));
+        }
+    }
+
+    /**
+	 * delete_database
+	 * delete database from db and server
+	 *
+	 * @access  public
+     * @param   $_POST['db_id']    Id of the database
+     * @param   $_POST['db_name']  Name for the database
+     *
+     * @return  html
+	 */
+    public function delete_database()
+    {
+        if (has_access(array('manage_database')) && $this->_CI->DatabaseModel->check_owner('db_name', trim($this->_CI->input->post('db_name')), 'sql_databases')) {
+            $this->_CI->DatabaseModel->delete_database(
+                trim($this->_CI->input->post('db_id')),
+                trim($this->_CI->input->post('db_name'))
+            );
+            return send_output(array('status' => 200));
+        } else{
             return send_output(array('status' => 500));
         }
     }

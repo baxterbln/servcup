@@ -5,12 +5,12 @@ $menu['user'] = array(
         'title' => lang('Domain Managment'),
         'icon' => 'th-large',
         'url' => '/domain',
-        'perms' => 'manage_customer',
+        'perms' => 'manage_domain',
         'children' => array(
             array(
                 'title' => lang('Domains'),
                 'url' => '/domain',
-                'perms' => 'manage_domains'
+                'perms' => 'manage_domain'
             ),
             array(
                 'title' => lang('Subdomains'),
@@ -25,7 +25,7 @@ $menu['user'] = array(
             array(
                 'title' => lang('Alias Domain'),
                 'url' => '/domain/forwards',
-                'perms' => 'manage_domains'
+                'perms' => 'manage_domain'
             )
         )
     );

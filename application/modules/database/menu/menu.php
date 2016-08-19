@@ -5,22 +5,22 @@ $menu['user'] = array(
     'title' => lang('Databases'),
     'icon' => 'database',
     'url' => '/database',
-    'perms' => 'manage_customer',
+    'perms' => 'manage_database',
     'children' => array(
         array(
             'title' => lang('Database user'),
             'url' => '/database/user',
-            'perms' => 'manage_customer',
+            'perms' => 'manage_database',
         ),
         array(
             'title' => lang('Manage databases'),
             'url' => '/database',
-            'perms' => 'manage_groups',
+            'perms' => 'manage_database',
         ),
         array(
             'title' => lang('phpMyAdmin'),
-            'url' => '/database/phpmyadmin',
-            'perms' => 'manage_groups',
+            'url' => '/phpmyadmin',
+            'perms' => 'manage_database',
         ),
     ),
 );

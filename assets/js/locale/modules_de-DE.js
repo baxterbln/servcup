@@ -22,3 +22,4 @@ var LG_confirm_delete_db = 'Datenbank löschen?';
 var LG_confirm_delete_db_message = 'Soll die Datenbank wirklich gelöscht werden?';
 var LG_db_added = 'Datenbank wurde gespeichert';
 var LG_db_saved = 'Datenbank wurde geändert';
+var LG_db_deleted = 'Datenbank wurde gelöscht';

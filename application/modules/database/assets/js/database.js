@@ -77,42 +77,29 @@ $(function() {
             });
         }
     });
-
-    $('#generate').click(function(e) {
-        e.preventDefault();
-        var password = makePasswd();
-        $('#password').prop('type', 'text').val(password);
-        $('#password_repeat').val(password);
-    });
 });
 
 window.operateEvents = {
     'click .edit': function(e, value, row, index) {
         $.ajax({
-            url: '/database/getUser',
+            url: '/database/getDatabase',
             type: 'post',
             dataType: 'json',
             data: {
-                id: row.id,
-                username: row.username
+                db_id: row.id,
+                db_name: row.db_name
             },
             success: function(data) {
 
-                var username = data.username;
-                username = username.replace("_" + data.customer_id, "");
+                var dbname = data.db_name;
+                dbname = dbname.replace("_" + data.customer_id, "");
 
-                $('#username').val(username);
-                $('#username').prop('disabled', true);
-                $('#user_id').val(data.id);
-                $('#password').val('');
-                $('#password_repeat').val('');
-                $(".formtitle").text(LG_edit_user);
-
-                if (data.remote == '%') {
-                    $('#remote').prop('checked', true);
-                } else {
-                    $('#remote').prop('checked', false);
-                }
+                $('#dbname').val(dbname);
+                $('#db_id').val(data.id);
+                $('#db_name').val(data.db_name);
+                $('#dbname').prop('disabled', true);
+                $("#username").val(data.db_user);
+                $(".formtitle").text(LG_edit_db);
             }
         });
     },
@@ -127,12 +114,12 @@ window.operateEvents = {
                     className: "btn-danger",
                     callback: function() {
                         $.ajax({
-                            url: '/database/deleteUser',
+                            url: '/database/deleteDatabase',
                             type: 'post',
                             dataType: 'json',
                             data: {
-                                user_id: row.id,
-                                username: row.username
+                                db_id: row.id,
+                                db_name: row.db_name
                             },
                             success: function(data) {
                                 if (data.status == "503") {
@@ -140,11 +127,9 @@ window.operateEvents = {
                                 } else if (data.status == "500") {
                                     // No access to object
                                     bootbox.alert(LG_access_denied, function() {});
-                                } else if (data.status == "501") {
-                                    // user had assigned database
-                                    bootbox.alert(LG_database_exist, function() {});
                                 } else {
-                                    $('#userlist').bootstrapTable('refresh');
+                                    bootbox.alert(LG_db_deleted, function() {});
+                                    $('#dblist').bootstrapTable('refresh');
                                 }
                             }
                         });

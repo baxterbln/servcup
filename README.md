@@ -6,8 +6,8 @@ Serverpart / Processes will be realized with golang
 Features:
 
 Userarea:
-- Manage Domains, Forwards, Subdomains, Caching, Mod-Pagespeed
-- Manage Datases and Users
+- Manage Domains, Forwards, Subdomains, Caching, Mod-Pagespeed (finished for beta)
+- Manage Datases and Users (finished for beta)
 - Manage Emailaccount, Forwards e.g.
 - Manage FTP Accounts
 - Manage DNS records
@@ -22,9 +22,9 @@ Reseller Area:
 - Support Area
 
 Admin Area:
-- Manage Users
+- Manage Customers  (finished for beta)
 - Manage Domains
 - Manage Orders (Domains & Packages)
 - Support Area
-- Permission Managment
+- Permission Managment (finished for beta)
 - Billing + Creating invoices

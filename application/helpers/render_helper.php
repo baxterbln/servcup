@@ -73,28 +73,32 @@ if(!function_exists('create_menu'))
         $str = '';
         $uri = $ci->uri->segment(1);
         if(is_array($arr)){
+            if(has_access(array($arr['perms']))) {
 
-            $str .= '<li><a href="'.$arr['url'].'">';
-			if(!empty($arr['icon'])){
-				$str .= '<i class="fa fa-'.$arr['icon'].'"></i>';
-			}
-			$str .= $arr['title'];
-			if(!empty($arr['children'])){
-				$str .= '<i class="fa arrow"></i>';
-			}
-			$str .= '</a>';
-         	if(!empty($arr['children'])){
-                if (strpos($arr['url'], $uri) !== false || (strpos($arr['url'], $uri) !== false && $ci->uri->segment(2))) {
-                    $str .= '<ul class="collapse in">';
-                }else{
-                    $str .= "<ul>";
+                $str .= '<li><a href="'.$arr['url'].'">';
+    			if(!empty($arr['icon'])){
+    				$str .= '<i class="fa fa-'.$arr['icon'].'"></i>';
+    			}
+    			$str .= $arr['title'];
+    			if(!empty($arr['children'])){
+    				$str .= '<i class="fa arrow"></i>';
+    			}
+    			$str .= '</a>';
+             	if(!empty($arr['children'])){
+                    if(has_access(array($arr['perms']))) {
+                        if (strpos($arr['url'], $uri) !== false || (strpos($arr['url'], $uri) !== false && $ci->uri->segment(2))) {
+                            $str .= '<ul class="collapse in">';
+                        }else{
+                            $str .= "<ul>";
+                        }
+        				foreach($arr['children'] as $subarr){
+                			$str .= create_menu($subarr,$str);
+        				}
+        				$str .="</ul>";
+                 	}
                 }
-				foreach($arr['children'] as $subarr){
-        			$str .= create_menu($subarr,$str);
-				}
-				$str .="</ul>";
-         	}
-			$str .= "</li>";
+    			$str .= "</li>";
+            }
         }
         return $str;
     }
