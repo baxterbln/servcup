@@ -360,4 +360,15 @@ class DomainModel extends CI_Model
         $this->db->update('domain_alias', $data);
     }
 
+    public function add_mail_domain($data)
+    {
+        $this->db->insert('mail_domains', $data);
+        return $this->db->insert_id();
+    }
+
+    public function add_mail_user($data)
+    {
+        $this->db->insert('mail_users', $data);
+    }
+
 }

@@ -252,7 +252,7 @@ class Domains {
                 $this->reset_cache_settings($this->_CI->input->post('domain_id'));
             }
 
-			if($this->_CI->input->post('domain_id') == "") {
+			if($this->_CI->input->post('domain_id') == "") { # add domain
 
 				$this->update = false;
 
@@ -340,6 +340,39 @@ class Domains {
 			}
 			else{
 				$domain_id = $this->_CI->DomainModel->add_domain($data);
+
+                /* Add domain and default postermaster account for mail */
+
+                $mail_path = str_replace("//", "/", get_setting('mail_path').'/'.$domain);
+
+                $mail_domain = array(
+                                'customer_id' => $this->customer_id,
+                                'domain' => $domain,
+                                'maildir' => $mail_path,
+                                'type' => 'local',
+                                'enabled' => 1,
+                                'spamassassin' => 1,
+                                'sa_tag' => 5,
+                                'sa_refuse' => 10
+                            );
+
+                $mail_id = $this->_CI->DomainModel->DomainModel->add_mail_domain($mail_domain);
+
+                $mail_user = array(
+                                'domain_id' => $mail_id,
+                                'customer_id' => $this->customer_id,
+                                'localpart' => 'postmaster',
+                                'username' => 'postmaster@'.$domain,
+                                'crypt' => crypt_password(random_password()),
+                                'smtp' => $mail_path.'/postmaster/Maildir',
+                                'pop' => $mail_path.'/postmaster',
+                                'type' => 'local',
+                                'enabled' => 1,
+                                'sa_tag' => 5,
+                                'sa_refuse' => 10
+                            );
+                $this->_CI->DomainModel->add_mail_user($mail_user);
+
 				if($domain_id != false) {
 					// Add alias if domain saved
 					foreach( $aliases as $index => $line )
@@ -519,7 +552,7 @@ class Domains {
             'CacheDurantion404' => "m",
         );
 
-        $this->_CI->DomainModel->update_cache($domain_id);
+        $this->_CI->DomainModel->update_cache($data, $domain_id);
     }
 
     public function save_cache()

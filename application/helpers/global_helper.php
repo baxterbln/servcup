@@ -101,3 +101,67 @@ if(!function_exists('get_server'))
         return $ci->Hostadm->get_server($function, $group);
     }
 }
+
+if(!function_exists('crypt_password'))
+{
+    /**
+     * crypt the plaintext password.
+     *
+     * @golbal  string  $cryptscheme
+     * @param   string  $clear  the cleartext password
+     * @param   string  $salt   optional salt
+     * @return  string          the properly crypted password
+     */
+    function crypt_password($clear, $cryptscheme = 'sha512', $salt = '')
+    {
+        if($cryptscheme === 'sha') {
+            $hash = sha1($clear);
+            $cryptedpass = '{SHA}' . base64_encode(pack('H*', $hash));
+        } elseif ($cryptscheme === 'CLEAR') {
+            $cryptedpass=$clear;
+        } else {
+            if(empty($salt)) {
+                switch($cryptscheme){
+                    case 'des':
+                        $salt = '';
+                    break;
+                    case 'md5':
+                        $salt='$1$';
+                    break;
+                    case 'sha512':
+                        $salt='$6$';
+                    break;
+                    case 'bcrypt':
+                        $salt='$2a$10$';
+                    break;
+                    default:
+                        if(preg_match('/\$[:digit:][:alnum:]?\$/', $cryptscheme)) {
+                            $salt=$cryptscheme;
+                        } else {
+                            die(_('The value of $cryptscheme is invalid!'));
+                        }
+                }
+                $salt.=get_random_bytes(CRYPT_SALT_LENGTH).'$';
+            }
+
+            $cryptedpass = crypt($clear, $salt);
+        }
+        return $cryptedpass;
+    }
+}
+
+if(!function_exists('get_random_bytes'))
+{
+    /**
+     * Generate pseudo random bytes
+     *
+     * @param int $count number of bytes to generate
+     * @return string A string with the hexadecimal number
+     */
+    function get_random_bytes($count)
+    {
+        $output = base64_encode(openssl_random_pseudo_bytes($count));
+        $output = strtr(substr($output, 0, $count), '+', '.'); //base64 is longer, so must truncate the result
+        return $output;
+    }
+}
