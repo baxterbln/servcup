@@ -44,8 +44,8 @@ class User
 
     public function get_user()
     {
-        if (has_access(array('manage_database')) && $this->_CI->DatabaseModel->checkOwner('username', $this->_CI->input->post('username'), 'sql_user')) {
-            $data = $this->_CI->DatabaseModel->getUser($this->_CI->input->post('username'), $this->_CI->input->post('id'));
+        if (has_access(array('manage_database')) && $this->_CI->DatabaseModel->check_owner('username', $this->_CI->input->post('username'), 'sql_user')) {
+            $data = $this->_CI->DatabaseModel->get_user($this->_CI->input->post('username'), $this->_CI->input->post('id'));
             return send_output($data);
         }else{
             return send_output(array('status' => 500));
@@ -83,9 +83,9 @@ class User
                     unset($data['customer_id']);
                     unset($data['username']);
 
-                    $this->_CI->DatabaseModel->updateUser($data, $this->_CI->input->post('user_id'));
+                    $this->_CI->DatabaseModel->update_user($data, $this->_CI->input->post('user_id'));
                 }else{
-                    $this->_CI->DatabaseModel->addUser($data);
+                    $this->_CI->DatabaseModel->add_user($data);
                 }
 
                 return send_output($data);
@@ -95,14 +95,14 @@ class User
         }
     }
 
-    public function deleteUser()
+    public function delete_user()
     {
-        if ( has_access(array('manage_database')) && $this->_CI->DatabaseModel->checkOwner('username', $this->_CI->input->post('username'), 'sql_user') )
+        if ( has_access(array('manage_database')) && $this->_CI->DatabaseModel->check_owner('username', $this->_CI->input->post('username'), 'sql_user') )
         {
-            if($this->_CI->DatabaseModel->checkAssignUser($this->_CI->input->post('username'))){ // User is assigned to database, error
+            if($this->_CI->DatabaseModel->check_assign_user($this->_CI->input->post('username'))){ // User is assigned to database, error
                 return send_output(array('status' => 501));
             }else{
-                $this->_CI->DatabaseModel->deleteUser($this->_CI->input->post('user_id'), $this->_CI->input->post('username'));
+                $this->_CI->DatabaseModel->delete_user($this->_CI->input->post('user_id'), $this->_CI->input->post('username'));
                 return send_output(array('status' => 200));
             }
         } else {
@@ -137,7 +137,7 @@ class User
             );
 
             return $errors;
-        } elseif (!$this->check_alphaNumeric($this->_CI->input->post('username')) && !$update) {
+        } elseif (!$this->check_alphanumeric($this->_CI->input->post('username')) && !$update) {
             return array('username' => lang('username character'), 'status' => 501);
         } elseif (!$this->check_existUser($this->_CI->input->post('username')) && !$update) {
             return array('username' => lang('user exist'), 'status' => 501);
@@ -146,7 +146,7 @@ class User
         }
     }
 
-    public function check_alphaNumeric($str)
+    public function check_alphanumeric($str)
     {
         $this->_CI->form_validation->set_message('alphaNumeric', 'Is not alpha numeric');
 
@@ -157,6 +157,6 @@ class User
     {
         $this->_CI->form_validation->set_message('UserExist', 'user ist already exist');
 
-        return $this->_CI->DatabaseModel->checkExistUser($user.'_'.$this->customer_id);
+        return $this->_CI->DatabaseModel->check_exist_user($user.'_'.$this->customer_id);
     }
 }

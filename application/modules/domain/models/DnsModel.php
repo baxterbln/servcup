@@ -12,7 +12,7 @@ class DnsModel extends CI_Model
         $this->dns = $this->load->database('dns', TRUE);
     }
 
-    public function getDnsDomainId($domain_id)
+    public function get_dns_domain_id($domain_id)
     {
         $this->dns->select('id');
         $this->dns->from('domains');
@@ -28,30 +28,30 @@ class DnsModel extends CI_Model
         }
     }
 
-    public function DeleteDNSDomain($domain_id)
+    public function delete_dns_domain($domain_id)
     {
         $this->dns->where(array('customer_id' => $this->customer_id, 'domain_id' => $domain_id));
         $this->dns->delete('domains');
     }
 
-    public function addDNSRecords($data)
+    public function add_dns_records($data)
     {
         $this->dns->insert_batch('records', $data);
     }
 
-    public function deleteDNSRecords($dns_id)
+    public function delete_dns_records($dns_id)
     {
         $this->dns->where(array('domain_id' => $dns_id));
         $this->dns->delete('records');
     }
 
-    public function removeAliaseRecords($alias, $domain_id)
+    public function remove_aliase_records($alias, $domain_id)
     {
         $this->dns->where(array('domain_id' => $domain_id, 'name' => $alias));
         $this->dns->delete('records');
     }
 
-    public function addDNSDomain($data)
+    public function add_dns_domain($data)
     {
         $this->dns->insert('domains', $data);
         if($this->dns->affected_rows() > 0) {

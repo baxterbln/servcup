@@ -11,7 +11,7 @@ class DomainModel extends CI_Model
         $this->customer_id = $this->session->userdata('customer_id');
     }
 
-    public function getDomains($count = FALSE)
+    public function get_domains($count = FALSE)
     {
         $this->db->select('*');
         $this->db->from('domain');
@@ -43,7 +43,7 @@ class DomainModel extends CI_Model
         }
     }
 
-    public function listDomains()
+    public function list_domains()
     {
         $this->db->select('id, domain');
         $this->db->from('domain');
@@ -52,7 +52,7 @@ class DomainModel extends CI_Model
         return $this->db->get()->result();
     }
 
-    public function getForwards($count = FALSE)
+    public function get_forwards($count = FALSE)
     {
         $this->db->select('id, domain, redirect, created, redirect_destination, active');
         $this->db->from('domain');
@@ -83,7 +83,7 @@ class DomainModel extends CI_Model
         }
     }
 
-    public function getSubdomains($count = FALSE)
+    public function get_subdomains($count = FALSE)
     {
         $this->db->select('id, domain, path, created, php_version, active');
         $this->db->from('domain');
@@ -114,7 +114,7 @@ class DomainModel extends CI_Model
         }
     }
 
-    public function getAllSSLDomains($count = FALSE)
+    public function get_all_ssl_domains($count = FALSE)
     {
         $this->db->select('id, domain, SSLCertificateType, SSLCertificateCreated, SSLCertificateExpire');
         $this->db->from('domain');
@@ -149,7 +149,7 @@ class DomainModel extends CI_Model
         }
     }
 
-    public function getDomain($id, $domain)
+    public function get_domain($id, $domain)
     {
         $this->db->select('*');
         $this->db->from('domain');
@@ -158,7 +158,7 @@ class DomainModel extends CI_Model
         return $this->db->get()->row();
     }
 
-    public function getParentDomain($id)
+    public function get_parent_domain($id)
     {
         $this->db->select('domain');
         $this->db->from('domain');
@@ -167,7 +167,7 @@ class DomainModel extends CI_Model
         return $this->db->get()->row()->domain;
     }
 
-    public function getDomainName($id)
+    public function get_domain_name($id)
     {
         $this->db->select('domain');
         $this->db->from('domain');
@@ -180,7 +180,7 @@ class DomainModel extends CI_Model
         }
     }
 
-    public function getAliasDomains($domain_id)
+    public function get_alias_domains($domain_id)
     {
         $this->db->select('id, alias');
         $this->db->from('domain_alias');
@@ -195,7 +195,7 @@ class DomainModel extends CI_Model
     }
 
 
-    public function addDomain($data)
+    public function add_domain($data)
     {
         $this->db->insert('domain', $data);
         if($this->db->affected_rows() > 0) {
@@ -205,37 +205,37 @@ class DomainModel extends CI_Model
         }
     }
 
-    public function updateDomain($data, $domain_id)
+    public function update_domain($data, $domain_id)
     {
         $this->db->where(array('customer_id' => $this->customer_id, 'id' => $domain_id));
         $this->db->update('domain', $data);
     }
 
-    public function suspendDomain($domain_id, $status)
+    public function suspend_domain($domain_id, $status)
     {
         $data = array('active' => $status);
         $this->db->where(array('customer_id' => $this->customer_id, 'id' => $domain_id));
         $this->db->update('domain', $data);
     }
 
-    public function addAlias($data)
+    public function add_alias($data)
     {
         $this->db->insert('domain_alias', $data);
     }
 
-    public function removeAliase($domain_id)
+    public function remove_alias($domain_id)
     {
         $this->db->where(array('customer_id' => $this->customer_id, 'domain_id' => $domain_id));
         $this->db->delete('domain_alias');
     }
 
-    public function DeleteDomain($domain_id)
+    public function delete_domain($domain_id)
     {
         $this->db->where(array('customer_id' => $this->customer_id, 'id' => $domain_id));
         $this->db->delete('domain');
     }
 
-    public function getCacheSettings($domain_id)
+    public function get_cache_settings($domain_id)
     {
         $this->db->select('*');
         $this->db->from('domain_cache');
@@ -244,7 +244,7 @@ class DomainModel extends CI_Model
         return $this->db->get()->row();
     }
 
-    public function getPageSpeedSettings($domain_id)
+    public function get_pagespeed_settings($domain_id)
     {
         $this->db->select('*');
         $this->db->from('domain_pagespeed');
@@ -253,20 +253,20 @@ class DomainModel extends CI_Model
         return $this->db->get()->row();
     }
 
-    public function updateCache($data, $domain_id)
+    public function update_cache($data, $domain_id)
     {
         $this->db->where(array('domain_id' => $domain_id));
         $this->db->update('domain_cache', $data);
     }
 
-    public function updatePagespeed($data, $domain_id)
+    public function update_pagespeed($data, $domain_id)
     {
         $this->db->where(array('domain_id' => $domain_id));
         $this->db->update('domain_pagespeed', $data);
     }
 
     // fetch server_id from customer
-    public function checkDomain($domain)
+    public function check_domain($domain)
     {
         $this->db->select('id');
         $this->db->from('domain');
@@ -279,7 +279,7 @@ class DomainModel extends CI_Model
     }
 
     // Check if domain exist in db
-    public function checkAlias($alias)
+    public function check_alias($alias)
     {
         $this->db->select('id');
         $this->db->from('domain_alias');
@@ -291,7 +291,7 @@ class DomainModel extends CI_Model
         return $this->db->get()->num_rows();
     }
 
-    public function checkDomainOwner($id, $domain)
+    public function check_domain_owner($id, $domain)
     {
         $this->db->select('id');
         $this->db->from('domain');
@@ -305,7 +305,7 @@ class DomainModel extends CI_Model
         return $this->db->get()->num_rows();
     }
 
-    public function getPiwikUser()
+    public function get_piwik_user()
     {
         $this->db->select('username, password');
         $this->db->from('domain_stats');
@@ -320,30 +320,12 @@ class DomainModel extends CI_Model
         }
     }
 
-    public function addPiwikUser($data)
+    public function add_piwik_user($data)
     {
         $this->db->insert('domain_stats', $data);
     }
 
-    public function deleteMailAlias($domain)
-    {
-        $this->db->where(array('domain' => $domain, 'customer_id' => $this->customer_id));
-        $this->db->delete('mail_alias');
-    }
-
-    public function deleteMailCatchAll($domain)
-    {
-        $this->db->where(array('domain' => $domain, 'customer_id' => $this->customer_id));
-        $this->db->delete('mail_catchall');
-    }
-
-    public function deleteMailUser($domain)
-    {
-        $this->db->where(array('domain' => $domain, 'customer_id' => $this->customer_id));
-        $this->db->delete('mail_user');
-    }
-
-    public function addForward($data)
+    public function add_forward($data)
     {
         $this->db->insert('domain', $data);
 
@@ -354,25 +336,25 @@ class DomainModel extends CI_Model
         }
     }
 
-    public function updateForward($data, $domain_id)
+    public function update_forward($data, $domain_id)
     {
         $this->db->where(array('customer_id' => $this->customer_id, 'id' => $domain_id));
         $this->db->update('domain', $data);
     }
 
-    public function updateSubdomain($data, $domain_id)
+    public function update_subdomain($data, $domain_id)
     {
         $this->db->where(array('customer_id' => $this->customer_id, 'id' => $domain_id));
         $this->db->update('domain', $data);
     }
 
-    public function updateCertificateDomain($data, $domain_id)
+    public function update_certificate_domain($data, $domain_id)
     {
         $this->db->where(array('customer_id' => $this->customer_id, 'id' => $domain_id));
         $this->db->update('domain', $data);
     }
 
-    public function updateCertificateAlias($data, $alias, $domain_id)
+    public function update_certificate_alias($data, $alias, $domain_id)
     {
         $this->db->where(array('customer_id' => $this->customer_id, 'alias' => $alias, 'domain_id' => $domain_id));
         $this->db->update('domain_alias', $data);

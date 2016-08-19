@@ -22,7 +22,7 @@ class Databases {
 			$this->data['site'] = 'database';
 			$this->data['title'] = lang('Manage databases');
 			$this->data['jsFiles'] = array('database.js');
-            $this->data['users'] = $this->_CI->DatabaseModel->listingUser();
+            $this->data['users'] = $this->_CI->DatabaseModel->listing_user();
 
 			render_page(role().'/database', $this->data, TRUE);
 		} else {
@@ -69,11 +69,11 @@ class Databases {
                 else if($this->_CI->input->post('username') == "") {
                     return send_output(array('username' => lang('No user exist'), 'status' => 501));
                 }
-                else if(!$this->_CI->DatabaseModel->checkExistDB($data['db_name'])){
+                else if(!$this->_CI->DatabaseModel->check_exist_db($data['db_name'])){
                     return send_output(array('dbname' => lang('db exist'), 'status' => 501));
                 }
                 else{
-                    $this->_CI->DatabaseModel->createDatabase($data);
+                    $this->_CI->DatabaseModel->create_database($data);
                     return send_output(array('status' => 200));
                 }
             }else{

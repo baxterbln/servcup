@@ -17,12 +17,12 @@ class Domains {
     }
 
     /**
-     * listDomains
+     * list_domains
      * List Domains assigned by user
      *
      * @access  public
      */
-    public function listDomains()
+    public function list_domains()
 	{
 		if(has_access(array('manage_domain')))
 		{
@@ -38,12 +38,12 @@ class Domains {
 	}
 
     /**
-     * addDomain
+     * add_domain
      * open form for new domain
      *
      * @access  public
      */
-    public function addDomain()
+    public function add_domain()
 	{
 		if(has_access(array('manage_domain')))
 		{
@@ -58,34 +58,34 @@ class Domains {
 
 	}
     /**
-	 * editDomain
+	 * edit_domain
 	 * open form for new domain
 	 *
 	 * @param   int  	$id   	Domain ID
      * @param   string  $domain Name of the domain
 	 * @access  public
 	 */
-    public function editDomain($id, $domain)
+    public function edit_domain($id, $domain)
 	{
 		if(has_access(array('manage_domain')))
 		{
-			if($this->_CI->DomainModel->checkDomainOwner($id, $domain) > 0) {
+			if($this->_CI->DomainModel->check_domain_owner($id, $domain) > 0) {
 
 				// Load Domaindata
-				$this->data['domain'] = $this->_CI->DomainModel->getDomain($id, $domain);
+				$this->data['domain'] = $this->_CI->DomainModel->get_domain($id, $domain);
 				$this->data['jsFiles'] = array('domainForm.js');
 				$this->data['site'] = 'domains';
 				$this->data['title'] = lang('Edit domain').$this->data['domain']->domain;
 
-				$aliasDomains = $this->_CI->DomainModel->getAliasDomains($this->data['domain']->id);
+				$aliasDomains = $this->_CI->DomainModel->get_alias_domains($this->data['domain']->id);
 				$aliases = "";
 				foreach ($aliasDomains as $key => $value) {
 					$aliases .= $value->alias."\n";
 				}
 				$this->data['domain']->alias = preg_replace("/\n$/", "", $aliases);
-                $this->data['cache'] =  $this->_CI->DomainModel->getCacheSettings($this->data['domain']->id);
+                $this->data['cache'] =  $this->_CI->DomainModel->get_cache_settings($this->data['domain']->id);
                 $this->data['excludeCacheFiles'] = explode("|", $this->data['cache']->excludeCacheFiles);
-                $this->data['ps'] =  $this->_CI->DomainModel->getPageSpeedSettings($this->data['domain']->id);
+                $this->data['ps'] =  $this->_CI->DomainModel->get_pagespeed_settings($this->data['domain']->id);
                 $this->data['PsExcludeDir'] = explode("|", $this->data['ps']->excludeDir);
 
 
@@ -121,12 +121,12 @@ class Domains {
         }
 	}
 
-    public function getDomains()
+    public function get_domains()
 	{
 		if(has_access(array('manage_domain'))) {
 
-			$domains['total'] = $this->_CI->DomainModel->getDomains(TRUE);
-			$domains['rows'] = $this->_CI->DomainModel->getDomains();
+			$domains['total'] = $this->_CI->DomainModel->get_domains(TRUE);
+			$domains['rows'] = $this->_CI->DomainModel->get_domains();
 
 			return send_output($domains);
         } else {
@@ -134,7 +134,7 @@ class Domains {
         }
     }
 
-    public function suspendDomain()
+    public function suspend_domain()
 	{
 		if(has_access(array('manage_domain')))
 		{
@@ -142,13 +142,13 @@ class Domains {
 			$domain_id = $this->_CI->input->post('domain_id');
 			$status = $this->_CI->input->post('status');
 
-			if($this->_CI->DomainModel->checkDomainOwner($domain_id, $domain) > 0) {
-				$this->_CI->DomainModel->suspendDomain($domain_id, $status);
+			if($this->_CI->DomainModel->check_domain_owner($domain_id, $domain) > 0) {
+				$this->_CI->DomainModel->suspend_domain($domain_id, $status);
 
 				if($status == 0) {
-					add_task('suspendDomain', $domain_id);
+					add_task('suspend_domain', $domain_id);
 				}else{
-					add_task('activateDomain', $domain_id);
+					add_task('activate_domain', $domain_id);
 				}
 				return send_output(array('status' => 200));
 			} else {
@@ -159,7 +159,7 @@ class Domains {
         }
 	}
 
-    public function deleteDomain()
+    public function delete_domain()
 	{
         $this->_CI->load->model('DnsModel');
 
@@ -167,16 +167,16 @@ class Domains {
 		{
 			$domain = $this->_CI->input->post('domain');
 			$domain_id = $this->_CI->input->post('domain_id');
-			$dns_id = $this->_CI->DnsModel->getDnsDomainId($domain_id);
+			$dns_id = $this->_CI->DnsModel->get_dns_domain_id($domain_id);
 
-			if($this->_CI->DomainModel->checkDomainOwner($domain_id, $domain) > 0) {
+			if($this->_CI->DomainModel->check_domain_owner($domain_id, $domain) > 0) {
 
 				// Delete DNS records
-				$this->_CI->DnsModel->DeleteDNSDomain($domain_id);
-				$this->_CI->DnsModel->deleteDNSRecords($dns_id);
+				$this->_CI->DnsModel->delete_dns_domain($domain_id);
+				$this->_CI->DnsModel->delete_dns_records($dns_id);
 
 				// Delete Aliase
-				$this->_CI->DomainModel->removeAliase($domain_id);
+				$this->_CI->DomainModel->remove_alias($domain_id);
 
 				// Delete domain from piwik
 				if(module_active('piwik', false)) {
@@ -186,13 +186,13 @@ class Domains {
 
 				// Delete email records if module used
 				if(module_active('mail', false)) {
-					$this->_CI->DomainModel->deleteMailAlias($domain);
-					$this->_CI->DomainModel->deleteMailCatchAll($domain);
+					$this->_CI->DomainModel->delete_mail_alias($domain);
+					$this->_CI->DomainModel->delete_mail_catchall($domain);
 					$this->_CI->DomainModel->deleteMailUser($domain);
 				}
 
-				$this->_CI->DomainModel->DeleteDomain($domain_id);
-				add_task('deleteDomain', $domain_id);
+				$this->_CI->DomainModel->delete_domain($domain_id);
+				add_task('delete_domain', $domain_id);
 
 				return send_output(array('status' => 200));
 			} else {
@@ -204,7 +204,7 @@ class Domains {
 	}
 
     /**
-	 * saveDomain
+	 * save_domain
 	 * create or update domain
 	 *
 	 * @param   int  	$_POST['domain_id']			optional, only if update
@@ -224,7 +224,7 @@ class Domains {
 	 * @return 	string								Json status
 	 * @access  public
 	 */
-	public function saveDomain()
+	public function save_domain()
 	{
         $this->_CI->load->model('DnsModel');
 
@@ -249,14 +249,14 @@ class Domains {
 			$this->server_ip = get_server('mail')->ip;
 
             if($cache == 0){
-                $this->resetCacheSettings($this->_CI->input->post('domain_id'));
+                $this->reset_cache_settings($this->_CI->input->post('domain_id'));
             }
 
 			if($this->_CI->input->post('domain_id') == "") {
 
 				$this->update = false;
 
-				if($this->_CI->DomainModel->checkDomain($domain) > 0) {
+				if($this->_CI->DomainModel->check_domain($domain) > 0) {
 					$errors = array(
 						'domain' => $domain.": ".lang('The domain is already exist'),
 						'field' => 'domain',
@@ -267,7 +267,7 @@ class Domains {
 
 				foreach( $aliases as $index => $line )
 				{
-					if($this->_CI->DomainModel->checkAlias(trim($line)) > 0) {
+					if($this->_CI->DomainModel->check_alias(trim($line)) > 0) {
 						$errors = array(
 							'domain' => $line.": ".lang('The alias is already exist'),
 							'field' => 'alias',
@@ -309,56 +309,56 @@ class Domains {
 				unset($data['server_id']);
 				unset($data['domain']);
 
-				$this->_CI->DomainModel->updateDomain($data, $domain_id);
+				$this->_CI->DomainModel->update_domain($data, $domain_id);
 
-				$dns_id = $this->_CI->DnsModel->getDnsDomainId($domain_id);
+				$dns_id = $this->_CI->DnsModel->get_dns_domain_id($domain_id);
 
 				// Remove alias DNS Records
 				if(module_active('dns') && $dns_id != 0) {
-					foreach ($this->_CI->DomainModel->getAliasDomains($domain_id) as $key => $value) {
-						$this->_CI->DnsModel->removeAliaseRecords($value->alias, $dns_id);
+					foreach ($this->_CI->DomainModel->get_alias_domains($domain_id) as $key => $value) {
+						$this->_CI->DnsModel->remove_aliase_records($value->alias, $dns_id);
 					}
 				}
 
 				// Remove Aliase and save new
-				$this->_CI->DomainModel->removeAliase($domain_id);
+				$this->_CI->DomainModel->remove_alias($domain_id);
 
 				foreach( $aliases as $index => $line )
 				{
-					$addAlias = array('domain_id' => $domain_id, 'alias' => trim($line), 'customer_id' => $this->customer_id);
-					$this->_CI->DomainModel->addAlias($addAlias);
+					$add_alias = array('domain_id' => $domain_id, 'alias' => trim($line), 'customer_id' => $this->customer_id);
+					$this->_CI->DomainModel->add_alias($add_alias);
 				}
 				if(module_active('dns') && $dns_id != 0) {
-					$this->addAliasRecords($aliases, $dns_id);
+					$this->add_alias_records($aliases, $dns_id);
 				}
 
-				add_task('updateDomain', $domain_id);
+				add_task('update_domain', $domain_id);
 
 				$return = array('message' => lang('Domain has been successfully changed'), 'status' => '200');
 				return send_output($return);
 
 			}
 			else{
-				$domain_id = $this->_CI->DomainModel->addDomain($data);
+				$domain_id = $this->_CI->DomainModel->add_domain($data);
 				if($domain_id != false) {
 					// Add alias if domain saved
 					foreach( $aliases as $index => $line )
 					{
-						$addAlias = array('domain_id' => $domain_id, 'alias' => trim($line), 'customer_id' => $this->customer_id);
-						$this->_CI->DomainModel->addAlias($addAlias);
+						$add_alias = array('domain_id' => $domain_id, 'alias' => trim($line), 'customer_id' => $this->customer_id);
+						$this->_CI->DomainModel->add_alias($add_alias);
 					}
 
 					$return = array('domain_id' => $domain_id, 'status' => '200');
 
 					// Add records for dns
 					if(module_active('dns')) {
-						$this->addDNS($domain_id, $domain, $aliases);
+						$this->add_dns($domain_id, $domain, $aliases);
 					}
                     if(module_active('piwik', false)) {
-                        $this->addPiwikDomain($domain);
+                        $this->add_piwik_domain($domain);
                     }
 
-					add_task('addDomain', $domain_id);
+					add_task('add_domain', $domain_id);
 
 					return send_output($return);
 				}
@@ -369,12 +369,12 @@ class Domains {
 		}
 	}
 
-    private function addDNS($domain_id, $domain, $alias)
+    private function add_dns($domain_id, $domain, $alias)
 	{
         $this->_CI->load->model('DnsModel');
 
-		$addDomain = array('domain_id' => $domain_id, 'name' => $domain, 'type' => 'NATIVE', 'server_id' => get_server('mail')->id, 'customer_id' => $this->customer_id);
-		$dns_id = $this->_CI->DnsModel->addDNSDomain($addDomain);
+		$add_domain = array('domain_id' => $domain_id, 'name' => $domain, 'type' => 'NATIVE', 'server_id' => get_server('mail')->id, 'customer_id' => $this->customer_id);
+		$dns_id = $this->_CI->DnsModel->add_dns_domain($add_domain);
 		if($dns_id > 0) {
 
 			$records[] = array('domain_id' => $dns_id, 'name' => $domain, 'content' => get_setting('primary_dns').' abuse@cconnect.es 1', 'type' => 'SOA', 'ttl' => '86400', 'prio' => NULL);
@@ -385,12 +385,12 @@ class Domains {
 			$records[] = array('domain_id' => $dns_id, 'name' => 'mail'.$domain, 'content' => $this->server_ip, 'type' => 'A', 'ttl' => '120', 'prio' => NULL);
 			$records[] = array('domain_id' => $dns_id, 'name' => $domain, 'content' => 'mail.'.$domain, 'type' => 'MX', 'ttl' => '120', 'prio' => '25');
 
-			$this->_CI->DnsModel->addDNSRecords($records);
-			$this->addAliasRecords($alias, $dns_id);
+			$this->_CI->DnsModel->add_dns_records($records);
+			$this->add_alias_records($alias, $dns_id);
 		}
 	}
 
-	private function addAliasRecords($alias, $dns_id)
+	private function add_alias_records($alias, $dns_id)
 	{
         $this->_CI->load->model('DnsModel');
 		$records = array();
@@ -401,15 +401,15 @@ class Domains {
 				$records[] = array('domain_id' => $dns_id, 'name' => trim($line), 'content' => $this->server_ip, 'type' => 'A', 'ttl' => '120', 'prio' => NULL);
 			}
 		}
-		$this->_CI->DnsModel->addDNSRecords($records);
+		$this->_CI->DnsModel->add_dns_records($records);
 	}
 
-    private function addPiwikDomain($domain)
+    private function add_piwik_domain($domain)
 	{
 		if(module_active('piwik', false)) {
 			$this->_CI->load->library('piwik');
 
-			$piwik = $this->_CI->DomainModel->getPiwikUser();
+			$piwik = $this->_CI->DomainModel->get_piwik_user();
 
 			if(!isset($piwik->username)) {
 				$piwik = new stdClass;
@@ -422,7 +422,7 @@ class Domains {
 
 					// Save in database
 					$newUser = array('customer_id' => $this->customer_id, 'username' => $piwik->username, 'password' => $piwik->password);
-					$this->_CI->DomainModel->addPiwikUser($newUser);
+					$this->_CI->DomainModel->add_piwik_user($newUser);
 				} else {
 					//send message
 				}
@@ -431,7 +431,7 @@ class Domains {
             $siteID = $this->_CI->piwik->add_site($domain);
 
 		    // Set Access for Site
-		    $this->_CI->piwik->setSiteAccess($siteID, $piwik->username);
+		    $this->_CI->piwik->set_site_access($siteID, $piwik->username);
 		}
 	}
 
@@ -468,7 +468,7 @@ class Domains {
 		}
 	}
 
-    public function checkAliasNames()
+    public function check_alias_names()
 	{
 		$error = array();
 
@@ -477,7 +477,7 @@ class Domains {
 		{
 			unset($errors);
 
-			if($this->_CI->DomainModel->checkAlias(trim($line)) > 0) {
+			if($this->_CI->DomainModel->check_alias(trim($line)) > 0) {
 				$errors = array(
 					'alias' => $line.": ".lang('The alias is already exist'),
 					'status' => 501
@@ -502,7 +502,7 @@ class Domains {
 		return check_fqdn($str);
     }
 
-    public function resetCacheSettings($domain_id)
+    public function reset_cache_settings($domain_id)
     {
         $data = array(
             'excludeDirs' => "",
@@ -519,10 +519,10 @@ class Domains {
             'CacheDurantion404' => "m",
         );
 
-        $this->_CI->DomainModel->updateCache($domain_id);
+        $this->_CI->DomainModel->update_cache($domain_id);
     }
 
-    public function saveCache()
+    public function save_cache()
     {
         if(has_access(array('manage_domain'), true))
 		{
@@ -562,9 +562,9 @@ class Domains {
                 'CacheDurantion404' => $cacheSettings->CacheDurantion404,
             );
 
-            $this->_CI->DomainModel->updateCache($data, $this->_CI->input->post('domain_id'));
+            $this->_CI->DomainModel->update_cache($data, $this->_CI->input->post('domain_id'));
 
-            add_task('updateDomain', $this->_CI->input->post('domain_id'));
+            add_task('update_domain', $this->_CI->input->post('domain_id'));
 
             $return = array('message' => lang('Domain has been successfully changed'), 'status' => '200');
 		    return send_output($return);
@@ -573,7 +573,7 @@ class Domains {
         }
     }
 
-    public function savePageSpeed()
+    public function save_pagespeed()
     {
         if(has_access(array('manage_domain'), true))
 		{
@@ -595,33 +595,33 @@ class Domains {
 
             $data = array(
                 "excludeDir" => $exclude,
-                "UseAnalyticsJs" => $this->setPsOnOff($psSettings->UseAnalyticsJs),
+                "UseAnalyticsJs" => $this->set_ps_onoff($psSettings->UseAnalyticsJs),
                 "AnalyticsID" => $psSettings->AnalyticsID,
-                "ModifyCachingHeaders" => $this->setPsOnOff($psSettings->ModifyCachingHeaders),
+                "ModifyCachingHeaders" => $this->set_ps_onoff($psSettings->ModifyCachingHeaders),
                 "XHeaderValue" => $psSettings->XHeaderValue,
-                "RunExperiment" => $this->setPsOnOff($psSettings->RunExperiment),
-                "DisableRewriteOnNoTransform" => $this->setPsOnOff($psSettings->DisableRewriteOnNoTransform),
-                "LowercaseHtmlNames" => $this->setPsOnOff($psSettings->LowercaseHtmlNames),
-                "PreserveUrlRelativity" => $this->setPsOnOff($psSettings->PreserveUrlRelativity),
-                "add_head" => $this->setPsVar($psSettings->add_head),
-                "combine_css" => $this->setPsVar($psSettings->combine_css),
-                "combine_javascript" => $this->setPsVar($psSettings->combine_javascript),
-                "convert_meta_tags" => $this->setPsVar($psSettings->convert_meta_tags),
-                "extend_cache" => $this->setPsVar($psSettings->extend_cache),
-                "fallback_rewrite_css_urls" => $this->setPsVar($psSettings->fallback_rewrite_css_urls),
-                "flatten_css_imports" => $this->setPsVar($psSettings->flatten_css_imports),
-                "inline_css" => $this->setPsVar($psSettings->inline_css),
-                "inline_import_to_link" => $this->setPsVar($psSettings->inline_import_to_link),
-                "inline_javascript" => $this->setPsVar($psSettings->inline_javascript),
-                "rewrite_css" => $this->setPsVar($psSettings->rewrite_css),
-                "rewrite_images" => $this->setPsVar($psSettings->rewrite_images),
-                "rewrite_javascript" => $this->setPsVar($psSettings->rewrite_javascript),
-                "rewrite_style_attributes_with_url" => $this->setPsVar($psSettings->rewrite_style_attributes_with_url)
+                "RunExperiment" => $this->set_ps_onoff($psSettings->RunExperiment),
+                "DisableRewriteOnNoTransform" => $this->set_ps_onoff($psSettings->DisableRewriteOnNoTransform),
+                "LowercaseHtmlNames" => $this->set_ps_onoff($psSettings->LowercaseHtmlNames),
+                "PreserveUrlRelativity" => $this->set_ps_onoff($psSettings->PreserveUrlRelativity),
+                "add_head" => $this->set_ps_var($psSettings->add_head),
+                "combine_css" => $this->set_ps_var($psSettings->combine_css),
+                "combine_javascript" => $this->set_ps_var($psSettings->combine_javascript),
+                "convert_meta_tags" => $this->set_ps_var($psSettings->convert_meta_tags),
+                "extend_cache" => $this->set_ps_var($psSettings->extend_cache),
+                "fallback_rewrite_css_urls" => $this->set_ps_var($psSettings->fallback_rewrite_css_urls),
+                "flatten_css_imports" => $this->set_ps_var($psSettings->flatten_css_imports),
+                "inline_css" => $this->set_ps_var($psSettings->inline_css),
+                "inline_import_to_link" => $this->set_ps_var($psSettings->inline_import_to_link),
+                "inline_javascript" => $this->set_ps_var($psSettings->inline_javascript),
+                "rewrite_css" => $this->set_ps_var($psSettings->rewrite_css),
+                "rewrite_images" => $this->set_ps_var($psSettings->rewrite_images),
+                "rewrite_javascript" => $this->set_ps_var($psSettings->rewrite_javascript),
+                "rewrite_style_attributes_with_url" => $this->set_ps_var($psSettings->rewrite_style_attributes_with_url)
             );
 
-            $this->_CI->DomainModel->updatePagespeed($data, $this->_CI->input->post('domain_id'));
+            $this->_CI->DomainModel->update_pagespeed($data, $this->_CI->input->post('domain_id'));
 
-            add_task('updateDomain', $this->_CI->input->post('domain_id'));
+            add_task('update_domain', $this->_CI->input->post('domain_id'));
 
             $return = array('message' => lang('Domain has been successfully changed'), 'status' => '200');
     		return send_output($return);
@@ -630,12 +630,12 @@ class Domains {
         }
     }
 
-    private function setPsVar($key)
+    private function set_ps_var($key)
     {
         return ($key == 1) ? 1 : 0;
     }
 
-    private function setPsOnOff($key)
+    private function set_ps_onoff($key)
     {
         return ($key == 1) ? 'on' : 'off';
     }

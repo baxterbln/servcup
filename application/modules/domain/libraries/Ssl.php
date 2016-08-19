@@ -29,16 +29,16 @@ class Ssl {
         }
 	}
 
-	public function getAllDomains()
+	public function get_all_domains()
 	{
         if(has_access(array('manage_ssl'))) {
 
-			$domains['total'] = $this->_CI->DomainModel->getAllSSLDomains(TRUE);
-			$domains['rows'] = $this->_CI->DomainModel->getAllSSLDomains();
+			$domains['total'] = $this->_CI->DomainModel->get_all_ssl_domains(TRUE);
+			$domains['rows'] = $this->_CI->DomainModel->get_all_ssl_domains();
 
             foreach ($domains['rows'] AS $key=>$value) {
                 $domains['rows'][$key]->domains = array($value->domain);
-                foreach($this->_CI->DomainModel->getAliasDomains($value->id) AS $domain=>$alias) {
+                foreach($this->_CI->DomainModel->get_alias_domains($value->id) AS $domain=>$alias) {
                     array_push($domains['rows'][$key]->domains, $alias->alias);
                 }
             }
@@ -48,15 +48,15 @@ class Ssl {
         }
     }
 
-	public function createCertificate()
+	public function create_certificate()
 	{
         $domain = $this->_CI->input->post('domain');
 		$domain_id = $this->_CI->input->post('domain_id');
 
         if(has_access(array('manage_ssl'))) {
-            if($this->_CI->DomainModel->checkDomainOwner($domain_id, $domain) > 0) {
+            if($this->_CI->DomainModel->check_domain_owner($domain_id, $domain) > 0) {
 
-                $domainData = $this->_CI->DomainModel->getDomain($domain_id, $domain);
+                $domainData = $this->_CI->DomainModel->get_domain($domain_id, $domain);
 
                 $params = array('countryCode' => 'DE', 'state' => 'Germany', 'mailto' => 'info@cconnect.es', 'logger' => true);
                 $this->_CI->load->library('Letsencrypt', $params);
@@ -64,26 +64,26 @@ class Ssl {
 
                 try {
                     $this->_CI->letsencrypt->signDomains(array($domainData->domain));
-                    $data = $this->getCertificateData($domain);
-                    $this->_CI->DomainModel->updateCertificateDomain($data, $domain_id);
+                    $data = $this->get_certificate_data($domain);
+                    $this->_CI->DomainModel->update_certificate_domain($data, $domain_id);
                 }  catch (Exception $e) {
                     return send_output(array('status' => 500, 'error' =>  $e->getMessage()));
                 }
 
                 if($domainData->type == 'domain') {
-                    foreach($this->_CI->DomainModel->getAliasDomains($domain_id) AS $key=>$value) {
+                    foreach($this->_CI->DomainModel->get_alias_domains($domain_id) AS $key=>$value) {
 
                         try {
                             $this->_CI->letsencrypt->signDomains(array($value->alias));
                             unset($data);
-                            $data = $this->getCertificateData($value->alias);
-                            $this->_CI->DomainModel->updateCertificateAlias($data, $value->alias, $value->id);
+                            $data = $this->get_certificate_data($value->alias);
+                            $this->_CI->DomainModel->update_certificate_alias($data, $value->alias, $value->id);
                         } catch (Exception $e) {
                             return send_output(array('status' => 500, 'error' =>  $e->getMessage()));
                         }
                     }
                 }
-                add_task('updateDomain', $domain_id);
+                add_task('update_domain', $domain_id);
                 return send_output(array('status' => 200));
             }
         } else {
@@ -92,7 +92,7 @@ class Ssl {
 	}
 
 
-    public function revokeCertificate()
+    public function revoke_certificate()
 	{
         $domain = $this->_CI->input->post('domain');
 		$domain_id = $this->_CI->input->post('domain_id');
@@ -105,32 +105,32 @@ class Ssl {
         $data['SSLCertificateExpire'] = null;
 
         if(has_access(array('manage_ssl'))) {
-            if($this->_CI->DomainModel->checkDomainOwner($domain_id, $domain) > 0) {
+            if($this->_CI->DomainModel->check_domain_owner($domain_id, $domain) > 0) {
 
-                $domainData = $this->_CI->DomainModel->getDomain($domain_id, $domain);
+                $domainData = $this->_CI->DomainModel->get_domain($domain_id, $domain);
 
                 $params = array('logger' => true);
                 $this->_CI->load->library('Letsencrypt', $params);
 
                 try {
-                    $this->_CI->letsencrypt->revokeCertificate($domain);
-                    $this->_CI->DomainModel->updateCertificateDomain($data, $domain_id);
+                    $this->_CI->letsencrypt->revoke_certificate($domain);
+                    $this->_CI->DomainModel->update_certificate_domain($data, $domain_id);
                 } catch (Exception $e) {
                     return send_output(array('status' => 500, 'error' =>  $e->getMessage()));
                 }
 
                 if($domainData->type == 'domain') {
-                    foreach($this->_CI->DomainModel->getAliasDomains($domain_id) AS $key=>$value) {
+                    foreach($this->_CI->DomainModel->get_alias_domains($domain_id) AS $key=>$value) {
 
                         try {
-                            $this->_CI->letsencrypt->revokeCertificate($value->alias);
-                            $this->_CI->DomainModel->updateCertificateAlias($data, $value->alias, $value->id);
+                            $this->_CI->letsencrypt->revoke_certificate($value->alias);
+                            $this->_CI->DomainModel->update_certificate_alias($data, $value->alias, $value->id);
                         } catch (Exception $e) {
                             return send_output(array('status' => 500, 'error' =>  $e->getMessage()));
                         }
                     }
                 }
-                add_task('updateDomain', $domain_id);
+                add_task('update_domain', $domain_id);
                 return send_output(array('status' => 200));
             }
         } else {
@@ -138,7 +138,7 @@ class Ssl {
         }
 	}
 
-    private function getCertificateData($domain)
+    private function get_certificate_data($domain)
     {
         $this->_CI->config->load('letsencrypt');
 

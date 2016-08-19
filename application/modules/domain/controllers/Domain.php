@@ -20,56 +20,56 @@ class Domain extends MX_Controller {
 	public function index()
 	{
 		$this->load->library('Domains', $this->data);
-		$this->domains->listDomains();
+		$this->domains->list_domains();
 	}
 
-	public function addDomain()
+	public function add_domain()
 	{
 		$this->load->library('Domains', $this->data);
-		$this->domains->addDomain();
+		$this->domains->add_domain();
 	}
 
-	public function editDomain($id, $domain)
+	public function edit_domain($id, $domain)
 	{
 		$this->load->library('Domains', $this->data);
-		$this->domains->editDomain($id, $domain);
+		$this->domains->edit_domain($id, $domain);
 	}
 
-	public function saveDomain()
+	public function save_domain()
 	{
 		$this->load->library('Domains', $this->data);
-		$this->domains->saveDomain();
+		$this->domains->save_domain();
 	}
 
-	public function getDomains()
+	public function get_domains()
 	{
 		$this->load->library('Domains', $this->data);
-		$this->domains->getDomains();
+		$this->domains->get_domains();
     }
 
-	public function suspendDomain()
+	public function suspend_domain()
 	{
 		$this->load->library('Domains', $this->data);
-		$this->domains->suspendDomain();
+		$this->domains->suspend_domain();
 	}
 
-	public function deleteDomain()
+	public function delete_domain()
 	{
 		$this->load->library('Domains', $this->data);
-		$this->domains->deleteDomain();
+		$this->domains->delete_domain();
 	}
 
 	/* Caching */
-	public function saveCache()
+	public function save_cache()
 	{
 		$this->load->library('Domains', $this->data);
-		$this->domains->saveCache();
+		$this->domains->save_cache();
 	}
 
-	public function savePageSpeed()
+	public function save_pagespeed()
 	{
 		$this->load->library('Domains', $this->data);
-		$this->domains->savePageSpeed();
+		$this->domains->save_pagespeed();
 	}
 
 	/* Forward requests */
@@ -79,34 +79,34 @@ class Domain extends MX_Controller {
 		$this->forward->forwards();
 	}
 
-	public function getForwards()
+	public function get_forwards()
 	{
 		$this->load->library('Forward', $this->data);
-		$this->forward->getForwards();
+		$this->forward->get_forwards();
     }
 
-	public function addForward()
+	public function add_forward()
 	{
 		$this->load->library('Forward', $this->data);
-		$this->forward->addForward();
+		$this->forward->add_forward();
 	}
 
-	public function saveForward()
+	public function save_forward()
 	{
 		$this->load->library('Forward', $this->data);
-		$this->forward->saveForward();
+		$this->forward->save_forward();
 	}
 
-	public function editForward($id, $domain)
+	public function edit_forward($id, $domain)
  	{
 		$this->load->library('Forward', $this->data);
-		$this->forward->editForward($id, $domain);
+		$this->forward->edit_forward($id, $domain);
 	}
 
-	public function deleteForward()
+	public function delete_forward()
  	{
 		$this->load->library('Forward', $this->data);
-		$this->forward->deleteForward();
+		$this->forward->delete_forward();
 	}
 
 	/* Subdomain requests */
@@ -116,34 +116,34 @@ class Domain extends MX_Controller {
 		$this->subdomain->subdomains();
 	}
 
-	public function getSubdomains()
+	public function get_subdomains()
 	{
 		$this->load->library('Subdomain', $this->data);
-		$this->subdomain->getSubdomains();
+		$this->subdomain->get_subdomains();
     }
 
-	public function addSubdomain()
+	public function add_subdomain()
 	{
 		$this->load->library('Subdomain', $this->data);
-		$this->subdomain->addSubdomain();
+		$this->subdomain->add_subdomain();
 	}
 
-	public function saveSubdomain()
+	public function save_subdomain()
 	{
 		$this->load->library('Subdomain', $this->data);
-		$this->subdomain->saveSubdomain();
+		$this->subdomain->save_subdomain();
 	}
 
-	public function editSubdomain($id, $domain)
+	public function edit_subdomain($id, $domain)
 	{
 		$this->load->library('Subdomain', $this->data);
-		$this->subdomain->editSubdomain($id, $domain);
+		$this->subdomain->edit_subdomain($id, $domain);
 	}
 
-	public function deleteSubdomain()
+	public function delete_subdomain()
 	{
 		$this->load->library('Subdomain', $this->data);
-		$this->subdomain->deleteSubdomain();
+		$this->subdomain->delete_subdomain();
 	}
 
 	/* SSL requests */
@@ -153,22 +153,22 @@ class Domain extends MX_Controller {
 		$this->ssl->ssl();
 	}
 
-	public function getAllDomains()
+	public function get_all_domains()
 	{
 		$this->load->library('Ssl', $this->data);
-		$this->ssl->getAllDomains();
+		$this->ssl->get_all_domains();
     }
 
-	public function createCertificate()
+	public function create_certificate()
 	{
 		$this->load->library('Ssl', $this->data);
-		$this->ssl->createCertificate();
+		$this->ssl->create_certificate();
 	}
 
-	public function revokeCertificate()
+	public function revoke_certificate()
 	{
 		$this->load->library('Ssl', $this->data);
-		$this->ssl->revokeCertificate();
+		$this->ssl->revoke_certificate();
 	}
 
 	public function getCert()
@@ -184,10 +184,10 @@ class Domain extends MX_Controller {
 	}
 
 	/* Global calls */
-	public function checkAliasNames()
+	public function check_alias_names()
 	{
 		$this->load->library('Domains', $this->data);
-		$this->domains->checkAliasNames();
+		$this->domains->check_alias_names();
 	}
 
 	/* Global calls */
@@ -214,7 +214,7 @@ class Domain extends MX_Controller {
 		return send_output($return);
 	}
 
-	public function directoryListing()
+	public function directory_listing()
 	{
 		$homeFolder = get_setting('client_path')."/c".$this->customer_id;
 
@@ -239,10 +239,10 @@ class Domain extends MX_Controller {
 		return send_output($paths);
 	}
 
-	public function openStats()
+	public function open_stats()
 	{
 		$this->load->model('DomainModel');
-		$piwik = $this->DomainModel->getPiwikUser();
+		$piwik = $this->DomainModel->get_piwik_user();
 		if(isset($piwik->username)) {
 			redirect("https://spider.cconnect.es/index.php?module=Login&action=logme&login=".$piwik->username."&password=".MD5($piwik->password));
 		}else{

@@ -45,10 +45,10 @@ class Database extends MX_Controller {
 		$this->user->save_user();
     }
 
-	public function deleteUser()
+	public function delete_user()
     {
         $this->load->library('User', $this->data);
-		$this->user->deleteUser();
+		$this->user->delete_user();
     }
 
 	public function get_databases()
